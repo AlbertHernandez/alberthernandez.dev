@@ -25,10 +25,10 @@
       }
     ],
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
+      "@/*": ["./src/*"],
+      "@/tests/*": ["tests/*"]
     },
+    "types": ["vitest/globals"]
   },
   "include": [
     "next-env.d.ts",

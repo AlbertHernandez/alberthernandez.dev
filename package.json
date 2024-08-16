@@ -2,10 +2,32 @@
   "name": "website",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
+  "description": "Personal website",
+  "author": "alberthernandezdev@gmail.com",
+  "bugs": {
+    "url": "https://github.com/AlbertHernandez/website/issues"
+  },
+  "homepage": "https://github.com/AlbertHernandez/website#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlbertHernandez/website.git"
+  },
+  "keywords": [
+    "typescript",
+    "express",
+    "template"
+  ],
+  "engines": {
+    "node": ">=20.x",
+    "npm": ">=10.x"
+  },
   "scripts": {
     "build": "next build",
     "start": "next start",
     "dev": "next dev",
+    "test": "rimraf coverage && npm run test:unit",
+    "test:unit": "vitest run --coverage --config vitest.config.ts",
     "prepare": "husky",
     "lint": "eslint . --ext .js,.mjs,cjs,.ts,.mts",
     "lint:fix": "npm run lint -- --fix",
@@ -14,9 +36,9 @@
     "typos": "chmod +x scripts/check_typos.sh && ./scripts/check_typos.sh"
   },
   "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.5"
+    "next": "14.2.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.4.0",
@@ -27,6 +49,9 @@
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "@vitest/coverage-istanbul": "^2.0.5",
+    "concurrently": "^8.2.2",
     "eslint": "^8.57.0",
     "eslint-config-next": "^14.2.5",
     "eslint-config-prettier": "^9.0.0",
@@ -34,12 +59,16 @@
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-unicorn": "^55.0.0",
+    "eslint-plugin-vitest": "^0.4.1",
     "husky": "^9.1.4",
+    "jsdom": "^24.1.1",
     "lint-staged": "^15.2.9",
     "postcss": "^8.4.41",
     "prettier": "^3.3.3",
     "rimraf": "^6.0.1",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "vite": "^5.4.1",
+    "vitest": "^2.0.5"
   }
 }
