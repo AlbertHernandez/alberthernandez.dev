@@ -3,10 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint . --ext .js,.mjs,cjs,.ts,.mts"
+    "dev": "next dev",
+    "prepare": "husky",
+    "lint": "eslint . --ext .js,.mjs,cjs,.ts,.mts",
+    "lint:fix": "npm run lint -- --fix",
+    "lint:yaml": "chmod +x scripts/lint_yaml.sh && ./scripts/lint_yaml.sh",
+    "validate-typescript": "tsc",
+    "typos": "chmod +x scripts/check_typos.sh && ./scripts/check_typos.sh"
   },
   "dependencies": {
     "react": "^18",
