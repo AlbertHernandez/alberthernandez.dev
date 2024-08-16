@@ -1,0 +1,19 @@
+name: 'CI'
+
+on:
+  push:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛬
+        uses: actions/checkout@v4
+      - name: Setup Node ⚙️
+        uses: ./.github/actions/setup-node
+      - name: Lint code 💅
+        run: npm run lint
+      - name: Build NextJS 📦
+        run: npm run build
+      - name: Run tests ✅
+        run: npm run test
