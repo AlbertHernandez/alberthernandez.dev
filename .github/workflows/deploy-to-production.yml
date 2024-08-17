@@ -50,6 +50,8 @@ jobs:
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
       - name: Merge main into production 🚀
         run: |
+          git checkout main
+          git fetch origin production
           git branch -D production
           git checkout -b production
           git push --force origin production
