@@ -3,8 +3,6 @@ import { withSentryConfig } from "@sentry/nextjs";
 const nextConfig = {};
 
 export default withSentryConfig(nextConfig, {
-  org: "albert-tb",
-  project: "website",
   silent: !process.env.CI,
   widenClientFileUpload: true,
   reactComponentAnnotation: {
