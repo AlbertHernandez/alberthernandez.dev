@@ -1,4 +1,4 @@
-name: 'Todo to issue'
+name: '☑️ Todo to issue'
 
 on:
   push:
