@@ -26,6 +26,7 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
+      "@/app/*": ["./src/app/*"],
       "@/tests/*": ["tests/*"]
     },
     "types": ["vitest/globals"]
