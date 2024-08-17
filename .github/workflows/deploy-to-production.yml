@@ -4,7 +4,23 @@ on:
   workflow_dispatch:
 
 jobs:
+  check-branch:
+    runs-on: ubuntu-latest
+    outputs:
+      is-main: ${{ steps.check.outputs.is-main }}
+    steps:
+      - name: Check if on main branch 🌳
+        id: check
+        run: |
+          if [[ "${GITHUB_REF}" == "refs/heads/main" ]]; then
+            echo "::set-output name=is-main::true"
+          else
+            echo "::set-output name=is-main::false"
+          fi
+
   tests:
+    if: needs.check-branch.outputs.is-main == 'true'
+    needs: [check-branch]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛬
@@ -19,7 +35,8 @@ jobs:
         run: npm run test
 
   merge-to-production:
-    needs: tests
+    if: needs.check-branch.outputs.is-main == 'true'
+    needs: [check-branch, tests]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛬
