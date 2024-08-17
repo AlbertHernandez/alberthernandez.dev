@@ -56,5 +56,6 @@ jobs:
         run: |
           git fetch origin production || git switch -c production
           git switch production
+          git pull origin production
           git merge main --allow-unrelated-histories --strategy-option theirs
           git push origin production
