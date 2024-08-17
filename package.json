@@ -36,6 +36,7 @@
     "typos": "chmod +x scripts/check_typos.sh && ./scripts/check_typos.sh"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.3.1",
     "next": "14.2.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
