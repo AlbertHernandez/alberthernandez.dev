@@ -55,5 +55,5 @@ jobs:
           git pull origin main
           git checkout production
           git pull origin production
-          git merge main --strategy-option theirs
+          git merge main --allow-unrelated-histories --strategy-option theirs
           git push origin production
