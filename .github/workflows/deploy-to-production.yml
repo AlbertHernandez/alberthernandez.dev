@@ -1,0 +1,36 @@
+name: 'Deploy to production'
+
+on:
+  workflow_dispatch:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛬
+        uses: actions/checkout@v4
+      - name: Setup Node ⚙️
+        uses: ./.github/actions/setup-node
+      - name: Lint code 💅
+        run: npm run lint
+      - name: Build NextJS 📦
+        run: npm run build
+      - name: Run tests ✅
+        run: npm run test
+
+  merge-to-production:
+    needs: tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛬
+        uses: actions/checkout@v4
+      - name: Setup Git 🛠
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+      - name: Merge main into production 🚀
+        run: |
+          git fetch origin production
+          git checkout production
+          git merge main
+          git push origin production
