@@ -1,7 +1,7 @@
 repository:
   name: website
   description: Personal website
-  homepage: github.com/AlbertHernandez/website
+  homepage: https://alberthernandez.dev/
   topics: nodejs, nextjs, typescript
   has_wiki: false
   private: true
