@@ -1,3 +1,19 @@
+<h1 align="center">⭐ Website ⭐</h1>
+
+<p align="center">
+  Personal website of Albert Hernandez
+</p>
+
+<p align="center">
+  <a href="https://nodejs.org/docs/latest-v20.x/api/index.html"><img src="https://img.shields.io/badge/🐢 node-20.x-green.svg" alt="node"/></a>
+  <a href="https://www.npmjs.com/"><img src="https://img.shields.io/badge/📦 npm-10.x-red.svg" alt="npm"/></a>
+  <a href="https://nextjs.org/"><img src="https://img.shields.io/badge/✨ Framework-NextJS-yellow.svg" alt="npm"/></a>
+  <a href="https://vercel.com/albert-hernandez-dev/website"><img src="https://img.shields.io/badge/☁️ Cloud-▲ Vercel-black.svg" alt="npm"/></a>
+  <a href="https://dash.cloudflare.com/ee5cacf057a2ebbe042cebfc8e8f3945/alberthernandez.dev"><img src="https://img.shields.io/badge/🚪 Firewall-Cloudflare-orange.svg" alt="cloudflare"/></a>
+  <a href="https://albert-tb.sentry.io/projects/website/?project=4507794284347392&statsPeriod=14d"><img src="https://img.shields.io/badge/🐛 Error Tracking-Sentry-purple.svg" alt="cloudflare"/></a>
+  <a href="https://vitest.dev/"><img src="https://img.shields.io/badge/🧪 Test-Vitest-green.svg" alt="swc"/></a>
+</p>
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

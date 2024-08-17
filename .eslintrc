@@ -17,6 +17,7 @@
     "plugin:node/recommended"
   ],
   "rules": {
+    "@typescript-eslint/no-misused-promises": "off",
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
     "unicorn/prefer-module": "off",
