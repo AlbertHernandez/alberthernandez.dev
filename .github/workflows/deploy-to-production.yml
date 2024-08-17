@@ -52,5 +52,5 @@ jobs:
         run: |
           git fetch origin production
           git checkout production
-          git merge main --allow-unrelated-histories -X theirs
+          git merge --ff-only main
           git push origin production
