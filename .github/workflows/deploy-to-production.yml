@@ -52,6 +52,5 @@ jobs:
         run: |
           git push origin --delete production || true
           git checkout -b production
-          git tag -d production || true
           git tag -a production -m "Release production"
           git push --force origin production
