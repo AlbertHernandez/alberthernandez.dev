@@ -3,6 +3,10 @@ name: '🚀 Deploy to production'
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   check-branch:
     name: Check branch 🌳
@@ -50,6 +54,7 @@ jobs:
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
       - name: Merge main into production 🚀
         run: |
-          git push origin --delete production || true
-          git checkout -b production
-          git push --force origin production
+          git fetch origin production || git checkout -b production
+          git checkout production
+          git merge main --allow-unrelated-histories --strategy-option theirs
+          git push origin production
