@@ -50,6 +50,9 @@ jobs:
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
       - name: Merge main into production 🚀
         run: |
-          git push origin --delete production || true
-          git checkout -b production
-          git push --force origin production
+          git checkout main
+          git pull origin main
+          git checkout production
+          git pull origin production
+          git merge main --strategy-option theirs
+          git push origin production
