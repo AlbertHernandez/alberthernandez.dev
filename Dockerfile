@@ -6,7 +6,7 @@ ARG NPM_TOKEN
 
 FROM base AS deps
 
-RUN apk update && apk add --no-cache libc6-compat dumb-init=1.2.5-r2
+RUN apk update && apk add --no-cache libc6-compat=1.2.4-r2 dumb-init=1.2.5-r2
 
 COPY package*.json .
 
