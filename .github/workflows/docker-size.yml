@@ -1,4 +1,4 @@
-name: 'Docker size'
+name: '🐳 Docker size'
 
 on:
   pull_request:
@@ -6,6 +6,7 @@ on:
 
 permissions:
   pull-requests: write
+  contents: read
 
 jobs:
   calculate-base:
