@@ -14,39 +14,68 @@
   <a href="https://vitest.dev/"><img src="https://img.shields.io/badge/🧪 Test-Vitest-green.svg" alt="swc"/></a>
 </p>
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 🧑‍💻 Developing
 
-## Getting Started
+First, you need to create the `.env` file, to do so you can execute:
 
-First, run the development server:
+```bash
+cp .env.example .env
+```
+
+Now, you need to configure the node environment, we recommend to use [nvm](https://github.com/nvm-sh/nvm) for it, but you can use another tool like [fnm](https://github.com/Schniz/fnm) or other:
+
+```bash
+nvm install
+nvm use
+```
+
+Then, install the dependencies:
+
+```bash
+npm ci
+```
+
+After it, start the app in development mode:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Finally, open [http://localhost:3000](http://localhost:3000) in the browser to see the app running.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✅ Testing
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+To run the tests of the app, you can run:
 
-## Learn More
+```bash
+npm run test
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 💅 Linting
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To run the linter, execute the following command:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+npm run lint
+```
 
-## Deploy on Vercel
+And for fixing lint issues automatically, you can execute:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run lint:fix
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 💼 Tools
+
+- [Vercel](https://vercel.com/) as cloud provider.
+- [Sentry](https://sentry.io/) for error tracking.
+- [Cloudflare](https://www.cloudflare.com/) for firewall and security.
+
+## 🚀 Deploys
+
+The deployment process is automatize using GitHub Actions and Vercel. First we should merge our changes to the `main` branch, this will trigger automatically the deployment to a preview environment where we can test the correct behaviour of the application. Once we know this is working fine, we can trigger the deployment to production by running the [deploy to production](https://github.com/AlbertHernandez/website/actions/workflows/deploy-to-production.yml) workflow.
+
+| 🌍 Environment | 🔗 URL                                                                                                 | ▶︎ Trigger                                                                                                                                |
+| -------------- | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| Development    | [website-3xok22epr-albert-hernandez-dev.vercel.app](website-3xok22epr-albert-hernandez-dev.vercel.app) | When there is a change on `main` branch                                                                                                    |
+| Production     | [https://alberthernandez.dev/](https://alberthernandez.dev/)                                           | Manually by running [deploy to production](https://github.com/AlbertHernandez/website/actions/workflows/deploy-to-production.yml) workflow |
