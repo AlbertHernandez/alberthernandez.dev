@@ -1,4 +1,4 @@
-<h1 align="center">⭐ Website ⭐</h1>
+<h1 align="center">⭐ Albert Hernandez Website ⭐</h1>
 
 <p align="center">
   Personal website of Albert Hernandez
@@ -15,6 +15,32 @@
 </p>
 
 ## 🧑‍💻 Developing
+
+There are two ways to develop in this project, using Docker or manually.
+
+### 🐳 Docker
+
+First, let's start by copying the `.env` file, to do so you can run:
+
+```bash
+cp .env.example .env
+```
+
+Now, you can start the app in development mode by running:
+
+```bash
+docker-compose up website
+```
+
+Also, if you want to start the app in production mode, you can run:
+
+```bash
+docker-compose up website-production
+```
+
+Now, you can open [http://localhost:3000](http://localhost:3000) in the browser to see the app running.
+
+### ✍️ Manual
 
 First, you need to create the `.env` file, to do so you can execute:
 

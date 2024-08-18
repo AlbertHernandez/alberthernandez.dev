@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  website-production:
+    container_name: website-production
+    restart: unless-stopped
+    env_file: .env
+    build:
+      context: .
+      args:
+        - PORT=${PORT:-3000}
+    ports:
+      - "${PORT:-3000}:${PORT:-3000}"
+      - "9229:9229"
+
+  website:
+    container_name: website
+    restart: unless-stopped
+    env_file: .env
+    build:
+      target: development
+      context: .
+    ports:
+      - "${PORT:-3000}:${PORT:-3000}"
+      - "9229:9229"
+    volumes:
+      - .:/app

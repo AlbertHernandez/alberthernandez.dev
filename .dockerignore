@@ -1,0 +1,11 @@
+*
+!/package.json
+!/package-lock.json
+!/tsconfig.json
+!/src
+!/public
+!/tailwind.config.ts
+!/postcss.config.mjs
+!/next.config.mjs
+!/next-env.d.ts
+!/sentry.*.config.ts
