@@ -37,20 +37,16 @@ FROM base AS production
 
 ENV NODE_ENV production
 ENV HOSTNAME "0.0.0.0"
-
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
-
-COPY --from=build /app/public ./public
+ENV USER=node
 
 RUN mkdir .next
-RUN chown nextjs:nodejs .next
 
-COPY --from=build --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=build --chown=nextjs:nodejs /app/.next/static ./.next/static
+COPY --from=deps /usr/bin/dumb-init /usr/bin/dumb-init
+COPY --from=build /app/public ./public
+COPY --from=build /app/.next/standalone ./
+COPY --from=build /app/.next/static ./.next/static
 
-USER nextjs
-
+USER $USER
 EXPOSE $PORT
 
-CMD ["node", "server.js"]
+CMD ["dumb-init", "node", "server.js"]
