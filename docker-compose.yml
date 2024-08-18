@@ -1,8 +1,8 @@
 version: "3.8"
 
 services:
-  website:
-    container_name: website
+  website-production:
+    container_name: website-production
     restart: unless-stopped
     env_file: .env
     build:
@@ -12,11 +12,16 @@ services:
     ports:
       - "${PORT:-3000}:${PORT:-3000}"
       - "9229:9229"
-    deploy:
-      resources:
-        limits:
-          cpus: "1"
-          memory: "512m"
-        reservations:
-          cpus: "0.25"
-          memory: "256m"
+
+  website:
+    container_name: website
+    restart: unless-stopped
+    env_file: .env
+    build:
+      target: development
+      context: .
+    ports:
+      - "${PORT:-3000}:${PORT:-3000}"
+      - "9229:9229"
+    volumes:
+      - .:/app

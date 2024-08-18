@@ -1,4 +1,25 @@
-FROM node:20-alpine AS base
+FROM node:20-alpine3.18 AS base
+
+ENV DIR /app
+WORKDIR $DIR
+ARG NPM_TOKEN
+
+FROM base AS development
+
+ENV NODE_ENV=development
+
+COPY package*.json .
+
+RUN echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ".npmrc" && \
+    npm ci && \
+    rm -f .npmrc
+
+COPY . .
+
+EXPOSE $PORT
+ENV HOSTNAME "0.0.0.0"
+
+CMD ["npm", "run", "dev"]
 
 # Install dependencies only when needed
 FROM base AS deps
