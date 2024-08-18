@@ -1,3 +1,7 @@
+<p align="center">
+  <a href="https://alberthernandez.dev/" target="blank"><img src="images/logo.png" alt="Albert Hernandez Website" width="512" /></a>
+</p>
+
 <h1 align="center">⭐ Albert Hernandez Website ⭐</h1>
 
 <p align="center">
