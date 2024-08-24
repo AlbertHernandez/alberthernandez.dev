@@ -7,7 +7,6 @@ import {
   Briefcase,
   Code,
   ExternalLink,
-  FileText,
   Lightbulb,
   Mail,
   Moon,
