@@ -85,7 +85,7 @@ const projects = [
       { name: "MongoDB", icon: "/cat.webp" },
       { name: "Socket.io", icon: "/cat.webp" },
     ],
-    github: "https://github.com/alberthernanded/task-management-app",
+    github: "https://github.com/alberthernandez/task-management-app",
     stars: 124,
   },
   {
@@ -99,7 +99,7 @@ const projects = [
       { name: "Stripe", icon: "/cat.webp" },
       { name: "PostgreSQL", icon: "/cat.webp" },
     ],
-    github: "https://github.com/alberthernanded/ecommerce-platform",
+    github: "https://github.com/alberthernandez/ecommerce-platform",
     stars: 89,
   },
   {
@@ -112,7 +112,7 @@ const projects = [
       { name: "Redux", icon: "/cat.webp" },
       { name: "OpenWeatherMap API", icon: "/cat.webp" },
     ],
-    github: "https://github.com/alberthernanded/weather-forecast-app",
+    github: "https://github.com/alberthernandez/weather-forecast-app",
     stars: 56,
   },
 ];
@@ -149,7 +149,7 @@ export default function Portfolio() {
             className="flex items-center space-x-2"
           >
             <span className="font-bold text-lg text-primary">
-              Albert Hernanded
+              Albert Hernández
             </span>
           </button>
           <nav className="hidden md:flex items-center space-x-4 text-sm font-medium">
@@ -172,7 +172,7 @@ export default function Portfolio() {
               Projects
             </button>
             <a
-              href="/albert_hernanded_resume.pdf"
+              href="/albert_hernandez_resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center hover:text-primary transition-colors"
@@ -205,7 +205,7 @@ export default function Portfolio() {
             <div className="md:w-1/3 flex justify-center items-center">
               <Image
                 src="/cat.webp"
-                alt="Albert Hernanded"
+                alt="Albert Hernández"
                 width={250}
                 height={250}
                 className="rounded-full"
@@ -213,7 +213,7 @@ export default function Portfolio() {
             </div>
             <div className="flex flex-col items-center md:items-start text-center md:text-left md:w-2/3">
               <h1 className="text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl lg:text-6xl mb-4 text-primary">
-                Albert Hernanded
+                Albert Hernández
               </h1>
               <p className="text-lg text-muted-foreground dark:text-gray-300 mb-6">
                 Software Engineer | Innovator | Problem Solver
@@ -227,28 +227,28 @@ export default function Portfolio() {
                   <Mail className="h-6 w-6" />
                 </Link>
                 <Link
-                  href="https://github.com/alberthernanded"
+                  href="https://github.com/alberthernandez"
                   aria-label="GitHub"
                   className="text-muted-foreground hover:text-primary"
                 >
                   <Github className="h-6 w-6" />
                 </Link>
                 <Link
-                  href="https://linkedin.com/in/alberthernanded"
+                  href="https://linkedin.com/in/alberthernandez"
                   aria-label="LinkedIn"
                   className="text-muted-foreground hover:text-primary"
                 >
                   <Linkedin className="h-6 w-6" />
                 </Link>
                 <Link
-                  href="https://twitter.com/alberthernanded"
+                  href="https://twitter.com/alberthernandez"
                   aria-label="Twitter"
                   className="text-muted-foreground hover:text-primary"
                 >
                   <Twitter className="h-6 w-6" />
                 </Link>
                 <Link
-                  href="https://youtube.com/alberthernanded"
+                  href="https://youtube.com/alberthernandez"
                   aria-label="YouTube"
                   className="text-muted-foreground hover:text-primary"
                 >
@@ -450,7 +450,7 @@ export default function Portfolio() {
       <footer className="py-8 md:py-12 mb-8">
         <div className="container mx-auto max-w-[980px] flex flex-col md:flex-row items-center justify-between">
           <p className="text-sm leading-loose text-muted-foreground dark:text-gray-400 mb-4 md:mb-0">
-            Built by Albert Hernanded. All rights reserved.
+            Built by Albert Hernández. All rights reserved.
           </p>
           <div className="flex space-x-4">
             <Link
@@ -461,28 +461,28 @@ export default function Portfolio() {
               <Mail className="h-5 w-5" />
             </Link>
             <Link
-              href="https://github.com/alberthernanded"
+              href="https://github.com/alberthernandez"
               aria-label="GitHub"
               className="text-muted-foreground hover:text-primary"
             >
               <Github className="h-5 w-5" />
             </Link>
             <Link
-              href="https://linkedin.com/in/alberthernanded"
+              href="https://linkedin.com/in/alberthernandez"
               aria-label="LinkedIn"
               className="text-muted-foreground hover:text-primary"
             >
               <Linkedin className="h-5 w-5" />
             </Link>
             <Link
-              href="https://twitter.com/alberthernanded"
+              href="https://twitter.com/alberthernandez"
               aria-label="Twitter"
               className="text-muted-foreground hover:text-primary"
             >
               <Twitter className="h-5 w-5" />
             </Link>
             <Link
-              href="https://youtube.com/alberthernanded"
+              href="https://youtube.com/alberthernandez"
               aria-label="YouTube"
               className="text-muted-foreground hover:text-primary"
             >
