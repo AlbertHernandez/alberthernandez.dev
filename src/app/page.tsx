@@ -201,7 +201,9 @@ export default function Portfolio() {
             </div>
             <div className="flex flex-col items-center md:items-start text-center md:text-left md:w-2/3">
               <h1 className="text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl lg:text-6xl mb-4 text-primary">
-                Albert Hernández
+                <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                  Albert Hernández
+                </span>
               </h1>
               <p className="text-lg text-muted-foreground dark:text-gray-300 mb-6">
                 Backend Software Engineer
@@ -302,8 +304,10 @@ export default function Portfolio() {
           className="py-12 md:py-24 lg:py-32 bg-gray-50 dark:bg-gray-800"
         >
           <div className="container mx-auto max-w-[980px]">
-            <h2 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl text-primary dark:text-primary-dark mb-12 text-left">
-              About Me
+            <h2 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl mb-12 text-left">
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                About Me
+              </span>
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-12">
               More than 5 years of experience as a Backend Software Engineer.
@@ -386,7 +390,9 @@ export default function Portfolio() {
         >
           <div className="mx-auto max-w-[980px] flex flex-col items-start gap-2">
             <h2 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl flex items-center mb-8 w-full justify-between text-primary">
-              Experience
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                Experience
+              </span>
               <Briefcase className="ml-2 h-8 w-8" />
             </h2>
             <div className="space-y-16">
@@ -453,7 +459,9 @@ export default function Portfolio() {
         >
           <div className="mx-auto max-w-[980px] flex flex-col items-start gap-2">
             <h2 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl flex items-center mb-8 w-full justify-between text-primary">
-              Projects
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                Projects
+              </span>
               <Code className="ml-2 h-8 w-8" />
             </h2>
             <div className="space-y-8 w-full">
