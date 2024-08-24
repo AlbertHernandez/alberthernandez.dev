@@ -429,7 +429,7 @@ export default function Portfolio() {
                     </a>
                     <ul className="list-disc list-inside mb-6 space-y-2">
                       {exp.points.map((point, i) => (
-                        <li key={i} className="text-sm leading-relaxed">
+                        <li key={i} className="text-sm leading-relaxed dark:text-gray-300">
                           {point}
                         </li>
                       ))}
