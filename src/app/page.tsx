@@ -305,6 +305,11 @@ export default function Portfolio() {
             <h2 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl text-primary dark:text-primary-dark mb-12 text-left">
               About Me
             </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300 mb-12">
+              More than 5 years of experience as a Backend Software Engineer.
+              Working with product teams focused on the end customer as well as
+              platform teams.
+            </p>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="flex items-start space-x-4">
                 <Code className="w-8 h-8 text-primary dark:text-primary-dark flex-shrink-0 mt-1" />
@@ -338,8 +343,8 @@ export default function Portfolio() {
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300">
                     I am passionate about working in product and platform teams,
-                    creating digital solutions that deliver value and positively
-                    impact end users.
+                    creating digital solutions that deliver value and impact end
+                    users.
                   </p>
                 </div>
               </div>
@@ -367,8 +372,7 @@ export default function Portfolio() {
                     >
                       YouTube
                     </a>
-                    , where I share all the knowledge I'm learning with the
-                    community.
+                    , where I combine my passion for teaching with programming.
                   </p>
                 </div>
               </div>
