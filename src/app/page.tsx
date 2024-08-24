@@ -170,15 +170,6 @@ export default function Portfolio() {
             >
               Projects
             </button>
-            <a
-              href="/albert_hernandez_resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center hover:text-primary"
-            >
-              <FileText className="w-4 h-4 mr-1" />
-              Resume
-            </a>
           </nav>
           <Button
             variant="ghost"
