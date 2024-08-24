@@ -24,23 +24,23 @@ import { Button } from "./components/button";
 const experiences = [
   {
     company: "TechCorp Inc.",
-    logo: "/techcorp-logo.png",
+    logo: "/cat.webp",
     role: "Senior Software Engineer",
     period: "Jan 2018 - Present",
     points: [
       "Led the development and implementation of a groundbreaking microservices-based architecture that revolutionized our platform's scalability and reliability. This ambitious project involved a complete overhaul of our existing monolithic system, requiring deep expertise in distributed systems design, cloud technologies, and agile methodologies. By leveraging cutting-edge technologies such as Kubernetes for container orchestration, Istio for service mesh, and Prometheus for monitoring, we were able to create a highly resilient and scalable infrastructure. The new architecture not only improved our system's performance, reducing downtime by an impressive 35%, but also significantly enhanced our ability to rapidly deploy new features and updates. This transformation allowed us to handle a 300% increase in user load without any degradation in performance, positioning us as a leader in our industry. Additionally, the modular nature of the microservices architecture enabled our development teams to work more efficiently, fostering innovation and reducing time-to-market for new features. The success of this project has become a case study within the company, showcasing the power of modern software architecture in driving business growth and technological advancement.",
     ],
     technologies: [
-      { name: "React", icon: "/react-icon.svg" },
-      { name: "Node.js", icon: "/nodejs-icon.svg" },
-      { name: "AWS", icon: "/aws-icon.svg" },
-      { name: "Docker", icon: "/docker-icon.svg" },
-      { name: "Kubernetes", icon: "/kubernetes-icon.svg" },
+      { name: "React", icon: "/cat.webp" },
+      { name: "Node.js", icon: "/cat.webp" },
+      { name: "AWS", icon: "/cat.webp" },
+      { name: "Docker", icon: "/cat.webp" },
+      { name: "Kubernetes", icon: "/cat.webp" },
     ],
   },
   {
     company: "InnoSoft Solutions",
-    logo: "/innosoft-logo.png",
+    logo: "/cat.webp",
     role: "Software Developer",
     period: "Mar 2015 - Dec 2017",
     points: [
@@ -49,15 +49,15 @@ const experiences = [
       "Optimized database queries, resulting in a 30% improvement in application performance.",
     ],
     technologies: [
-      { name: "Angular", icon: "/angular-icon.svg" },
-      { name: "Python", icon: "/python-icon.svg" },
-      { name: "PostgreSQL", icon: "/postgresql-icon.svg" },
-      { name: "Redis", icon: "/redis-icon.svg" },
+      { name: "Angular", icon: "/cat.webp" },
+      { name: "Python", icon: "/cat.webp" },
+      { name: "PostgreSQL", icon: "/cat.webp" },
+      { name: "Redis", icon: "/cat.webp" },
     ],
   },
   {
     company: "StartUp Innovations",
-    logo: "/startup-logo.png",
+    logo: "/cat.webp",
     role: "Junior Developer",
     period: "Jun 2013 - Feb 2015",
     points: [
@@ -66,9 +66,9 @@ const experiences = [
       "Contributed to mobile app projects, gaining experience in cross-platform development.",
     ],
     technologies: [
-      { name: "JavaScript", icon: "/javascript-icon.svg" },
-      { name: "React Native", icon: "/react-native-icon.svg" },
-      { name: "Firebase", icon: "/firebase-icon.svg" },
+      { name: "JavaScript", icon: "/cat.webp" },
+      { name: "React Native", icon: "/cat.webp" },
+      { name: "Firebase", icon: "/cat.webp" },
     ],
   },
 ];
@@ -76,41 +76,41 @@ const experiences = [
 const projects = [
   {
     title: "Task Management App",
-    icon: "/task-management-icon.svg",
+    icon: "/cat.webp",
     description:
       "A full-stack application for managing tasks and projects, featuring real-time updates and team collaboration tools.",
     technologies: [
-      { name: "React", icon: "/react-icon.svg" },
-      { name: "Node.js", icon: "/nodejs-icon.svg" },
-      { name: "MongoDB", icon: "/mongodb-icon.svg" },
-      { name: "Socket.io", icon: "/socketio-icon.svg" },
+      { name: "React", icon: "/cat.webp" },
+      { name: "Node.js", icon: "/cat.webp" },
+      { name: "MongoDB", icon: "/cat.webp" },
+      { name: "Socket.io", icon: "/cat.webp" },
     ],
     github: "https://github.com/alberthernanded/task-management-app",
     stars: 124,
   },
   {
     title: "E-commerce Platform",
-    icon: "/ecommerce-icon.svg",
+    icon: "/cat.webp",
     description:
       "A scalable e-commerce solution with features like product management, user authentication, and payment integration.",
     technologies: [
-      { name: "Next.js", icon: "/nextjs-icon.svg" },
-      { name: "TypeScript", icon: "/typescript-icon.svg" },
-      { name: "Stripe", icon: "/stripe-icon.svg" },
-      { name: "PostgreSQL", icon: "/postgresql-icon.svg" },
+      { name: "Next.js", icon: "/cat.webp" },
+      { name: "TypeScript", icon: "/cat.webp" },
+      { name: "Stripe", icon: "/cat.webp" },
+      { name: "PostgreSQL", icon: "/cat.webp" },
     ],
     github: "https://github.com/alberthernanded/ecommerce-platform",
     stars: 89,
   },
   {
     title: "Weather Forecast App",
-    icon: "/weather-icon.svg",
+    icon: "/cat.webp",
     description:
       "A mobile application providing accurate weather forecasts using geolocation and integrating with a weather API.",
     technologies: [
-      { name: "React Native", icon: "/react-native-icon.svg" },
-      { name: "Redux", icon: "/redux-icon.svg" },
-      { name: "OpenWeatherMap API", icon: "/openweathermap-icon.svg" },
+      { name: "React Native", icon: "/cat.webp" },
+      { name: "Redux", icon: "/cat.webp" },
+      { name: "OpenWeatherMap API", icon: "/cat.webp" },
     ],
     github: "https://github.com/alberthernanded/weather-forecast-app",
     stars: 56,
@@ -204,7 +204,7 @@ export default function Portfolio() {
           <div className="mx-auto max-w-[980px] flex flex-col md:flex-row items-center justify-center gap-8">
             <div className="md:w-1/3 flex justify-center items-center">
               <Image
-                src="/placeholder.svg?height=250&width=250"
+                src="/cat.webp"
                 alt="Albert Hernanded"
                 width={250}
                 height={250}
