@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { motion } from "framer-motion";
 import {
   Briefcase,
   Code,
@@ -158,19 +157,19 @@ export default function Portfolio() {
           <nav className="hidden md:flex items-center space-x-4 text-sm font-medium">
             <button
               onClick={() => scrollToSection("about-me")}
-              className="hover:text-primary transition-colors"
+              className="hover:text-primary"
             >
               About Me
             </button>
             <button
               onClick={() => scrollToSection("experience")}
-              className="hover:text-primary transition-colors"
+              className="hover:text-primary"
             >
               Experience
             </button>
             <button
               onClick={() => scrollToSection("projects")}
-              className="hover:text-primary transition-colors"
+              className="hover:text-primary"
             >
               Projects
             </button>
@@ -178,7 +177,7 @@ export default function Portfolio() {
               href="/albert_hernandez_resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center hover:text-primary transition-colors"
+              className="flex items-center hover:text-primary"
             >
               <FileText className="w-4 h-4 mr-1" />
               Resume
