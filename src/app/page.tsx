@@ -25,6 +25,7 @@ const experiences = [
     logo: "/edpuzzle.webp",
     role: "Senior Software Engineer",
     period: "May 2024 - Present",
+    startDate: "2024-05-01",
     website: "https://edpuzzle.com",
     points: [
       "Develop an education platform used by millions of teachers and students worldwide, featuring high-performance systems with over 300 million requests per day.",
@@ -48,6 +49,8 @@ const experiences = [
     logo: "/coverwallet.webp",
     role: "Senior Software Engineer",
     period: "Feb 2019 - May 2024",
+    startDate: "2019-02-01",
+    endDate: "2024-05-01",
     website: "https://www.coverwallet.com/",
     points: [
       "Create internal libraries, making them independent of any specific framework so that all microservices in the platform could utilize them.",
@@ -137,7 +140,42 @@ export default function Portfolio() {
     }
   };
 
-  if (!mounted) return;
+  const calculateDuration = (startDate, endDate) => {
+    // Parse the start and end dates
+    const start = new Date(startDate);
+    const end = endDate ? new Date(endDate) : new Date();
+
+    // Calculate the difference in years and months
+    let years = end.getFullYear() - start.getFullYear();
+    let months = end.getMonth() - start.getMonth();
+
+    // Adjust for negative months
+    if (months < 0) {
+      years--;
+      months += 12;
+    }
+
+    // Handle cases where the start day is after the end day in the same month
+    if (start.getDate() > end.getDate()) {
+      if (months === 0) {
+        years--;
+        months = 11;
+      } else {
+        months--;
+      }
+    }
+
+    // Format the result
+    if (years === 0) {
+      return `${months} month${months === 1 ? "" : "s"}`;
+    } else if (months === 0) {
+      return `${years} year${years === 1 ? "" : "s"}`;
+    } else {
+      return `${years} year${years === 1 ? "" : "s"} ${months} month${months === 1 ? "" : "s"}`;
+    }
+  };
+
+  if (!mounted) return null;
 
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground dark:bg-gray-900 dark:text-gray-100">
@@ -413,11 +451,16 @@ export default function Portfolio() {
                     />
                   </div>
                   <div className="ml-6 flex-grow">
-                    <div className="flex justify-between items-center mb-2">
+                    <div className="flex justify-between items-start mb-2">
                       <h3 className="text-xl font-bold">{exp.role}</h3>
-                      <div className="text-sm text-muted-foreground dark:text-gray-400 flex items-center">
-                        <CalendarDays className="w-4 h-4 mr-1" />
-                        {exp.period}
+                      <div className="text-sm text-muted-foreground dark:text-gray-400">
+                        <div className="flex items-center justify-end">
+                          <CalendarDays className="w-4 h-4 mr-1" />
+                          <span>{exp.period}</span>
+                        </div>
+                        <div className="text-right mt-1">
+                          {calculateDuration(exp.startDate, exp.endDate)}
+                        </div>
                       </div>
                     </div>
                     <a
