@@ -24,6 +24,7 @@ const experiences = [
     logo: "/cat.webp",
     role: "Senior Software Engineer",
     period: "Jan 2018 - Present",
+    website: "https://techcorp.example.com",
     points: [
       "Led the development and implementation of a groundbreaking microservices-based architecture that revolutionized our platform's scalability and reliability. This ambitious project involved a complete overhaul of our existing monolithic system, requiring deep expertise in distributed systems design, cloud technologies, and agile methodologies. By leveraging cutting-edge technologies such as Kubernetes for container orchestration, Istio for service mesh, and Prometheus for monitoring, we were able to create a highly resilient and scalable infrastructure. The new architecture not only improved our system's performance, reducing downtime by an impressive 35%, but also significantly enhanced our ability to rapidly deploy new features and updates. This transformation allowed us to handle a 300% increase in user load without any degradation in performance, positioning us as a leader in our industry. Additionally, the modular nature of the microservices architecture enabled our development teams to work more efficiently, fostering innovation and reducing time-to-market for new features. The success of this project has become a case study within the company, showcasing the power of modern software architecture in driving business growth and technological advancement.",
     ],
@@ -40,6 +41,7 @@ const experiences = [
     logo: "/cat.webp",
     role: "Software Developer",
     period: "Mar 2015 - Dec 2017",
+    website: "https://techcorp.example.com",
     points: [
       "Developed and maintained web applications for a diverse client base, focusing on responsive design and cross-browser compatibility.",
       "Collaborated with cross-functional teams to deliver high-quality software solutions on time and within budget.",
@@ -57,6 +59,7 @@ const experiences = [
     logo: "/cat.webp",
     role: "Junior Developer",
     period: "Jun 2013 - Feb 2015",
+    website: "https://techcorp.example.com",
     points: [
       "Assisted in front-end development for various web and mobile applications.",
       "Participated in code reviews, improving code quality and learning best practices.",
@@ -417,9 +420,15 @@ export default function Portfolio() {
                         {exp.period}
                       </div>
                     </div>
-                    <p className="text-lg text-muted-foreground dark:text-gray-400 mb-4">
+                    <a
+                      href={exp.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-lg text-primary hover:underline mb-4 group"
+                    >
                       {exp.company}
-                    </p>
+                      <ExternalLink className="ml-1 h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </a>
                     <ul className="list-disc list-inside mb-6 space-y-4">
                       {exp.points.map((point, i) => (
                         <li key={i} className="text-sm leading-relaxed">
