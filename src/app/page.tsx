@@ -9,12 +9,14 @@ import {
   ExternalLink,
   FileText,
   Github,
+  Lightbulb,
   Linkedin,
   Mail,
   Moon,
   Star,
   Sun,
   Twitter,
+  Users,
   Youtube,
 } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -261,53 +263,69 @@ export default function Portfolio() {
 
         <section
           id="about-me"
-          className="container py-12 md:py-24 lg:py-32 bg-muted/50 dark:bg-gray-800/50 mx-auto"
+          className="py-12 md:py-24 lg:py-32 bg-gray-50 dark:bg-gray-800"
         >
-          <div className="mx-auto max-w-[980px]">
-            <div className="flex justify-between items-center mb-8">
-              <h2 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl text-primary">
-                About Me
-              </h2>
-              <Code className="h-8 w-8 text-primary" aria-hidden="true" />
-            </div>
-            <div className="space-y-6 text-left">
-              <p className="text-lg leading-relaxed">
-                I'm a Software Engineer{" "}
-                <span role="img" aria-label="rocket">
-                  🚀
-                </span>{" "}
-                from Spain{" "}
-                <span role="img" aria-label="flag of Spain">
-                  🇪🇸
-                </span>
-                , currently working{" "}
-                <span role="img" aria-label="man technologist">
-                  👨🏻‍💻
-                </span>{" "}
-                at Coverwallet, an Aon Company. My passion lies in creating
-                innovative solutions and tackling complex problems in the world
-                of technology.
-              </p>
-              <p className="text-lg leading-relaxed">
-                As a passionate learner who loves code{" "}
-                <span role="img" aria-label="coffee">
-                  ☕︎
-                </span>
-                , you'll always find me exploring new technologies and staying
-                up-to-date with the latest industry trends. I believe in
-                continuous improvement and pushing the boundaries of what's
-                possible in software development.
-              </p>
-              <p className="text-lg leading-relaxed">
-                I've also started a YouTube channel where I create tutorials
-                about Web Technologies like Node.js and JavaScript. I love
-                sharing knowledge and believe it's the best way to grow{" "}
-                <span role="img" aria-label="rocket">
-                  🚀
-                </span>
-                . Through my tutorials, I aim to help other developers learn and
-                advance in their careers.
-              </p>
+          <div className="container mx-auto max-w-[980px]">
+            <h2 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl text-primary dark:text-primary-dark mb-12 text-left">
+              About Me
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="flex items-start space-x-4">
+                <Code className="w-8 h-8 text-primary dark:text-primary-dark flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-bold mb-2">
+                    Web Development Specialist
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    I am a Software Engineer specializing in Web Development.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <Users className="w-8 h-8 text-primary dark:text-primary-dark flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-bold mb-2">
+                    Cross-functional Collaborator
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    With experience in frontend, backend, and SRE teams, I enjoy
+                    collaborating with cross-functional teams to bring
+                    innovative ideas to life.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <Lightbulb className="w-8 h-8 text-primary dark:text-primary-dark flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-bold mb-2">
+                    Value-Driven Solutions
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    I am passionate about working in product and platform teams,
+                    creating digital solutions that deliver value and positively
+                    impact end users.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <Youtube className="w-8 h-8 text-primary dark:text-primary-dark flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Content Creator</h3>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    In my free time, I create programming videos on{" "}
+                    <a
+                      href="https://www.youtube.com/@AlbertHernandez"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary dark:text-primary-dark hover:underline"
+                    >
+                      YouTube
+                    </a>
+                    , where I share all the knowledge I'm learning with the
+                    community.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
