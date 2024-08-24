@@ -19,6 +19,7 @@ import {
   Users,
   Youtube,
 } from "lucide-react";
+import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 import { Button } from "./components/button";
@@ -120,19 +121,17 @@ const projects = [
 ];
 
 export default function Portfolio() {
-  const [darkMode, setDarkMode] = useState(false);
+  const { setTheme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    const isDarkMode = localStorage.getItem("darkMode") === "true";
-    setDarkMode(isDarkMode);
-    document.documentElement.classList.toggle("dark", isDarkMode);
-  }, []);
+  useEffect(() => setMounted(true), []);
 
   const toggleDarkMode = () => {
-    const newDarkMode = !darkMode;
-    setDarkMode(newDarkMode);
-    localStorage.setItem("darkMode", newDarkMode.toString());
-    document.documentElement.classList.toggle("dark", newDarkMode);
+    if (resolvedTheme === "dark") {
+      setTheme("light");
+    } else {
+      setTheme("dark");
+    }
   };
 
   const scrollToSection = (sectionId: string) => {
@@ -141,6 +140,8 @@ export default function Portfolio() {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  if (!mounted) return;
 
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground dark:bg-gray-900 dark:text-gray-100">
@@ -189,7 +190,7 @@ export default function Portfolio() {
             onClick={toggleDarkMode}
             className="rounded-full group hover:bg-transparent"
           >
-            {darkMode ? (
+            {resolvedTheme === "dark" ? (
               <Sun className="h-5 w-5 transition-transform duration-200 ease-in-out group-hover:rotate-12" />
             ) : (
               <Moon className="h-5 w-5 transition-transform duration-200 ease-in-out group-hover:rotate-12" />
