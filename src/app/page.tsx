@@ -5,6 +5,7 @@ import Link from "next/link";
 
 import {
   Briefcase,
+  CalendarDays,
   Code,
   ExternalLink,
   Lightbulb,
@@ -414,7 +415,8 @@ export default function Portfolio() {
                   <div className="ml-6 flex-grow">
                     <div className="flex justify-between items-center mb-2">
                       <h3 className="text-xl font-bold">{exp.role}</h3>
-                      <div className="text-sm text-muted-foreground dark:text-gray-400">
+                      <div className="text-sm text-muted-foreground dark:text-gray-400 flex items-center">
+                        <CalendarDays className="w-4 h-4 mr-1" />
                         {exp.period}
                       </div>
                     </div>
@@ -429,7 +431,10 @@ export default function Portfolio() {
                     </a>
                     <ul className="list-disc list-inside mb-6 space-y-2">
                       {exp.points.map((point, i) => (
-                        <li key={i} className="text-sm leading-relaxed dark:text-gray-300">
+                        <li
+                          key={i}
+                          className="text-sm leading-relaxed dark:text-gray-300"
+                        >
                           {point}
                         </li>
                       ))}
