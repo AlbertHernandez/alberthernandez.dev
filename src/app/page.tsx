@@ -191,7 +191,10 @@ export default function Portfolio() {
       </header>
 
       <main className="flex-1 pt-24">
-        <section id="about" className="container py-8 md:py-12 lg:py-24">
+        <section
+          id="about"
+          className="container py-8 md:py-12 lg:py-24 mx-auto"
+        >
           <div className="mx-auto max-w-[980px] flex flex-col md:flex-row items-center justify-center gap-8">
             <div className="md:w-1/3 flex justify-center items-center">
               <Image
@@ -252,7 +255,7 @@ export default function Portfolio() {
 
         <section
           id="about-me"
-          className="container py-12 md:py-24 lg:py-32 bg-muted/50 dark:bg-gray-800/50"
+          className="container py-12 md:py-24 lg:py-32 bg-muted/50 dark:bg-gray-800/50 mx-auto"
         >
           <div className="mx-auto max-w-[980px]">
             <div className="flex justify-between items-center mb-8">
@@ -303,7 +306,10 @@ export default function Portfolio() {
           </div>
         </section>
 
-        <section id="experience" className="container py-8 md:py-12 lg:py-24">
+        <section
+          id="experience"
+          className="container py-8 md:py-12 lg:py-24 mx-auto"
+        >
           <div className="mx-auto max-w-[980px] flex flex-col items-start gap-2">
             <h2 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl flex items-center mb-8 w-full justify-between text-primary">
               Experience
@@ -367,7 +373,10 @@ export default function Portfolio() {
           </div>
         </section>
 
-        <section id="projects" className="container py-8 md:py-12 lg:py-24">
+        <section
+          id="projects"
+          className="container py-8 md:py-12 lg:py-24 mx-auto"
+        >
           <div className="mx-auto max-w-[980px] flex flex-col items-start gap-2">
             <h2 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl flex items-center mb-8 w-full justify-between text-primary">
               Projects
