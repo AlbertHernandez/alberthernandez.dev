@@ -193,7 +193,7 @@ export default function Portfolio() {
           <div className="mx-auto max-w-[980px] flex flex-col md:flex-row items-center justify-center gap-8">
             <div className="md:w-1/3 flex justify-center items-center">
               <Image
-                src="/cat.webp"
+                src="/perfil.webp"
                 alt="Albert Hernández"
                 width={250}
                 height={250}
