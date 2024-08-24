@@ -21,7 +21,7 @@ import { Button } from "./components/button";
 const experiences = [
   {
     company: "Edpuzzle",
-    logo: "/cat.webp",
+    logo: "/edpuzzle.webp",
     role: "Senior Software Engineer",
     period: "May 2024 - Present",
     website: "https://edpuzzle.com",
@@ -44,7 +44,7 @@ const experiences = [
   },
   {
     company: "CoverWallet, an Aon company",
-    logo: "/cat.webp",
+    logo: "/coverwallet.webp",
     role: "Senior Software Engineer",
     period: "Feb 2019 - May 2024",
     website: "https://www.coverwallet.com/",
