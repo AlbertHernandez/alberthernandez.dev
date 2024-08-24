@@ -460,10 +460,7 @@ export default function Portfolio() {
           </div>
         </section>
 
-        <section
-          id="projects"
-          className="container py-8 md:py-12 lg:py-24 mx-auto"
-        >
+        <section id="projects" className="container mx-auto">
           <div className="mx-auto max-w-[980px] flex flex-col items-start gap-2">
             <h2 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl flex items-center mb-8 w-full justify-between text-primary">
               <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
