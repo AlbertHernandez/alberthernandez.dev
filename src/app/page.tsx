@@ -165,6 +165,12 @@ export default function Portfolio() {
             >
               Experience
             </button>
+            <button
+              onClick={() => scrollToSection("projects")}
+              className="hover:text-primary transition-colors"
+            >
+              Projects
+            </button>
             <a
               href="/albert_hernanded_resume.pdf"
               target="_blank"
