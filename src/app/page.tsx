@@ -24,11 +24,6 @@ import { useEffect, useState } from "react";
 
 import { Button } from "./components/button";
 
-const headerVariants = {
-  hidden: { opacity: 0, y: -50, x: "-50%" },
-  visible: { opacity: 1, y: 0, x: "-50%" },
-};
-
 const experiences = [
   {
     company: "TechCorp Inc.",
@@ -150,21 +145,15 @@ export default function Portfolio() {
 
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground dark:bg-gray-900 dark:text-gray-100">
-      <motion.header
-        className="fixed top-4 left-1/2 z-50 rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-lg"
-        initial="hidden"
-        animate="visible"
-        variants={headerVariants}
-        transition={{duration: 0.8, ease: "easeOut"}}
-      >
+      <header className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-lg">
         <div className="inline-flex h-14 items-center justify-between px-6 space-x-4">
           <button
             onClick={() => scrollToSection("about")}
             className="flex items-center space-x-2"
           >
-          <span className="font-bold text-lg text-primary">
-            Albert Hernández
-          </span>
+            <span className="font-bold text-lg text-primary">
+              Albert Hernández
+            </span>
           </button>
           <nav className="hidden md:flex items-center space-x-4 text-sm font-medium">
             <button
@@ -191,7 +180,7 @@ export default function Portfolio() {
               rel="noopener noreferrer"
               className="flex items-center hover:text-primary transition-colors"
             >
-              <FileText className="w-4 h-4 mr-1"/>
+              <FileText className="w-4 h-4 mr-1" />
               Resume
             </a>
           </nav>
@@ -202,13 +191,13 @@ export default function Portfolio() {
             className="rounded-full group hover:bg-transparent"
           >
             {darkMode ? (
-              <Sun className="h-5 w-5 transition-transform duration-200 ease-in-out group-hover:rotate-12"/>
+              <Sun className="h-5 w-5 transition-transform duration-200 ease-in-out group-hover:rotate-12" />
             ) : (
-              <Moon className="h-5 w-5 transition-transform duration-200 ease-in-out group-hover:rotate-12"/>
+              <Moon className="h-5 w-5 transition-transform duration-200 ease-in-out group-hover:rotate-12" />
             )}
           </Button>
         </div>
-      </motion.header>
+      </header>
 
       <main className="flex-1 pt-24">
         <section
@@ -226,8 +215,7 @@ export default function Portfolio() {
               />
             </div>
             <div className="flex flex-col items-center md:items-start text-center md:text-left md:w-2/3">
-              <h1
-                className="text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl lg:text-6xl mb-4 text-primary">
+              <h1 className="text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl lg:text-6xl mb-4 text-primary">
                 Albert Hernández
               </h1>
               <p className="text-lg text-muted-foreground dark:text-gray-300 mb-6">
@@ -239,35 +227,35 @@ export default function Portfolio() {
                   aria-label="Email"
                   className="text-muted-foreground hover:text-primary"
                 >
-                  <Mail className="h-6 w-6"/>
+                  <Mail className="h-6 w-6" />
                 </Link>
                 <Link
                   href="https://github.com/alberthernandez"
                   aria-label="GitHub"
                   className="text-muted-foreground hover:text-primary"
                 >
-                  <Github className="h-6 w-6"/>
+                  <Github className="h-6 w-6" />
                 </Link>
                 <Link
                   href="https://linkedin.com/in/alberthernandez"
                   aria-label="LinkedIn"
                   className="text-muted-foreground hover:text-primary"
                 >
-                  <Linkedin className="h-6 w-6"/>
+                  <Linkedin className="h-6 w-6" />
                 </Link>
                 <Link
                   href="https://twitter.com/alberthernandez"
                   aria-label="Twitter"
                   className="text-muted-foreground hover:text-primary"
                 >
-                  <Twitter className="h-6 w-6"/>
+                  <Twitter className="h-6 w-6" />
                 </Link>
                 <Link
                   href="https://youtube.com/alberthernandez"
                   aria-label="YouTube"
                   className="text-muted-foreground hover:text-primary"
                 >
-                  <Youtube className="h-6 w-6"/>
+                  <Youtube className="h-6 w-6" />
                 </Link>
               </div>
             </div>
@@ -279,13 +267,12 @@ export default function Portfolio() {
           className="py-12 md:py-24 lg:py-32 bg-gray-50 dark:bg-gray-800"
         >
           <div className="container mx-auto max-w-[980px]">
-            <h2
-              className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl text-primary dark:text-primary-dark mb-12 text-left animate-fade-in-up">
+            <h2 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl text-primary dark:text-primary-dark mb-12 text-left">
               About Me
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="flex items-start space-x-4 animate-fade-in-up">
-                <Code className="w-8 h-8 text-primary dark:text-primary-dark flex-shrink-0 mt-1"/>
+              <div className="flex items-start space-x-4">
+                <Code className="w-8 h-8 text-primary dark:text-primary-dark flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-bold mb-2">
                     Web Development Specialist
@@ -295,8 +282,8 @@ export default function Portfolio() {
                   </p>
                 </div>
               </div>
-              <div className="flex items-start space-x-4 animate-fade-in-up">
-                <Users className="w-8 h-8 text-primary dark:text-primary-dark flex-shrink-0 mt-1"/>
+              <div className="flex items-start space-x-4">
+                <Users className="w-8 h-8 text-primary dark:text-primary-dark flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-bold mb-2">
                     Cross-functional Collaborator
@@ -308,8 +295,8 @@ export default function Portfolio() {
                   </p>
                 </div>
               </div>
-              <div className="flex items-start space-x-4 animate-fade-in-up">
-                <Lightbulb className="w-8 h-8 text-primary dark:text-primary-dark flex-shrink-0 mt-1"/>
+              <div className="flex items-start space-x-4">
+                <Lightbulb className="w-8 h-8 text-primary dark:text-primary-dark flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-bold mb-2">
                     Value-Driven Solutions
@@ -321,8 +308,8 @@ export default function Portfolio() {
                   </p>
                 </div>
               </div>
-              <div className="flex items-start space-x-4 animate-fade-in-up">
-                <Youtube className="w-8 h-8 text-primary dark:text-primary-dark flex-shrink-0 mt-1"/>
+              <div className="flex items-start space-x-4">
+                <Youtube className="w-8 h-8 text-primary dark:text-primary-dark flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-bold mb-2">Content Creator</h3>
                   <p className="text-gray-600 dark:text-gray-300">
@@ -349,19 +336,17 @@ export default function Portfolio() {
           className="container py-8 md:py-12 lg:py-24 mx-auto"
         >
           <div className="mx-auto max-w-[980px] flex flex-col items-start gap-2">
-            <h2
-              className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl flex items-center mb-8 w-full justify-between text-primary">
+            <h2 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl flex items-center mb-8 w-full justify-between text-primary">
               Experience
-              <Briefcase className="ml-2 h-8 w-8"/>
+              <Briefcase className="ml-2 h-8 w-8" />
             </h2>
             <div className="space-y-16">
               {experiences.map((exp, index) => (
                 <div key={exp.company} className="relative flex items-start">
                   {index !== experiences.length - 1 && (
-                    <div className="absolute top-0 left-6 h-[calc(100%+4rem)] w-px bg-gray-300 dark:bg-gray-700"/>
+                    <div className="absolute top-0 left-6 h-[calc(100%+4rem)] w-px bg-gray-300 dark:bg-gray-700" />
                   )}
-                  <div
-                    className="flex-shrink-0 w-12 h-12 rounded-full border-4 border-white dark:border-gray-800 bg-white dark:bg-gray-800 z-10">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full border-4 border-white dark:border-gray-800 bg-white dark:bg-gray-800 z-10">
                     <Image
                       src={exp.logo}
                       alt={`${exp.company} logo`}
@@ -418,10 +403,9 @@ export default function Portfolio() {
           className="container py-8 md:py-12 lg:py-24 mx-auto"
         >
           <div className="mx-auto max-w-[980px] flex flex-col items-start gap-2">
-            <h2
-              className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl flex items-center mb-8 w-full justify-between text-primary">
+            <h2 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl flex items-center mb-8 w-full justify-between text-primary">
               Projects
-              <Code className="ml-2 h-8 w-8"/>
+              <Code className="ml-2 h-8 w-8" />
             </h2>
             <div className="space-y-8 w-full">
               {projects.map(project => (
@@ -441,7 +425,7 @@ export default function Portfolio() {
                       <h3 className="text-2xl font-bold">{project.title}</h3>
                     </div>
                     <div className="flex items-center text-yellow-500">
-                      <Star className="w-5 h-5 mr-1 fill-current"/>
+                      <Star className="w-5 h-5 mr-1 fill-current" />
                       <span>{project.stars}</span>
                     </div>
                   </div>
@@ -471,9 +455,9 @@ export default function Portfolio() {
                     rel="noopener noreferrer"
                     className="flex items-center text-sm text-primary hover:underline"
                   >
-                    <Github className="w-4 h-4 mr-1"/>
+                    <Github className="w-4 h-4 mr-1" />
                     View on GitHub
-                    <ExternalLink className="w-3 h-3 ml-1"/>
+                    <ExternalLink className="w-3 h-3 ml-1" />
                   </a>
                 </div>
               ))}
@@ -493,35 +477,35 @@ export default function Portfolio() {
               aria-label="Email"
               className="text-muted-foreground hover:text-primary"
             >
-              <Mail className="h-5 w-5"/>
+              <Mail className="h-5 w-5" />
             </Link>
             <Link
               href="https://github.com/alberthernandez"
               aria-label="GitHub"
               className="text-muted-foreground hover:text-primary"
             >
-              <Github className="h-5 w-5"/>
+              <Github className="h-5 w-5" />
             </Link>
             <Link
               href="https://linkedin.com/in/alberthernandez"
               aria-label="LinkedIn"
               className="text-muted-foreground hover:text-primary"
             >
-              <Linkedin className="h-5 w-5"/>
+              <Linkedin className="h-5 w-5" />
             </Link>
             <Link
               href="https://twitter.com/alberthernandez"
               aria-label="Twitter"
               className="text-muted-foreground hover:text-primary"
             >
-              <Twitter className="h-5 w-5"/>
+              <Twitter className="h-5 w-5" />
             </Link>
             <Link
               href="https://youtube.com/alberthernandez"
               aria-label="YouTube"
               className="text-muted-foreground hover:text-primary"
             >
-              <Youtube className="h-5 w-5"/>
+              <Youtube className="h-5 w-5" />
             </Link>
           </div>
         </div>
