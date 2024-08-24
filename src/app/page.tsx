@@ -20,55 +20,53 @@ import { Button } from "./components/button";
 
 const experiences = [
   {
-    company: "TechCorp Inc.",
+    company: "Edpuzzle",
     logo: "/cat.webp",
     role: "Senior Software Engineer",
-    period: "Jan 2018 - Present",
-    website: "https://techcorp.example.com",
+    period: "May 2024 - Present",
+    website: "https://edpuzzle.com",
     points: [
-      "Led the development and implementation of a groundbreaking microservices-based architecture that revolutionized our platform's scalability and reliability. This ambitious project involved a complete overhaul of our existing monolithic system, requiring deep expertise in distributed systems design, cloud technologies, and agile methodologies. By leveraging cutting-edge technologies such as Kubernetes for container orchestration, Istio for service mesh, and Prometheus for monitoring, we were able to create a highly resilient and scalable infrastructure. The new architecture not only improved our system's performance, reducing downtime by an impressive 35%, but also significantly enhanced our ability to rapidly deploy new features and updates. This transformation allowed us to handle a 300% increase in user load without any degradation in performance, positioning us as a leader in our industry. Additionally, the modular nature of the microservices architecture enabled our development teams to work more efficiently, fostering innovation and reducing time-to-market for new features. The success of this project has become a case study within the company, showcasing the power of modern software architecture in driving business growth and technological advancement.",
-    ],
-    technologies: [
-      { name: "React", icon: "/cat.webp" },
-      { name: "Node.js", icon: "/cat.webp" },
-      { name: "AWS", icon: "/cat.webp" },
-      { name: "Docker", icon: "/cat.webp" },
-      { name: "Kubernetes", icon: "/cat.webp" },
-    ],
-  },
-  {
-    company: "InnoSoft Solutions",
-    logo: "/cat.webp",
-    role: "Software Developer",
-    period: "Mar 2015 - Dec 2017",
-    website: "https://techcorp.example.com",
-    points: [
-      "Developed and maintained web applications for a diverse client base, focusing on responsive design and cross-browser compatibility.",
-      "Collaborated with cross-functional teams to deliver high-quality software solutions on time and within budget.",
-      "Optimized database queries, resulting in a 30% improvement in application performance.",
-    ],
-    technologies: [
-      { name: "Angular", icon: "/cat.webp" },
-      { name: "Python", icon: "/cat.webp" },
-      { name: "PostgreSQL", icon: "/cat.webp" },
-      { name: "Redis", icon: "/cat.webp" },
-    ],
-  },
-  {
-    company: "StartUp Innovations",
-    logo: "/cat.webp",
-    role: "Junior Developer",
-    period: "Jun 2013 - Feb 2015",
-    website: "https://techcorp.example.com",
-    points: [
-      "Assisted in front-end development for various web and mobile applications.",
-      "Participated in code reviews, improving code quality and learning best practices.",
-      "Contributed to mobile app projects, gaining experience in cross-platform development.",
+      "Develop an education platform used by millions of teachers and students worldwide, featuring high-performance systems with over 300 million requests per day.",
+      "Create search and recommendation tools enabling teachers to discover new materials for their students according to their profiles and preferences.",
+      "Ensure code quality and reliability through testing, using design patterns such as CQRS, event-driven architecture, and feature flags. Follow hexagonal architecture and Domain-Driven Design (DDD) principles, and employ Continuous Integration/Continuous Deployment (CI/CD) practices with daily deployments.",
     ],
     technologies: [
       { name: "JavaScript", icon: "/cat.webp" },
-      { name: "React Native", icon: "/cat.webp" },
-      { name: "Firebase", icon: "/cat.webp" },
+      { name: "React", icon: "/cat.webp" },
+      { name: "Node.js", icon: "/cat.webp" },
+      { name: "Jest", icon: "/cat.webp" },
+      { name: "MongoDB", icon: "/cat.webp" },
+      { name: "Redis", icon: "/cat.webp" },
+      { name: "Docker", icon: "/cat.webp" },
+      { name: "Github Actions", icon: "/cat.webp" },
+      { name: "Datadog", icon: "/cat.webp" },
+    ],
+  },
+  {
+    company: "CoverWallet, an Aon company",
+    logo: "/cat.webp",
+    role: "Senior Software Engineer",
+    period: "Feb 2019 - May 2024",
+    website: "https://www.coverwallet.com/",
+    points: [
+      "Create internal libraries, making them independent of any specific framework so that all microservices in the platform could utilize them.",
+      "Integrate Feature Flag systems, Observability, Cloud Native Development, and Trunk-based development practices, which helped teams deliver software with a greater quality and reliability.",
+      "Optimize import and export processes by designing ETLs to reduce manual work for agents, achieving over 80% time savings. Create of a backoffice to visualize, execute, and monitor them in real-time.",
+      "Design and implement bridges between cloud systems like GCP and Salesforce, enabling real-time communication via events between both solutions.",
+      "Enhanced a public API to enable external developers to interact with the platform easily.",
+      "Develop matching systems between agents and end customers to allocate the most suitable agent based on customer profiles.",
+    ],
+    technologies: [
+      { name: "TypeScript", icon: "/cat.webp" },
+      { name: "Node.js", icon: "/cat.webp" },
+      { name: "NestJS", icon: "/cat.webp" },
+      { name: "Jest", icon: "/cat.webp" },
+      { name: "MongoDB", icon: "/cat.webp" },
+      { name: "Redis", icon: "/cat.webp" },
+      { name: "Docker", icon: "/cat.webp" },
+      { name: "Kubernetes", icon: "/cat.webp" },
+      { name: "CircleCI", icon: "/cat.webp" },
+      { name: "Datadog", icon: "/cat.webp" },
     ],
   },
 ];
@@ -429,7 +427,7 @@ export default function Portfolio() {
                       {exp.company}
                       <ExternalLink className="ml-1 h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                     </a>
-                    <ul className="list-disc list-inside mb-6 space-y-4">
+                    <ul className="list-disc list-inside mb-6 space-y-2">
                       {exp.points.map((point, i) => (
                         <li key={i} className="text-sm leading-relaxed">
                           {point}
