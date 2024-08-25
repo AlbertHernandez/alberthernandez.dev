@@ -1086,7 +1086,7 @@ export default function Portfolio() {
                   </div>
                 </div>
                 <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-4">
-                  Bachelor's Degree in Computer Science
+                  Bachelor&apos;s Degree in Computer Science
                 </p>
               </div>
             </div>
