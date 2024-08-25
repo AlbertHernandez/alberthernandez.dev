@@ -462,6 +462,13 @@ const projects = [
 export default function Portfolio() {
   const { setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    const timer = setTimeout(() => setVisible(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => setMounted(true), []);
 
@@ -519,32 +526,36 @@ export default function Portfolio() {
 
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground dark:bg-gray-900 dark:text-gray-100">
-      <header className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-lg">
+      <header
+        className={`fixed left-1/2 transform -translate-x-1/2 z-50 rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-lg transition-all duration-500 ease-in-out ${
+          visible ? "top-4 opacity-100" : "-top-full opacity-0"
+        }`}
+      >
         <div className="inline-flex h-14 items-center justify-between px-6 space-x-4">
           <button
             onClick={() => scrollToSection("about")}
             className="flex items-center space-x-2"
           >
-            <span className="font-bold text-primary dark:text-white transition-all duration-300 ease-in-out hover:scale-110">
+            <span className="font-bold text-lg text-primary duration-300 hover:scale-110">
               Albert Hernández
             </span>
           </button>
           <nav className="hidden md:flex items-center space-x-4 text-sm font-medium">
             <button
               onClick={() => scrollToSection("about-me")}
-              className="text-primary dark:text-white transition-all duration-300 ease-in-out hover:scale-110"
+              className="text-primary duration-300 hover:scale-110"
             >
               About Me
             </button>
             <button
               onClick={() => scrollToSection("experience")}
-              className="text-primary dark:text-white transition-all duration-300 ease-in-out hover:scale-110"
+              className="text-primary duration-300 hover:scale-110"
             >
               Experience
             </button>
             <button
               onClick={() => scrollToSection("projects")}
-              className="text-primary dark:text-white transition-all duration-300 ease-in-out hover:scale-110"
+              className="text-primary duration-300 hover:scale-110"
             >
               Projects
             </button>
@@ -556,14 +567,13 @@ export default function Portfolio() {
             className="rounded-full group hover:bg-transparent"
           >
             {resolvedTheme === "dark" ? (
-              <Sun className="h-5 w-5 transition-transform duration-200 ease-in-out group-hover:rotate-12" />
+              <Sun className="h-5 w-5 transition-transform duration-300 group-hover:rotate-12" />
             ) : (
-              <Moon className="h-5 w-5 transition-transform duration-200 ease-in-out group-hover:rotate-12" />
+              <Moon className="h-5 w-5 transition-transform duration-300 group-hover:rotate-12" />
             )}
           </Button>
         </div>
       </header>
-
       <main className="flex-1 pt-24">
         <section
           id="about"
