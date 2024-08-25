@@ -626,7 +626,7 @@ const experiences = [
 // ];
 
 export default function Portfolio() {
-  const {setTheme, resolvedTheme, theme} = useTheme();
+  const { setTheme, resolvedTheme, theme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [visible, setVisible] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -666,11 +666,11 @@ export default function Portfolio() {
 
   const getThemeIcon = () => {
     if (resolvedTheme === "light") {
-      return <Sun className="h-5 w-5"/>;
+      return <Sun className="h-5 w-5" />;
     } else if (resolvedTheme === "dark") {
-      return <Moon className="h-5 w-5"/>;
+      return <Moon className="h-5 w-5" />;
     } else {
-      return <Laptop className="h-5 w-5"/>;
+      return <Laptop className="h-5 w-5" />;
     }
   };
 
