@@ -6,6 +6,7 @@ import Link from "next/link";
 import {
   Briefcase,
   CalendarDays,
+  Check,
   ChevronDown,
   Code,
   ExternalLink,
@@ -462,7 +463,7 @@ const projects = [
 ];
 
 export default function Portfolio() {
-  const { setTheme, resolvedTheme } = useTheme();
+  const { setTheme, resolvedTheme, theme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [visible, setVisible] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -638,33 +639,42 @@ export default function Portfolio() {
                       setTheme("light");
                       closeDropdownWithDelay();
                     }}
-                    className="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 w-full text-left"
+                    className="flex items-center justify-between px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 w-full text-left"
                     role="menuitem"
                   >
-                    <Sun className="h-5 w-5 mr-2" />
-                    Light
+                    <div className="flex items-center">
+                      <Sun className="h-5 w-5 mr-2" />
+                      Light
+                    </div>
+                    {theme === "light" && <Check className="h-4 w-4" />}
                   </button>
                   <button
                     onClick={() => {
                       setTheme("dark");
                       closeDropdownWithDelay();
                     }}
-                    className="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 w-full text-left"
+                    className="flex items-center justify-between px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 w-full text-left"
                     role="menuitem"
                   >
-                    <Moon className="h-5 w-5 mr-2" />
-                    Dark
+                    <div className="flex items-center">
+                      <Moon className="h-5 w-5 mr-2" />
+                      Dark
+                    </div>
+                    {theme === "dark" && <Check className="h-4 w-4" />}
                   </button>
                   <button
                     onClick={() => {
                       setTheme("system");
                       closeDropdownWithDelay();
                     }}
-                    className="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 w-full text-left"
+                    className="flex items-center justify-between px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 w-full text-left"
                     role="menuitem"
                   >
-                    <Laptop className="h-5 w-5 mr-2" />
-                    System
+                    <div className="flex items-center">
+                      <Laptop className="h-5 w-5 mr-2" />
+                      System
+                    </div>
+                    {theme === "system" && <Check className="h-4 w-4" />}
                   </button>
                 </div>
               </div>
