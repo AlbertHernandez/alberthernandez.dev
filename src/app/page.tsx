@@ -520,7 +520,7 @@ export default function Portfolio() {
   const closeDropdownWithDelay = () => {
     timeoutRef.current = setTimeout(() => {
       setDropdownOpen(false);
-    }, 300); // Reduced from 2000ms to 300ms
+    }, 300);
   };
 
   const openDropdown = () => {
@@ -533,6 +533,11 @@ export default function Portfolio() {
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
+  };
+
+  const handleThemeChange = newTheme => {
+    setTheme(newTheme);
+    setDropdownOpen(false);
   };
 
   const calculateDuration = (startDate, endDate) => {
@@ -635,10 +640,7 @@ export default function Portfolio() {
                     Theme
                   </div>
                   <button
-                    onClick={() => {
-                      setTheme("light");
-                      closeDropdownWithDelay();
-                    }}
+                    onClick={() => handleThemeChange("light")}
                     className="flex items-center justify-between px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 w-full text-left"
                     role="menuitem"
                   >
@@ -649,10 +651,7 @@ export default function Portfolio() {
                     {theme === "light" && <Check className="h-4 w-4" />}
                   </button>
                   <button
-                    onClick={() => {
-                      setTheme("dark");
-                      closeDropdownWithDelay();
-                    }}
+                    onClick={() => handleThemeChange("dark")}
                     className="flex items-center justify-between px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 w-full text-left"
                     role="menuitem"
                   >
@@ -663,10 +662,7 @@ export default function Portfolio() {
                     {theme === "dark" && <Check className="h-4 w-4" />}
                   </button>
                   <button
-                    onClick={() => {
-                      setTheme("system");
-                      closeDropdownWithDelay();
-                    }}
+                    onClick={() => handleThemeChange("system")}
                     className="flex items-center justify-between px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 w-full text-left"
                     role="menuitem"
                   >
