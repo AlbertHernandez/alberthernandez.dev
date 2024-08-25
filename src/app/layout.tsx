@@ -28,8 +28,8 @@ export const metadata: Metadata = {
   ],
   twitter: {
     card: "summary_large_image",
-    site: "@alberthernandez",
-    creator: "@alberthernandez",
+    site: "@AlbertHernandev",
+    creator: "@AlbertHernandev",
     title: "Albert Hernández | Backend Software Engineer",
     description:
       "Backend Software Engineer with over 5 years of experience. Specializing in web development",
