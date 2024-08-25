@@ -713,6 +713,7 @@ export default function Portfolio() {
                 </Link>
                 <Link
                   href="https://github.com/alberthernandez"
+                  target="_blank"
                   aria-label="GitHub"
                   className="text-muted-foreground hover:text-primary transition-colors duration-200"
                 >
@@ -728,6 +729,7 @@ export default function Portfolio() {
                 </Link>
                 <Link
                   href="https://linkedin.com/in/alberthernandez"
+                  target="_blank"
                   aria-label="LinkedIn"
                   className="text-muted-foreground hover:text-primary transition-colors duration-200"
                 >
@@ -742,8 +744,9 @@ export default function Portfolio() {
                   </svg>
                 </Link>
                 <Link
-                  href="https://twitter.com/alberthernandez"
-                  aria-label="Twitter"
+                  href="https://x.com/alberthernandez"
+                  target="_blank"
+                  aria-label="X"
                   className="text-muted-foreground hover:text-primary transition-colors duration-200"
                 >
                   <svg
@@ -758,6 +761,7 @@ export default function Portfolio() {
                 </Link>
                 <Link
                   href="https://youtube.com/alberthernandez"
+                  target="_blank"
                   aria-label="YouTube"
                   className="text-muted-foreground hover:text-primary transition-colors duration-200"
                 >
@@ -1052,7 +1056,7 @@ export default function Portfolio() {
               <div className="flex flex-col flex-grow">
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
                   <Link
-                    href="https://www.upv.es/index-en.html"
+                    href="https://www.upv.es"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-xl sm:text-2xl font-bold text-primary hover:underline inline-flex items-center group"
@@ -1099,6 +1103,7 @@ export default function Portfolio() {
             </Link>
             <Link
               href="https://github.com/alberthernandez"
+              target="_blank"
               aria-label="GitHub"
               className="text-muted-foreground hover:text-primary transition-colors duration-200"
             >
@@ -1114,6 +1119,7 @@ export default function Portfolio() {
             </Link>
             <Link
               href="https://linkedin.com/in/alberthernandez"
+              target="_blank"
               aria-label="LinkedIn"
               className="text-muted-foreground hover:text-primary transition-colors duration-200"
             >
@@ -1128,8 +1134,9 @@ export default function Portfolio() {
               </svg>
             </Link>
             <Link
-              href="https://twitter.com/alberthernandez"
-              aria-label="Twitter"
+              href="https://x.com/alberthernandez"
+              target="_blank"
+              aria-label="X"
               className="text-muted-foreground hover:text-primary transition-colors duration-200"
             >
               <svg
@@ -1144,6 +1151,7 @@ export default function Portfolio() {
             </Link>
             <Link
               href="https://youtube.com/alberthernandez"
+              target="_blank"
               aria-label="YouTube"
               className="text-muted-foreground hover:text-primary transition-colors duration-200"
             >
