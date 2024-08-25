@@ -467,6 +467,7 @@ export default function Portfolio() {
   const [visible, setVisible] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const timeoutRef = useRef(null);
 
   useEffect(() => {
     setMounted(true);
@@ -513,6 +514,17 @@ export default function Portfolio() {
     } else {
       setTheme("dark");
     }
+  };
+
+  const closeDropdownWithDelay = () => {
+    timeoutRef.current = setTimeout(() => {
+      setDropdownOpen(false);
+    }, 300); // Reduced from 2000ms to 300ms
+  };
+
+  const openDropdown = () => {
+    clearTimeout(timeoutRef.current);
+    setDropdownOpen(true);
   };
 
   const scrollToSection = (sectionId: string) => {
@@ -595,7 +607,12 @@ export default function Portfolio() {
               Projects
             </button>
           </nav>
-          <div className="relative" ref={dropdownRef}>
+          <div
+            className="relative"
+            ref={dropdownRef}
+            onMouseEnter={openDropdown}
+            onMouseLeave={closeDropdownWithDelay}
+          >
             <Button
               variant="ghost"
               size="icon"
@@ -619,7 +636,7 @@ export default function Portfolio() {
                   <button
                     onClick={() => {
                       setTheme("light");
-                      setDropdownOpen(false);
+                      closeDropdownWithDelay();
                     }}
                     className="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 w-full text-left"
                     role="menuitem"
@@ -630,7 +647,7 @@ export default function Portfolio() {
                   <button
                     onClick={() => {
                       setTheme("dark");
-                      setDropdownOpen(false);
+                      closeDropdownWithDelay();
                     }}
                     className="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 w-full text-left"
                     role="menuitem"
@@ -641,7 +658,7 @@ export default function Portfolio() {
                   <button
                     onClick={() => {
                       setTheme("system");
-                      setDropdownOpen(false);
+                      closeDropdownWithDelay();
                     }}
                     className="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 w-full text-left"
                     role="menuitem"
