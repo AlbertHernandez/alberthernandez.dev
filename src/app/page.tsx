@@ -10,6 +10,7 @@ import {
   ChevronDown,
   Code,
   ExternalLink,
+  GraduationCap,
   Laptop,
   Lightbulb,
   Moon,
@@ -418,49 +419,49 @@ const experiences = [
   },
 ];
 
-const projects = [
-  {
-    title: "Task Management App",
-    icon: "/cat.webp",
-    description:
-      "A full-stack application for managing tasks and projects, featuring real-time updates and team collaboration tools.",
-    technologies: [
-      { name: "React", icon: "/cat.webp" },
-      { name: "Node.js", icon: "/cat.webp" },
-      { name: "MongoDB", icon: "/cat.webp" },
-      { name: "Socket.io", icon: "/cat.webp" },
-    ],
-    github: "https://github.com/alberthernandez/task-management-app",
-    stars: 124,
-  },
-  {
-    title: "E-commerce Platform",
-    icon: "/cat.webp",
-    description:
-      "A scalable e-commerce solution with features like product management, user authentication, and payment integration.",
-    technologies: [
-      { name: "Next.js", icon: "/cat.webp" },
-      { name: "TypeScript", icon: "/cat.webp" },
-      { name: "Stripe", icon: "/cat.webp" },
-      { name: "PostgreSQL", icon: "/cat.webp" },
-    ],
-    github: "https://github.com/alberthernandez/ecommerce-platform",
-    stars: 89,
-  },
-  {
-    title: "Weather Forecast App",
-    icon: "/cat.webp",
-    description:
-      "A mobile application providing accurate weather forecasts using geolocation and integrating with a weather API.",
-    technologies: [
-      { name: "React Native", icon: "/cat.webp" },
-      { name: "Redux", icon: "/cat.webp" },
-      { name: "OpenWeatherMap API", icon: "/cat.webp" },
-    ],
-    github: "https://github.com/alberthernandez/weather-forecast-app",
-    stars: 56,
-  },
-];
+// const projects = [
+//   {
+//     title: "Task Management App",
+//     icon: "/cat.webp",
+//     description:
+//       "A full-stack application for managing tasks and projects, featuring real-time updates and team collaboration tools.",
+//     technologies: [
+//       { name: "React", icon: "/cat.webp" },
+//       { name: "Node.js", icon: "/cat.webp" },
+//       { name: "MongoDB", icon: "/cat.webp" },
+//       { name: "Socket.io", icon: "/cat.webp" },
+//     ],
+//     github: "https://github.com/alberthernandez/task-management-app",
+//     stars: 124,
+//   },
+//   {
+//     title: "E-commerce Platform",
+//     icon: "/cat.webp",
+//     description:
+//       "A scalable e-commerce solution with features like product management, user authentication, and payment integration.",
+//     technologies: [
+//       { name: "Next.js", icon: "/cat.webp" },
+//       { name: "TypeScript", icon: "/cat.webp" },
+//       { name: "Stripe", icon: "/cat.webp" },
+//       { name: "PostgreSQL", icon: "/cat.webp" },
+//     ],
+//     github: "https://github.com/alberthernandez/ecommerce-platform",
+//     stars: 89,
+//   },
+//   {
+//     title: "Weather Forecast App",
+//     icon: "/cat.webp",
+//     description:
+//       "A mobile application providing accurate weather forecasts using geolocation and integrating with a weather API.",
+//     technologies: [
+//       { name: "React Native", icon: "/cat.webp" },
+//       { name: "Redux", icon: "/cat.webp" },
+//       { name: "OpenWeatherMap API", icon: "/cat.webp" },
+//     ],
+//     github: "https://github.com/alberthernandez/weather-forecast-app",
+//     stars: 56,
+//   },
+// ];
 
 export default function Portfolio() {
   const { setTheme, resolvedTheme, theme } = useTheme();
@@ -599,12 +600,6 @@ export default function Portfolio() {
               className="text-primary transition-all ease-in-out hover:scale-110"
             >
               Experience
-            </button>
-            <button
-              onClick={() => scrollToSection("projects")}
-              className="text-primary transition-all ease-in-out hover:scale-110"
-            >
-              Projects
             </button>
           </nav>
           <div
@@ -957,78 +952,125 @@ export default function Portfolio() {
           </div>
         </section>
 
-        <section id="projects" className="container mx-auto">
-          <div className="mx-auto max-w-[980px] flex flex-col items-start gap-2 space-y-6">
+        {/*<section id="projects" className="container mx-auto">*/}
+        {/*  <div className="mx-auto max-w-[980px] flex flex-col items-start gap-2 space-y-6">*/}
+        {/*    <h2 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl flex items-center mb-8 w-full justify-between text-primary">*/}
+        {/*      <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">*/}
+        {/*        Projects*/}
+        {/*      </span>*/}
+        {/*      <Code className="ml-2 h-8 w-8" />*/}
+        {/*    </h2>*/}
+        {/*    <div className="space-y-8 w-full">*/}
+        {/*      {projects.map(project => (*/}
+        {/*        <div*/}
+        {/*          key={project.title}*/}
+        {/*          className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.02]"*/}
+        {/*        >*/}
+        {/*          <div className="flex justify-between items-start mb-4">*/}
+        {/*            <div className="flex items-center">*/}
+        {/*              <Image*/}
+        {/*                src={project.icon}*/}
+        {/*                alt={`${project.title} icon`}*/}
+        {/*                width={40}*/}
+        {/*                height={40}*/}
+        {/*                className="mr-4"*/}
+        {/*              />*/}
+        {/*              <h3 className="text-2xl font-bold">{project.title}</h3>*/}
+        {/*            </div>*/}
+        {/*            <div className="flex items-center text-yellow-500">*/}
+        {/*              <Star className="w-5 h-5 mr-1 fill-current" />*/}
+        {/*              <span>{project.stars}</span>*/}
+        {/*            </div>*/}
+        {/*          </div>*/}
+        {/*          <p className="text-muted-foreground dark:text-gray-400 mb-4">*/}
+        {/*            {project.description}*/}
+        {/*          </p>*/}
+        {/*          <div className="flex flex-wrap gap-2 mb-4">*/}
+        {/*            {project.technologies.map((tech, i) => (*/}
+        {/*              <div*/}
+        {/*                key={i}*/}
+        {/*                className="flex items-center px-3 py-1 bg-primary/10 text-primary rounded-full"*/}
+        {/*              >*/}
+        {/*                <Image*/}
+        {/*                  src={tech.icon}*/}
+        {/*                  alt={`${tech.name} icon`}*/}
+        {/*                  width={16}*/}
+        {/*                  height={16}*/}
+        {/*                  className="mr-1"*/}
+        {/*                />*/}
+        {/*                <span className="text-xs font-medium">{tech.name}</span>*/}
+        {/*              </div>*/}
+        {/*            ))}*/}
+        {/*          </div>*/}
+        {/*          <a*/}
+        {/*            href={project.github}*/}
+        {/*            target="_blank"*/}
+        {/*            rel="noopener noreferrer"*/}
+        {/*            className="flex items-center text-sm text-primary hover:underline"*/}
+        {/*          >*/}
+        {/*            <svg*/}
+        {/*              role="img"*/}
+        {/*              className="fill-current mr-2"*/}
+        {/*              viewBox="0 0 24 24"*/}
+        {/*              xmlns="http://www.w3.org/2000/svg"*/}
+        {/*              width={24}*/}
+        {/*              height={24}*/}
+        {/*            >*/}
+        {/*              <title>GitHub</title>*/}
+        {/*              <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />*/}
+        {/*            </svg>*/}
+        {/*            View on GitHub*/}
+        {/*            <ExternalLink className="w-3 h-3 ml-1" />*/}
+        {/*          </a>*/}
+        {/*        </div>*/}
+        {/*      ))}*/}
+        {/*    </div>*/}
+        {/*  </div>*/}
+        {/*</section>*/}
+
+        <section
+          id="education"
+          className="py-12 md:py-24 lg:py-24 bg-gray-50 dark:bg-gray-800"
+        >
+          <div className="container mx-auto max-w-[1042px]">
             <h2 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl flex items-center mb-8 w-full justify-between text-primary">
               <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
-                Projects
+                Education
               </span>
-              <Code className="ml-2 h-8 w-8" />
+              <GraduationCap className="ml-2 h-8 w-8" />
             </h2>
-            <div className="space-y-8 w-full">
-              {projects.map(project => (
-                <div
-                  key={project.title}
-                  className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.02]"
-                >
-                  <div className="flex justify-between items-start mb-4">
-                    <div className="flex items-center">
-                      <Image
-                        src={project.icon}
-                        alt={`${project.title} icon`}
-                        width={40}
-                        height={40}
-                        className="mr-4"
-                      />
-                      <h3 className="text-2xl font-bold">{project.title}</h3>
-                    </div>
-                    <div className="flex items-center text-yellow-500">
-                      <Star className="w-5 h-5 mr-1 fill-current" />
-                      <span>{project.stars}</span>
-                    </div>
-                  </div>
-                  <p className="text-muted-foreground dark:text-gray-400 mb-4">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.technologies.map((tech, i) => (
-                      <div
-                        key={i}
-                        className="flex items-center px-3 py-1 bg-primary/10 text-primary rounded-full"
-                      >
-                        <Image
-                          src={tech.icon}
-                          alt={`${tech.name} icon`}
-                          width={16}
-                          height={16}
-                          className="mr-1"
-                        />
-                        <span className="text-xs font-medium">{tech.name}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <a
-                    href={project.github}
+            <div className="flex flex-row items-start gap-4 sm:gap-8">
+              <div className="w-16 h-16 relative flex-shrink-0">
+                <Image
+                  src="/upv.webp"
+                  alt="Universitat Politecnica de Valencia logo"
+                  layout="fill"
+                  objectFit="contain"
+                  className="rounded-full"
+                />
+              </div>
+              <div className="flex flex-col flex-grow">
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
+                  <Link
+                    href="https://www.upv.es/index-en.html"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center text-sm text-primary hover:underline"
+                    className="text-xl sm:text-2xl font-bold text-primary hover:underline inline-flex items-center group"
                   >
-                    <svg
-                      role="img"
-                      className="fill-current mr-2"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={24}
-                      height={24}
-                    >
-                      <title>GitHub</title>
-                      <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-                    </svg>
-                    View on GitHub
-                    <ExternalLink className="w-3 h-3 ml-1" />
-                  </a>
+                    Universitat Politècnica de València (UPV)
+                    <ExternalLink className="ml-1 h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </Link>
+                  <div className="text-sm text-muted-foreground dark:text-gray-400 w-full sm:w-auto sm:text-right mt-1 sm:mt-0">
+                    <div className="flex items-center sm:justify-end">
+                      <CalendarDays className="w-4 h-4 mr-1" />
+                      <span>2017 - 2021</span>
+                    </div>
+                  </div>
                 </div>
-              ))}
+                <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-4">
+                  Bachelor's Degree in Computer Science
+                </p>
+              </div>
             </div>
           </div>
         </section>
