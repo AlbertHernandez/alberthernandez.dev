@@ -37,6 +37,7 @@ const experiences = [
     technologies: [
       {
         name: "JavaScript",
+        color: "#F7DF1E",
         icon: (
           <svg
             role="img"
@@ -53,6 +54,7 @@ const experiences = [
       },
       {
         name: "React",
+        color: "#61DAFB",
         icon: (
           <svg
             role="img"
@@ -69,6 +71,7 @@ const experiences = [
       },
       {
         name: "Node.js",
+        color: "#5FA04E",
         icon: (
           <svg
             role="img"
@@ -85,6 +88,7 @@ const experiences = [
       },
       {
         name: "Jest",
+        color: "#C21325",
         icon: (
           <svg
             role="img"
@@ -101,6 +105,7 @@ const experiences = [
       },
       {
         name: "MongoDB",
+        color: "#47A248",
         icon: (
           <svg
             role="img"
@@ -117,6 +122,7 @@ const experiences = [
       },
       {
         name: "Redis",
+        color: "#880000",
         icon: (
           <svg
             role="img"
@@ -133,6 +139,7 @@ const experiences = [
       },
       {
         name: "Docker",
+        color: "#2496ED",
         icon: (
           <svg
             role="img"
@@ -149,6 +156,7 @@ const experiences = [
       },
       {
         name: "Github Actions",
+        color: "#2088FF",
         icon: (
           <svg
             role="img"
@@ -165,6 +173,7 @@ const experiences = [
       },
       {
         name: "Amazon Web Services (AWS)",
+        color: "#FF9900",
         icon: (
           <svg
             role="img"
@@ -181,6 +190,7 @@ const experiences = [
       },
       {
         name: "Datadog",
+        color: "#632CA6",
         icon: (
           <svg
             role="img"
@@ -216,6 +226,7 @@ const experiences = [
     technologies: [
       {
         name: "TypeScript",
+        color: "#3178C6",
         icon: (
           <svg
             role="img"
@@ -232,6 +243,7 @@ const experiences = [
       },
       {
         name: "Node.js",
+        color: "#5FA04E",
         icon: (
           <svg
             role="img"
@@ -248,6 +260,7 @@ const experiences = [
       },
       {
         name: "NestJS",
+        color: "#E0234E",
         icon: (
           <svg
             role="img"
@@ -264,6 +277,7 @@ const experiences = [
       },
       {
         name: "Jest",
+        color: "#C21325",
         icon: (
           <svg
             role="img"
@@ -280,6 +294,7 @@ const experiences = [
       },
       {
         name: "MongoDB",
+        color: "#47A248",
         icon: (
           <svg
             role="img"
@@ -296,11 +311,15 @@ const experiences = [
       },
       {
         name: "Redis",
+        color: "#880000",
         icon: (
           <svg
             role="img"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
+            className="fill-current text-[color:#880000]"
+            width={ICON_TECHNOLOGY_SIZE}
+            height={ICON_TECHNOLOGY_SIZE}
           >
             <title>MongoDB</title>
             <path d="M17.193 9.555c-1.264-5.58-4.252-7.414-4.573-8.115-.28-.394-.53-.954-.735-1.44-.036.495-.055.685-.523 1.184-.723.566-4.438 3.682-4.74 10.02-.282 5.912 4.27 9.435 4.888 9.884l.07.05A73.49 73.49 0 0111.91 24h.481c.114-1.032.284-2.056.51-3.07.417-.296.604-.463.85-.693a11.342 11.342 0 003.639-8.464c.01-.814-.103-1.662-.197-2.218zm-5.336 8.195s0-8.291.275-8.29c.213 0 .49 10.695.49 10.695-.381-.045-.765-1.76-.765-2.405z" />
@@ -309,12 +328,13 @@ const experiences = [
       },
       {
         name: "Docker",
+        color: "#2496ED",
         icon: (
           <svg
             role="img"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
-            className="fill-current text-[color:#880000]"
+            className="fill-current text-[color:#2496ED]"
             width={ICON_TECHNOLOGY_SIZE}
             height={ICON_TECHNOLOGY_SIZE}
           >
@@ -325,6 +345,7 @@ const experiences = [
       },
       {
         name: "Kubernetes",
+        color: "#326CE5",
         icon: (
           <svg
             role="img"
@@ -341,12 +362,13 @@ const experiences = [
       },
       {
         name: "CircleCI",
+        color: "#343434",
         icon: (
           <svg
             role="img"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
-            className="fill-current"
+            className="fill-current text-[color:#343434]"
             width={ICON_TECHNOLOGY_SIZE}
             height={ICON_TECHNOLOGY_SIZE}
           >
@@ -357,6 +379,7 @@ const experiences = [
       },
       {
         name: "Google Cloud Platform",
+        color: "#4285F4",
         icon: (
           <svg
             role="img"
@@ -373,6 +396,7 @@ const experiences = [
       },
       {
         name: "Datadog",
+        color: "#632CA6",
         icon: (
           <svg
             role="img"
@@ -804,12 +828,23 @@ export default function Portfolio() {
                       {exp.technologies.map((tech, i) => (
                         <div
                           key={i}
-                          className="flex items-center px-3 py-2 bg-primary/10 text-primary rounded-lg hover:bg-primary/20 transition-colors duration-200"
+                          className="flex items-center px-3 py-2 rounded-lg transition-colors duration-200"
+                          style={{
+                            backgroundColor: `${tech.color}1A`,
+                          }}
+                          onMouseEnter={e => {
+                            e.currentTarget.style.backgroundColor = `${tech.color}99`;
+                          }}
+                          onMouseLeave={e => {
+                            e.currentTarget.style.backgroundColor = `${tech.color}1A`;
+                          }}
                         >
                           <div className="w-4 h-4 mr-1.5 flex items-center justify-center">
                             {tech.icon}
                           </div>
-                          <span className="text-xs font-medium">{tech.name}</span>
+                          <span className="text-xs font-medium">
+                            {tech.name}
+                          </span>
                         </div>
                       ))}
                     </div>
