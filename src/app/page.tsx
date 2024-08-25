@@ -496,25 +496,19 @@ export default function Portfolio() {
   };
 
   const getThemeIcon = () => {
-    switch (resolvedTheme) {
-      case "dark": {
-        return <Moon className="h-5 w-5" />;
-      }
-      case "light": {
-        return <Sun className="h-5 w-5" />;
-      }
-      default: {
-        return <Laptop className="h-5 w-5" />;
-      }
-    }
-  };
-
-  const toggleDarkMode = () => {
-    if (resolvedTheme === "dark") {
-      setTheme("light");
-    } else {
-      setTheme("dark");
-    }
+    return (
+      <div className="relative w-5 h-5">
+        <Sun
+          className={`h-5 w-5 absolute transition-all duration-300 ${resolvedTheme === "light" ? "opacity-100 rotate-0" : "opacity-0 -rotate-90"}`}
+        />
+        <Moon
+          className={`h-5 w-5 absolute transition-all duration-300 ${resolvedTheme === "dark" ? "opacity-100 rotate-0" : "opacity-0 rotate-90"}`}
+        />
+        <Laptop
+          className={`h-5 w-5 absolute transition-all duration-300 ${resolvedTheme === "system" ? "opacity-100 scale-100" : "opacity-0 scale-50"}`}
+        />
+      </div>
+    );
   };
 
   const closeDropdownWithDelay = () => {
