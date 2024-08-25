@@ -804,12 +804,12 @@ export default function Portfolio() {
                       {exp.technologies.map((tech, i) => (
                         <div
                           key={i}
-                          className="flex items-center px-3 py-1 bg-primary/10 text-primary rounded-full"
+                          className="flex items-center px-3 py-2 bg-primary/10 text-primary rounded-lg hover:bg-primary/20 transition-colors duration-200"
                         >
-                          <span className="mr-1">{tech.icon}</span>
-                          <span className="text-xs font-medium">
-                            {tech.name}
-                          </span>
+                          <div className="w-6 h-6 mr-2 flex items-center justify-center">
+                            {tech.icon}
+                          </div>
+                          <span className="text-sm font-medium">{tech.name}</span>
                         </div>
                       ))}
                     </div>
