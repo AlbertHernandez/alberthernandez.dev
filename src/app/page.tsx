@@ -618,9 +618,9 @@ export default function Portfolio() {
               size="icon"
               onClick={toggleDropdown}
               className="rounded-full group hover:bg-transparent"
+              aria-label="Toggle theme"
             >
               {getThemeIcon()}
-              <ChevronDown className="h-4 w-4 ml-1" />
             </Button>
             {dropdownOpen && (
               <div className="absolute right-1/2 transform translate-x-1/2 mt-4 w-48 rounded-md shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5">
