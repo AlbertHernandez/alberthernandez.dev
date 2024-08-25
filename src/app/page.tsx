@@ -601,6 +601,12 @@ export default function Portfolio() {
             >
               Experience
             </button>
+            <button
+              onClick={() => scrollToSection("education")}
+              className="text-primary transition-all ease-in-out hover:scale-110"
+            >
+              Education
+            </button>
           </nav>
           <div
             className="relative"
@@ -671,7 +677,7 @@ export default function Portfolio() {
           </div>
         </div>
       </header>
-      <main className="flex-1 pt-24">
+      <main className="flex-1 pt-16">
         <section
           id="about"
           className="container py-8 md:py-12 lg:py-24 mx-auto"
@@ -782,7 +788,7 @@ export default function Portfolio() {
 
         <section
           id="about-me"
-          className="py-12 md:py-24 lg:py-24 bg-gray-50 dark:bg-gray-800"
+          className="py-12 md:py-12 lg:py-16 bg-gray-50 dark:bg-gray-800"
         >
           <div className="container mx-auto max-w-[1042px]">
             <h2 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl mb-12 text-left">
@@ -867,7 +873,7 @@ export default function Portfolio() {
 
         <section
           id="experience"
-          className="container py-8 md:py-12 lg:py-24 mx-auto"
+          className="container py-12 md:py-12 lg:py-16 mx-auto"
         >
           <div className="mx-auto max-w-[980px] flex flex-col items-start gap-2 space-y-6">
             <h2 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl flex items-center mb-8 w-full justify-between text-primary">
@@ -1034,7 +1040,7 @@ export default function Portfolio() {
 
         <section
           id="education"
-          className="py-12 md:py-24 lg:py-24 bg-gray-50 dark:bg-gray-800"
+          className="py-12 md:py-12 lg:py-16 bg-gray-50 dark:bg-gray-800"
         >
           <div className="container mx-auto max-w-[1042px]">
             <h2 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl flex items-center mb-8 w-full justify-between text-primary">
