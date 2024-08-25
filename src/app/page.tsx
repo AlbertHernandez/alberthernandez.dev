@@ -186,8 +186,7 @@ const experiences = [
             height={ICON_TECHNOLOGY_SIZE}
           >
             <title>Docker</title>
-            <path
-              d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.184-.186h-2.12a.186.186 0 00-.186.186v1.887c0 .102.084.185.186.185m-2.92 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.082.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338.001-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 00-.75.748 11.376 11.376 0 00.692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137.983.003 1.963-.086 2.93-.266a12.248 12.248 0 003.823-1.389c.98-.567 1.86-1.288 2.61-2.136 1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288Z"/>
+            <path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.184-.186h-2.12a.186.186 0 00-.186.186v1.887c0 .102.084.185.186.185m-2.92 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.082.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338.001-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 00-.75.748 11.376 11.376 0 00.692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137.983.003 1.963-.086 2.93-.266a12.248 12.248 0 003.823-1.389c.98-.567 1.86-1.288 2.61-2.136 1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288Z" />
           </svg>
         ),
       },
@@ -204,8 +203,7 @@ const experiences = [
             height={ICON_TECHNOLOGY_SIZE}
           >
             <title>GitHub Actions</title>
-            <path
-              d="M10.984 13.836a.5.5 0 0 1-.353-.146l-.745-.743a.5.5 0 1 1 .706-.708l.392.391 1.181-1.18a.5.5 0 0 1 .708.707l-1.535 1.533a.504.504 0 0 1-.354.146zm9.353-.147l1.534-1.532a.5.5 0 0 0-.707-.707l-1.181 1.18-.392-.391a.5.5 0 1 0-.706.708l.746.743a.497.497 0 0 0 .706-.001zM4.527 7.452l2.557-1.585A1 1 0 0 0 7.09 4.17L4.533 2.56A1 1 0 0 0 3 3.406v3.196a1.001 1.001 0 0 0 1.527.85zm2.03-2.436L4 6.602V3.406l2.557 1.61zM24 12.5c0 1.93-1.57 3.5-3.5 3.5a3.503 3.503 0 0 1-3.46-3h-2.08a3.503 3.503 0 0 1-3.46 3 3.502 3.502 0 0 1-3.46-3h-.558c-.972 0-1.85-.399-2.482-1.042V17c0 1.654 1.346 3 3 3h.04c.244-1.693 1.7-3 3.46-3 1.93 0 3.5 1.57 3.5 3.5S13.43 24 11.5 24a3.502 3.502 0 0 1-3.46-3H8c-2.206 0-4-1.794-4-4V9.899A5.008 5.008 0 0 1 0 5c0-2.757 2.243-5 5-5s5 2.243 5 5a5.005 5.005 0 0 1-4.952 4.998A2.482 2.482 0 0 0 7.482 12h.558c.244-1.693 1.7-3 3.46-3a3.502 3.502 0 0 1 3.46 3h2.08a3.503 3.503 0 0 1 3.46-3c1.93 0 3.5 1.57 3.5 3.5zm-15 8c0 1.378 1.122 2.5 2.5 2.5s2.5-1.122 2.5-2.5-1.122-2.5-2.5-2.5S9 19.122 9 20.5zM5 9c2.206 0 4-1.794 4-4S7.206 1 5 1 1 2.794 1 5s1.794 4 4 4zm9 3.5c0-1.378-1.122-2.5-2.5-2.5S9 11.122 9 12.5s1.122 2.5 2.5 2.5 2.5-1.122 2.5-2.5zm9 0c0-1.378-1.122-2.5-2.5-2.5S18 11.122 18 12.5s1.122 2.5 2.5 2.5 2.5-1.122 2.5-2.5zm-13 8a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0zm2 0a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0zm12 0c0 1.93-1.57 3.5-3.5 3.5a3.503 3.503 0 0 1-3.46-3.002c-.007.001-.013.005-.021.005l-.506.017h-.017a.5.5 0 0 1-.016-.999l.506-.017c.018-.002.035.006.052.007A3.503 3.503 0 0 1 20.5 17c1.93 0 3.5 1.57 3.5 3.5zm-1 0c0-1.378-1.122-2.5-2.5-2.5S18 19.122 18 20.5s1.122 2.5 2.5 2.5 2.5-1.122 2.5-2.5z" />
+            <path d="M10.984 13.836a.5.5 0 0 1-.353-.146l-.745-.743a.5.5 0 1 1 .706-.708l.392.391 1.181-1.18a.5.5 0 0 1 .708.707l-1.535 1.533a.504.504 0 0 1-.354.146zm9.353-.147l1.534-1.532a.5.5 0 0 0-.707-.707l-1.181 1.18-.392-.391a.5.5 0 1 0-.706.708l.746.743a.497.497 0 0 0 .706-.001zM4.527 7.452l2.557-1.585A1 1 0 0 0 7.09 4.17L4.533 2.56A1 1 0 0 0 3 3.406v3.196a1.001 1.001 0 0 0 1.527.85zm2.03-2.436L4 6.602V3.406l2.557 1.61zM24 12.5c0 1.93-1.57 3.5-3.5 3.5a3.503 3.503 0 0 1-3.46-3h-2.08a3.503 3.503 0 0 1-3.46 3 3.502 3.502 0 0 1-3.46-3h-.558c-.972 0-1.85-.399-2.482-1.042V17c0 1.654 1.346 3 3 3h.04c.244-1.693 1.7-3 3.46-3 1.93 0 3.5 1.57 3.5 3.5S13.43 24 11.5 24a3.502 3.502 0 0 1-3.46-3H8c-2.206 0-4-1.794-4-4V9.899A5.008 5.008 0 0 1 0 5c0-2.757 2.243-5 5-5s5 2.243 5 5a5.005 5.005 0 0 1-4.952 4.998A2.482 2.482 0 0 0 7.482 12h.558c.244-1.693 1.7-3 3.46-3a3.502 3.502 0 0 1 3.46 3h2.08a3.503 3.503 0 0 1 3.46-3c1.93 0 3.5 1.57 3.5 3.5zm-15 8c0 1.378 1.122 2.5 2.5 2.5s2.5-1.122 2.5-2.5-1.122-2.5-2.5-2.5S9 19.122 9 20.5zM5 9c2.206 0 4-1.794 4-4S7.206 1 5 1 1 2.794 1 5s1.794 4 4 4zm9 3.5c0-1.378-1.122-2.5-2.5-2.5S9 11.122 9 12.5s1.122 2.5 2.5 2.5 2.5-1.122 2.5-2.5zm9 0c0-1.378-1.122-2.5-2.5-2.5S18 11.122 18 12.5s1.122 2.5 2.5 2.5 2.5-1.122 2.5-2.5zm-13 8a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0zm2 0a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0zm12 0c0 1.93-1.57 3.5-3.5 3.5a3.503 3.503 0 0 1-3.46-3.002c-.007.001-.013.005-.021.005l-.506.017h-.017a.5.5 0 0 1-.016-.999l.506-.017c.018-.002.035.006.052.007A3.503 3.503 0 0 1 20.5 17c1.93 0 3.5 1.57 3.5 3.5zm-1 0c0-1.378-1.122-2.5-2.5-2.5S18 19.122 18 20.5s1.122 2.5 2.5 2.5 2.5-1.122 2.5-2.5z" />
           </svg>
         ),
       },
@@ -516,7 +514,7 @@ const experiences = [
 //       { name: "MongoDB", icon: "/cat.webp" },
 //       { name: "Socket.io", icon: "/cat.webp" },
 //     ],
-//     github: "https://github.com/alberthernandez/task-management-app",
+//     github: "https://github.com/AlbertHernandez/task-management-app",
 //     stars: 124,
 //   },
 //   {
@@ -530,7 +528,7 @@ const experiences = [
 //       { name: "Stripe", icon: "/cat.webp" },
 //       { name: "PostgreSQL", icon: "/cat.webp" },
 //     ],
-//     github: "https://github.com/alberthernandez/ecommerce-platform",
+//     github: "https://github.com/AlbertHernandez/ecommerce-platform",
 //     stars: 89,
 //   },
 //   {
@@ -543,7 +541,7 @@ const experiences = [
 //       { name: "Redux", icon: "/cat.webp" },
 //       { name: "OpenWeatherMap API", icon: "/cat.webp" },
 //     ],
-//     github: "https://github.com/alberthernandez/weather-forecast-app",
+//     github: "https://github.com/AlbertHernandez/weather-forecast-app",
 //     stars: 56,
 //   },
 // ];
@@ -813,7 +811,7 @@ export default function Portfolio() {
                   </svg>
                 </Link>
                 <Link
-                  href="https://github.com/alberthernandez"
+                  href="https://github.com/AlbertHernandez"
                   target="_blank"
                   aria-label="GitHub"
                   className="text-muted-foreground hover:text-primary transition-colors duration-200"
@@ -829,7 +827,7 @@ export default function Portfolio() {
                   </svg>
                 </Link>
                 <Link
-                  href="https://linkedin.com/in/alberthernandez"
+                  href="https://www.linkedin.com/in/albert-hernandez-dev"
                   target="_blank"
                   aria-label="LinkedIn"
                   className="text-muted-foreground hover:text-primary transition-colors duration-200"
@@ -845,7 +843,7 @@ export default function Portfolio() {
                   </svg>
                 </Link>
                 <Link
-                  href="https://x.com/alberthernandez"
+                  href="https://x.com/AlbertHernandev"
                   target="_blank"
                   aria-label="X"
                   className="text-muted-foreground hover:text-primary transition-colors duration-200"
@@ -861,7 +859,7 @@ export default function Portfolio() {
                   </svg>
                 </Link>
                 <Link
-                  href="https://youtube.com/alberthernandez"
+                  href="https://www.youtube.com/@AlbertHernandez"
                   target="_blank"
                   aria-label="YouTube"
                   className="text-muted-foreground hover:text-primary transition-colors duration-200"
@@ -1056,83 +1054,6 @@ export default function Portfolio() {
             </div>
           </div>
         </section>
-
-        {/*<section id="projects" className="container mx-auto">*/}
-        {/*  <div className="mx-auto max-w-[980px] flex flex-col items-start gap-2 space-y-6">*/}
-        {/*    <h2 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl flex items-center mb-8 w-full justify-between text-primary">*/}
-        {/*      <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">*/}
-        {/*        Projects*/}
-        {/*      </span>*/}
-        {/*      <Code className="ml-2 h-8 w-8" />*/}
-        {/*    </h2>*/}
-        {/*    <div className="space-y-8 w-full">*/}
-        {/*      {projects.map(project => (*/}
-        {/*        <div*/}
-        {/*          key={project.title}*/}
-        {/*          className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.02]"*/}
-        {/*        >*/}
-        {/*          <div className="flex justify-between items-start mb-4">*/}
-        {/*            <div className="flex items-center">*/}
-        {/*              <Image*/}
-        {/*                src={project.icon}*/}
-        {/*                alt={`${project.title} icon`}*/}
-        {/*                width={40}*/}
-        {/*                height={40}*/}
-        {/*                className="mr-4"*/}
-        {/*              />*/}
-        {/*              <h3 className="text-2xl font-bold">{project.title}</h3>*/}
-        {/*            </div>*/}
-        {/*            <div className="flex items-center text-yellow-500">*/}
-        {/*              <Star className="w-5 h-5 mr-1 fill-current" />*/}
-        {/*              <span>{project.stars}</span>*/}
-        {/*            </div>*/}
-        {/*          </div>*/}
-        {/*          <p className="text-muted-foreground dark:text-gray-400 mb-4">*/}
-        {/*            {project.description}*/}
-        {/*          </p>*/}
-        {/*          <div className="flex flex-wrap gap-2 mb-4">*/}
-        {/*            {project.technologies.map((tech, i) => (*/}
-        {/*              <div*/}
-        {/*                key={i}*/}
-        {/*                className="flex items-center px-3 py-1 bg-primary/10 text-primary rounded-full"*/}
-        {/*              >*/}
-        {/*                <Image*/}
-        {/*                  src={tech.icon}*/}
-        {/*                  alt={`${tech.name} icon`}*/}
-        {/*                  width={16}*/}
-        {/*                  height={16}*/}
-        {/*                  className="mr-1"*/}
-        {/*                />*/}
-        {/*                <span className="text-xs font-medium">{tech.name}</span>*/}
-        {/*              </div>*/}
-        {/*            ))}*/}
-        {/*          </div>*/}
-        {/*          <a*/}
-        {/*            href={project.github}*/}
-        {/*            target="_blank"*/}
-        {/*            rel="noopener noreferrer"*/}
-        {/*            className="flex items-center text-sm text-primary hover:underline"*/}
-        {/*          >*/}
-        {/*            <svg*/}
-        {/*              role="img"*/}
-        {/*              className="fill-current mr-2"*/}
-        {/*              viewBox="0 0 24 24"*/}
-        {/*              xmlns="http://www.w3.org/2000/svg"*/}
-        {/*              width={24}*/}
-        {/*              height={24}*/}
-        {/*            >*/}
-        {/*              <title>GitHub</title>*/}
-        {/*              <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />*/}
-        {/*            </svg>*/}
-        {/*            View on GitHub*/}
-        {/*            <ExternalLink className="w-3 h-3 ml-1" />*/}
-        {/*          </a>*/}
-        {/*        </div>*/}
-        {/*      ))}*/}
-        {/*    </div>*/}
-        {/*  </div>*/}
-        {/*</section>*/}
-
         <section
           id="education"
           className="py-12 md:py-12 lg:py-16 bg-gray-50 dark:bg-gray-800"
@@ -1203,7 +1124,7 @@ export default function Portfolio() {
               </svg>
             </Link>
             <Link
-              href="https://github.com/alberthernandez"
+              href="https://github.com/AlbertHernandez"
               target="_blank"
               aria-label="GitHub"
               className="text-muted-foreground hover:text-primary transition-colors duration-200"
@@ -1219,7 +1140,7 @@ export default function Portfolio() {
               </svg>
             </Link>
             <Link
-              href="https://linkedin.com/in/alberthernandez"
+              href="https://www.linkedin.com/in/albert-hernandez-dev"
               target="_blank"
               aria-label="LinkedIn"
               className="text-muted-foreground hover:text-primary transition-colors duration-200"
@@ -1235,7 +1156,7 @@ export default function Portfolio() {
               </svg>
             </Link>
             <Link
-              href="https://x.com/alberthernandez"
+              href="https://x.com/AlbertHernandev"
               target="_blank"
               aria-label="X"
               className="text-muted-foreground hover:text-primary transition-colors duration-200"
@@ -1251,7 +1172,7 @@ export default function Portfolio() {
               </svg>
             </Link>
             <Link
-              href="https://youtube.com/alberthernandez"
+              href="https://www.youtube.com/@AlbertHernandez"
               target="_blank"
               aria-label="YouTube"
               className="text-muted-foreground hover:text-primary transition-colors duration-200"
