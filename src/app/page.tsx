@@ -697,7 +697,7 @@ export default function Portfolio() {
               </p>
               <div className="flex space-x-4">
                 <Link
-                  href="mailto:albert@example.com"
+                  href="mailto:alberthernandezdev@gmail.com"
                   aria-label="Email"
                   className="text-muted-foreground hover:text-primary transition-colors duration-200"
                 >
@@ -1087,7 +1087,7 @@ export default function Portfolio() {
           </p>
           <div className="flex space-x-4">
             <Link
-              href="mailto:albert@example.com"
+              href="mailto:alberthernandezdev@gmail.com"
               aria-label="Email"
               className="text-muted-foreground hover:text-primary transition-colors duration-200"
             >
