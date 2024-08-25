@@ -806,10 +806,10 @@ export default function Portfolio() {
                           key={i}
                           className="flex items-center px-3 py-2 bg-primary/10 text-primary rounded-lg hover:bg-primary/20 transition-colors duration-200"
                         >
-                          <div className="w-6 h-6 mr-2 flex items-center justify-center">
+                          <div className="w-4 h-4 mr-1.5 flex items-center justify-center">
                             {tech.icon}
                           </div>
-                          <span className="text-sm font-medium">{tech.name}</span>
+                          <span className="text-xs font-medium">{tech.name}</span>
                         </div>
                       ))}
                     </div>
