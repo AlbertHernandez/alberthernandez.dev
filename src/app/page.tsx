@@ -583,26 +583,26 @@ export default function Portfolio() {
             onClick={() => scrollToSection("about")}
             className="flex items-center space-x-2"
           >
-            <span className="font-bold text-lg text-primary dark:text-white transition-all ease-in-out hover:scale-110">
+            <span className="font-bold text-lg text-primary transition-all ease-in-out hover:scale-110">
               Albert Hernández
             </span>
           </button>
           <nav className="hidden md:flex items-center space-x-4 text-sm font-medium">
             <button
               onClick={() => scrollToSection("about-me")}
-              className="text-primary dark:text-white transition-all ease-in-out hover:scale-110"
+              className="text-primary transition-all ease-in-out hover:scale-110"
             >
               About Me
             </button>
             <button
               onClick={() => scrollToSection("experience")}
-              className="text-primary dark:text-white transition-all ease-in-out hover:scale-110"
+              className="text-primary transition-all ease-in-out hover:scale-110"
             >
               Experience
             </button>
             <button
               onClick={() => scrollToSection("projects")}
-              className="text-primary dark:text-white transition-all ease-in-out hover:scale-110"
+              className="text-primary transition-all ease-in-out hover:scale-110"
             >
               Projects
             </button>
