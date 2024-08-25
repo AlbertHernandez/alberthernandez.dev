@@ -51,7 +51,7 @@ const experiences = [
     period: "Feb 2019 - May 2024",
     startDate: "2019-02-01",
     endDate: "2024-05-01",
-    website: "https://www.coverwallet.com/",
+    website: "https://www.coverwallet.com",
     points: [
       "Create internal libraries, making them independent of any specific framework so that all microservices in the platform could utilize them.",
       "Integrate Feature Flag systems, Observability, Cloud Native Development, and Trunk-based development practices, which helped teams deliver software with a greater quality and reliability.",
