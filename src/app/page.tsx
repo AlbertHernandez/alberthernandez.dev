@@ -830,13 +830,13 @@ export default function Portfolio() {
                           key={i}
                           className="flex items-center px-3 py-2 rounded-lg transition-colors duration-200"
                           style={{
-                            backgroundColor: `#4e4e4e1A`,
+                            backgroundColor: `#6767671A`,
                           }}
                           onMouseEnter={e => {
                             e.currentTarget.style.backgroundColor = `${tech.color}33`;
                           }}
                           onMouseLeave={e => {
-                            e.currentTarget.style.backgroundColor = `#4e4e4e1A`;
+                            e.currentTarget.style.backgroundColor = `#6767671A`;
                           }}
                         >
                           <div className="w-4 h-4 mr-1.5 flex items-center justify-center">
