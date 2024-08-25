@@ -467,6 +467,7 @@ export default function Portfolio() {
   const [mounted, setMounted] = useState(false);
   const [visible, setVisible] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [isRotated, setIsRotated] = useState(false);
   const dropdownRef = useRef(null);
   const timeoutRef = useRef(null);
 
@@ -482,6 +483,7 @@ export default function Portfolio() {
     const handleClickOutside = event => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setDropdownOpen(false);
+        setIsRotated(false);
       }
     };
 
@@ -493,27 +495,28 @@ export default function Portfolio() {
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
+    setIsRotated(!dropdownOpen);
   };
 
   const getThemeIcon = () => {
     return (
-      <div className="relative w-5 h-5 group">
+      <div className={`relative w-5 h-5 transition-all duration-300`}>
         <Sun
-          className={`h-5 w-5 absolute transition-all duration-300 group-hover:rotate-12 ${
+          className={`h-5 w-5 absolute transition-all duration-300 ${isRotated ? "rotate-12" : ""} ${
             resolvedTheme === "light"
               ? "opacity-100 rotate-0"
               : "opacity-0 -rotate-90"
           }`}
         />
         <Moon
-          className={`h-5 w-5 absolute transition-all duration-300 group-hover:-rotate-12 ${
+          className={`h-5 w-5 absolute transition-all duration-300 ${isRotated ? "-rotate-12" : ""} ${
             resolvedTheme === "dark"
               ? "opacity-100 rotate-0"
               : "opacity-0 rotate-90"
           }`}
         />
         <Laptop
-          className={`h-5 w-5 absolute transition-all duration-300 group-hover:rotate-12 ${
+          className={`h-5 w-5 absolute transition-all duration-300 ${
             resolvedTheme === "system"
               ? "opacity-100 scale-100"
               : "opacity-0 scale-50"
@@ -526,12 +529,14 @@ export default function Portfolio() {
   const closeDropdownWithDelay = () => {
     timeoutRef.current = setTimeout(() => {
       setDropdownOpen(false);
+      setIsRotated(false);
     }, 300);
   };
 
   const openDropdown = () => {
     clearTimeout(timeoutRef.current);
     setDropdownOpen(true);
+    setIsRotated(true);
   };
 
   const scrollToSection = (sectionId: string) => {
@@ -544,6 +549,7 @@ export default function Portfolio() {
   const handleThemeChange = newTheme => {
     setTheme(newTheme);
     setDropdownOpen(false);
+    setIsRotated(false);
   };
 
   const calculateDuration = (startDate, endDate) => {
