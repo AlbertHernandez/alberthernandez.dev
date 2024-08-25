@@ -684,13 +684,15 @@ export default function Portfolio() {
         >
           <div className="mx-auto max-w-[980px] flex flex-col md:flex-row items-center justify-center gap-8">
             <div className="md:w-1/3 flex justify-center items-center">
-              <Image
-                src="/albert.webp"
-                alt="Albert Hernández"
-                width={250}
-                height={250}
-                className="rounded-full"
-              />
+              <div className="rounded-full border-4 shadow-lg">
+                <Image
+                  src="/albert.webp"
+                  alt="Albert Hernández"
+                  width={250}
+                  height={250}
+                  className="rounded-full"
+                />
+              </div>
             </div>
             <div className="flex flex-col items-center md:items-start text-center md:text-left md:w-2/3">
               <h1 className="text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl lg:text-6xl mb-4 text-primary">
