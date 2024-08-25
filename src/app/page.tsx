@@ -451,14 +451,16 @@ export default function Portfolio() {
                     />
                   </div>
                   <div className="ml-6 flex-grow">
-                    <div className="flex justify-between items-start mb-2">
-                      <h3 className="text-xl font-bold">{exp.role}</h3>
-                      <div className="text-sm text-muted-foreground dark:text-gray-400">
-                        <div className="flex items-center justify-end">
+                    <div className="flex flex-col sm:flex-row justify-between items-start mb-2">
+                      <h3 className="text-xl font-bold mb-2 sm:mb-0">
+                        {exp.role}
+                      </h3>
+                      <div className="text-sm text-muted-foreground dark:text-gray-400 w-full sm:w-auto sm:text-right">
+                        <div className="flex items-center sm:justify-end">
                           <CalendarDays className="w-4 h-4 mr-1" />
                           <span>{exp.period}</span>
                         </div>
-                        <div className="text-right mt-1">
+                        <div className="mt-1">
                           {calculateDuration(exp.startDate, exp.endDate)}
                         </div>
                       </div>
