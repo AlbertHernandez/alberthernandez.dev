@@ -6,8 +6,10 @@ import Link from "next/link";
 import {
   Briefcase,
   CalendarDays,
+  ChevronDown,
   Code,
   ExternalLink,
+  Laptop,
   Lightbulb,
   Moon,
   Star,
@@ -15,7 +17,7 @@ import {
   Users,
 } from "lucide-react";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { Button } from "./components/button";
 
@@ -463,6 +465,8 @@ export default function Portfolio() {
   const { setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [visible, setVisible] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
   useEffect(() => {
     setMounted(true);
@@ -471,6 +475,37 @@ export default function Portfolio() {
   }, []);
 
   useEffect(() => setMounted(true), []);
+
+  useEffect(() => {
+    const handleClickOutside = event => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
+
+  const getThemeIcon = () => {
+    switch (resolvedTheme) {
+      case "dark": {
+        return <Moon className="h-5 w-5" />;
+      }
+      case "light": {
+        return <Sun className="h-5 w-5" />;
+      }
+      default: {
+        return <Laptop className="h-5 w-5" />;
+      }
+    }
+  };
 
   const toggleDarkMode = () => {
     if (resolvedTheme === "dark") {
@@ -536,42 +571,88 @@ export default function Portfolio() {
             onClick={() => scrollToSection("about")}
             className="flex items-center space-x-2"
           >
-            <span className="font-bold text-lg text-primary duration-300 hover:scale-110">
+            <span className="font-bold text-lg text-primary dark:text-white transition-all duration-300 ease-in-out hover:scale-110">
               Albert Hernández
             </span>
           </button>
           <nav className="hidden md:flex items-center space-x-4 text-sm font-medium">
             <button
               onClick={() => scrollToSection("about-me")}
-              className="text-primary duration-300 hover:scale-110"
+              className="text-primary dark:text-white transition-all duration-300 ease-in-out hover:scale-110"
             >
               About Me
             </button>
             <button
               onClick={() => scrollToSection("experience")}
-              className="text-primary duration-300 hover:scale-110"
+              className="text-primary dark:text-white transition-all duration-300 ease-in-out hover:scale-110"
             >
               Experience
             </button>
             <button
               onClick={() => scrollToSection("projects")}
-              className="text-primary duration-300 hover:scale-110"
+              className="text-primary dark:text-white transition-all duration-300 ease-in-out hover:scale-110"
             >
               Projects
             </button>
           </nav>
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={toggleDarkMode}
-            className="rounded-full group hover:bg-transparent"
-          >
-            {resolvedTheme === "dark" ? (
-              <Sun className="h-5 w-5 transition-transform duration-300 group-hover:rotate-12" />
-            ) : (
-              <Moon className="h-5 w-5 transition-transform duration-300 group-hover:rotate-12" />
+          <div className="relative" ref={dropdownRef}>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleDropdown}
+              className="rounded-full group hover:bg-transparent"
+            >
+              {getThemeIcon()}
+              <ChevronDown className="h-4 w-4 ml-1" />
+            </Button>
+            {dropdownOpen && (
+              <div className="absolute right-0 mt-4 w-48 rounded-md shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5">
+                <div
+                  className="py-1"
+                  role="menu"
+                  aria-orientation="vertical"
+                  aria-labelledby="options-menu"
+                >
+                  <div className="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 border-b border-gray-200 dark:border-gray-700">
+                    Theme
+                  </div>
+                  <button
+                    onClick={() => {
+                      setTheme("light");
+                      setDropdownOpen(false);
+                    }}
+                    className="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 w-full text-left"
+                    role="menuitem"
+                  >
+                    <Sun className="h-5 w-5 mr-2" />
+                    Light
+                  </button>
+                  <button
+                    onClick={() => {
+                      setTheme("dark");
+                      setDropdownOpen(false);
+                    }}
+                    className="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 w-full text-left"
+                    role="menuitem"
+                  >
+                    <Moon className="h-5 w-5 mr-2" />
+                    Dark
+                  </button>
+                  <button
+                    onClick={() => {
+                      setTheme("system");
+                      setDropdownOpen(false);
+                    }}
+                    className="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 w-full text-left"
+                    role="menuitem"
+                  >
+                    <Laptop className="h-5 w-5 mr-2" />
+                    System
+                  </button>
+                </div>
+              </div>
             )}
-          </Button>
+          </div>
         </div>
       </header>
       <main className="flex-1 pt-24">
