@@ -1067,7 +1067,7 @@ export default function Portfolio() {
                   <div className="text-sm text-muted-foreground dark:text-gray-400 w-full sm:w-auto sm:text-right mt-1 sm:mt-0">
                     <div className="flex items-center sm:justify-end">
                       <CalendarDays className="w-4 h-4 mr-1" />
-                      <span>2017 - 2021</span>
+                      <span>2015 - 2019</span>
                     </div>
                   </div>
                 </div>
