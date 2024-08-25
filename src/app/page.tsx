@@ -7,14 +7,12 @@ import {
   Briefcase,
   CalendarDays,
   Check,
-  ChevronDown,
   Code,
   ExternalLink,
   GraduationCap,
   Laptop,
   Lightbulb,
   Moon,
-  Star,
   Sun,
   Users,
 } from "lucide-react";
@@ -469,8 +467,8 @@ export default function Portfolio() {
   const [visible, setVisible] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [isRotated, setIsRotated] = useState(false);
-  const dropdownRef = useRef(null);
-  const timeoutRef = useRef(null);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -481,8 +479,11 @@ export default function Portfolio() {
   useEffect(() => setMounted(true), []);
 
   useEffect(() => {
-    const handleClickOutside = event => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
         setDropdownOpen(false);
         setIsRotated(false);
       }
@@ -517,25 +518,17 @@ export default function Portfolio() {
   };
 
   const openDropdown = () => {
-    clearTimeout(timeoutRef.current);
+    if (timeoutRef.current !== null) {
+      clearTimeout(timeoutRef.current);
+    }
     setDropdownOpen(true);
     setIsRotated(true);
   };
 
-  const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  const handleThemeChange = newTheme => {
-    setTheme(newTheme);
-    setDropdownOpen(false);
-    setIsRotated(false);
-  };
-
-  const calculateDuration = (startDate, endDate) => {
+  const calculateDuration = (
+    startDate: string,
+    endDate: string | undefined,
+  ) => {
     // Parse the start and end dates
     const start = new Date(startDate);
     const end = endDate ? new Date(endDate) : new Date();
@@ -570,7 +563,20 @@ export default function Portfolio() {
     }
   };
 
-  if (!mounted) return null;
+  const scrollToSection = (sectionId: string) => {
+    const section = document.querySelector(`#${sectionId}`);
+    if (section instanceof HTMLElement) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleThemeChange = (newTheme: "light" | "dark" | "system") => {
+    setTheme(newTheme);
+    setDropdownOpen(false);
+    setIsRotated(false);
+  };
+
+  if (!mounted) return;
 
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground dark:bg-gray-900 dark:text-gray-100">
