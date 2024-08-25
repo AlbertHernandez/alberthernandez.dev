@@ -774,10 +774,10 @@ export default function Portfolio() {
                       <div className="text-sm text-muted-foreground dark:text-gray-400 w-full sm:w-auto sm:text-right">
                         <div className="flex items-center sm:justify-end">
                           <CalendarDays className="w-4 h-4 mr-1" />
-                          <span>{exp.period}</span>
-                        </div>
-                        <div className="mt-1">
-                          {calculateDuration(exp.startDate, exp.endDate)}
+                          <span>
+                            {exp.period} ·{" "}
+                            {calculateDuration(exp.startDate, exp.endDate)}
+                          </span>
                         </div>
                       </div>
                     </div>
