@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "Albert Hernández | Backend Software Engineer",
     description:
       "Backend Software Engineer with over 5 years of experience. Specializing in web development",
-    images: ["/albert-hernandez-twitter-card.jpeg"],
+    images: ["/albert-hernandez-banner-twitter.jpg"],
   },
   authors: [{ name: "Albert Hernández" }],
   creator: "Albert Hernández",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
       "Backend Software Engineer with over 5 years of experience. Specializing in web development",
     images: [
       {
-        url: "/albert-hernandez-twitter-card.jpeg",
+        url: "/albert-hernandez-banner.jpg",
         width: 1500,
         height: 500,
         alt: "Albert Hernández - Backend Software Engineer",
