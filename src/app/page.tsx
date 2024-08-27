@@ -598,50 +598,6 @@ const experiences = [
   },
 ];
 
-// const projects = [
-//   {
-//     title: "Task Management App",
-//     icon: "/cat.webp",
-//     description:
-//       "A full-stack application for managing tasks and projects, featuring real-time updates and team collaboration tools.",
-//     technologies: [
-//       { name: "React", icon: "/cat.webp" },
-//       { name: "Node.js", icon: "/cat.webp" },
-//       { name: "MongoDB", icon: "/cat.webp" },
-//       { name: "Socket.io", icon: "/cat.webp" },
-//     ],
-//     github: "https://github.com/AlbertHernandez/task-management-app",
-//     stars: 124,
-//   },
-//   {
-//     title: "E-commerce Platform",
-//     icon: "/cat.webp",
-//     description:
-//       "A scalable e-commerce solution with features like product management, user authentication, and payment integration.",
-//     technologies: [
-//       { name: "Next.js", icon: "/cat.webp" },
-//       { name: "TypeScript", icon: "/cat.webp" },
-//       { name: "Stripe", icon: "/cat.webp" },
-//       { name: "PostgreSQL", icon: "/cat.webp" },
-//     ],
-//     github: "https://github.com/AlbertHernandez/ecommerce-platform",
-//     stars: 89,
-//   },
-//   {
-//     title: "Weather Forecast App",
-//     icon: "/cat.webp",
-//     description:
-//       "A mobile application providing accurate weather forecasts using geolocation and integrating with a weather API.",
-//     technologies: [
-//       { name: "React Native", icon: "/cat.webp" },
-//       { name: "Redux", icon: "/cat.webp" },
-//       { name: "OpenWeatherMap API", icon: "/cat.webp" },
-//     ],
-//     github: "https://github.com/AlbertHernandez/weather-forecast-app",
-//     stars: 56,
-//   },
-// ];
-
 export default function Portfolio() {
   const { setTheme, resolvedTheme, theme } = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -884,7 +840,7 @@ export default function Portfolio() {
         >
           <div className="mx-auto max-w-[980px] flex flex-col md:flex-row items-center justify-center gap-8">
             <div className="md:w-1/3 flex justify-center items-center">
-              <div className="rounded-full border-4 shadow-lg">
+              <div className="rounded-full border-4 shadow-lg border-[#27314b] dark:border-[#e5e7eb]">
                 <Image
                   src="/albert.webp"
                   alt="Albert Hernández"
