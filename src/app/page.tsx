@@ -821,7 +821,7 @@ export default function Portfolio() {
             </p>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="flex items-start space-x-4">
-                <Code className="w-8 h-8 text-primary dark:text-primary-dark flex-shrink-0 mt-1" />
+                <Code className="w-8 h-8 text-primary dark:text-primary-dark flex-shrink-0" />
                 <div>
                   <h3 className="text-xl font-bold mb-2">Backend Developer</h3>
                   <p className="text-gray-600 dark:text-gray-300">
@@ -832,7 +832,7 @@ export default function Portfolio() {
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <Users className="w-8 h-8 text-primary dark:text-primary-dark flex-shrink-0 mt-1" />
+                <Users className="w-8 h-8 text-primary dark:text-primary-dark flex-shrink-0" />
                 <div>
                   <h3 className="text-xl font-bold mb-2">
                     Cross-functional Collaborator
@@ -845,7 +845,7 @@ export default function Portfolio() {
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <Lightbulb className="w-8 h-8 text-primary dark:text-primary-dark flex-shrink-0 mt-1" />
+                <Lightbulb className="w-8 h-8 text-primary dark:text-primary-dark flex-shrink-0" />
                 <div>
                   <h3 className="text-xl font-bold mb-2">
                     Value-Driven Solutions
@@ -859,7 +859,7 @@ export default function Portfolio() {
               </div>
               <div className="flex items-start space-x-4">
                 <svg
-                  className="w-8 h-8 text-primary dark:text-primary-dark flex-shrink-0 mt-1"
+                  className="w-8 h-8 text-primary dark:text-primary-dark flex-shrink-0"
                   xmlns="http://www.w3.org/2000/svg"
                   role="img"
                   viewBox="0 0 24 24"
@@ -868,19 +868,18 @@ export default function Portfolio() {
                   <title>YouTube</title>
                   <path d="M23.498 6.186a2.963 2.963 0 0 0-2.084-2.084C19.963 3.5 12 3.5 12 3.5s-7.963 0-9.414.602A2.963 2.963 0 0 0 .502 6.186C0 7.638 0 12 0 12s0 4.362.502 5.814a2.963 2.963 0 0 0 2.084 2.084C4.037 20.5 12 20.5 12 20.5s7.963 0 9.414-.602a2.963 2.963 0 0 0 2.084-2.084C24 16.362 24 12 24 12s0-4.362-.502-5.814zM9.546 15.568V8.432L15.818 12l-6.272 3.568z" />
                 </svg>
-
                 <div>
                   <h3 className="text-xl font-bold mb-2">Content Creator</h3>
                   <p className="text-gray-600 dark:text-gray-300">
                     In my free time, I create programming videos on{" "}
-                    <a
+                    <Link
                       href="https://www.youtube.com/@AlbertHernandez"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-primary dark:text-primary-dark hover:underline"
                     >
                       YouTube
-                    </a>
+                    </Link>
                     , where I combine my passion for teaching with programming.
                   </p>
                 </div>
@@ -888,7 +887,6 @@ export default function Portfolio() {
             </div>
           </div>
         </section>
-
         <section
           id="experience"
           className="container py-12 md:py-12 lg:py-16 mx-auto"
