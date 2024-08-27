@@ -710,9 +710,6 @@ export default function Portfolio() {
                   Albert Hernández
                 </span>
               </h1>
-              <p className="text-lg text-muted-foreground dark:text-gray-300 mb-6">
-                Backend Software Engineer
-              </p>
               <p className="text-base text-muted-foreground dark:text-gray-400 mb-6">
                 I&apos;m a passionate Backend Software Engineer based in Spain,
                 with over 5 years of experience in building scalable and
