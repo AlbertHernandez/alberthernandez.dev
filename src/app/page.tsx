@@ -713,6 +713,12 @@ export default function Portfolio() {
               <p className="text-lg text-muted-foreground dark:text-gray-300 mb-6">
                 Backend Software Engineer
               </p>
+              <p className="text-base text-muted-foreground dark:text-gray-400 mb-6">
+                I&apos;m a passionate Backend Software Engineer based in Spain,
+                with over 5 years of experience in building scalable and
+                efficient systems. I also create content on YouTube about web
+                programing. Let&apos;s connect!
+              </p>
               <div className="flex space-x-4">
                 <Link
                   href="mailto:alberthernandezdev@gmail.com"
