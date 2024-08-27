@@ -5,18 +5,16 @@ import Link from "next/link";
 
 import {
   Briefcase,
-  Check,
   Code,
   ExternalLink,
   GraduationCap,
-  Laptop,
   Lightbulb,
   Moon,
   Sun,
   Users,
 } from "lucide-react";
 import { useTheme } from "next-themes";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Button } from "./components/button";
 
@@ -599,13 +597,9 @@ const experiences = [
 ];
 
 export default function Portfolio() {
-  const { setTheme, resolvedTheme, theme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [visible, setVisible] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [isRotated, setIsRotated] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement | null>(null);
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -613,51 +607,12 @@ export default function Portfolio() {
     return () => clearTimeout(timer);
   }, []);
 
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
-      ) {
-        setDropdownOpen(false);
-        setIsRotated(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
-
-  const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen);
-    setIsRotated(!isRotated);
-  };
-
   const getThemeIcon = () => {
     if (resolvedTheme === "light") {
       return <Sun className="h-5 w-5" aria-hidden="true" />;
     } else if (resolvedTheme === "dark") {
       return <Moon className="h-5 w-5" aria-hidden="true" />;
-    } else {
-      return <Laptop className="h-5 w-5" aria-hidden="true" />;
     }
-  };
-
-  const closeDropdownWithDelay = () => {
-    timeoutRef.current = setTimeout(() => {
-      setDropdownOpen(false);
-      setIsRotated(false);
-    }, 300);
-  };
-
-  const openDropdown = () => {
-    if (timeoutRef.current !== null) {
-      clearTimeout(timeoutRef.current);
-    }
-    setDropdownOpen(true);
-    setIsRotated(true);
   };
 
   const calculateDuration = (
@@ -705,10 +660,12 @@ export default function Portfolio() {
     }
   };
 
-  const handleThemeChange = (newTheme: "light" | "dark" | "system") => {
-    setTheme(newTheme);
-    setDropdownOpen(false);
-    setIsRotated(false);
+  const toggleTheme = () => {
+    if (resolvedTheme === "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
   };
 
   if (!mounted) return;
@@ -756,80 +713,24 @@ export default function Portfolio() {
               Education
             </button>
           </div>
-          <div
-            className="relative"
-            ref={dropdownRef}
-            onMouseEnter={openDropdown}
-            onMouseLeave={closeDropdownWithDelay}
-          >
+          <div className="relative">
             <Button
               variant="ghost"
               size="icon"
-              onClick={toggleDropdown}
+              onClick={toggleTheme}
               className="rounded-full group hover:bg-transparent transition-all ease-in-out"
-              aria-expanded={dropdownOpen}
-              aria-haspopup="true"
               aria-label="Toggle theme"
             >
               <div
-                className={`transition-transform duration-300 ${isRotated ? "rotate-45" : ""}`}
+                className={`transition-transform duration-300 ${
+                  resolvedTheme === "dark"
+                    ? "hover:-rotate-12"
+                    : "hover:rotate-12"
+                }`}
               >
                 {getThemeIcon()}
               </div>
             </Button>
-            {dropdownOpen && (
-              <div
-                className="absolute right-1/2 transform translate-x-1/2 mt-4 w-48 rounded-md shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5"
-                role="menu"
-                aria-orientation="vertical"
-                aria-labelledby="options-menu"
-              >
-                <div className="py-1">
-                  <div className="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 border-b border-gray-200 dark:border-gray-700">
-                    Theme
-                  </div>
-                  <button
-                    onClick={() => handleThemeChange("light")}
-                    className="flex items-center justify-between px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 w-full text-left"
-                    role="menuitem"
-                  >
-                    <div className="flex items-center">
-                      <Sun className="h-5 w-5 mr-2" aria-hidden="true" />
-                      Light
-                    </div>
-                    {theme === "light" && (
-                      <Check className="h-4 w-4" aria-hidden="true" />
-                    )}
-                  </button>
-                  <button
-                    onClick={() => handleThemeChange("dark")}
-                    className="flex items-center justify-between px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 w-full text-left"
-                    role="menuitem"
-                  >
-                    <div className="flex items-center">
-                      <Moon className="h-5 w-5 mr-2" aria-hidden="true" />
-                      Dark
-                    </div>
-                    {theme === "dark" && (
-                      <Check className="h-4 w-4" aria-hidden="true" />
-                    )}
-                  </button>
-                  <button
-                    onClick={() => handleThemeChange("system")}
-                    className="flex items-center justify-between px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 w-full text-left"
-                    role="menuitem"
-                  >
-                    <div className="flex items-center">
-                      <Laptop className="h-5 w-5 mr-2" aria-hidden="true" />
-                      System
-                    </div>
-                    {theme === "system" && (
-                      <Check className="h-4 w-4" aria-hidden="true" />
-                    )}
-                  </button>
-                </div>
-              </div>
-            )}
           </div>
         </nav>
       </header>
