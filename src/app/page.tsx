@@ -910,24 +910,26 @@ export default function Portfolio() {
                   </div>
                   <div className="ml-6 flex-grow">
                     <div className="flex flex-col sm:flex-row justify-between items-start mb-2">
-                      <h3 className="text-xl font-bold mb-2 sm:mb-0">
-                        {exp.role}
-                      </h3>
+                      <div>
+                        <a
+                          href={exp.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center text-xl font-bold text-primary hover:underline mb-1 group"
+                        >
+                          {exp.company}
+                          <ExternalLink className="ml-1 h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        </a>
+                        <h3 className="text-lg font-semibold mb-2 sm:mb-0">
+                          {exp.role}
+                        </h3>
+                      </div>
                       <div className="text-sm text-muted-foreground dark:text-gray-400 w-full sm:w-auto sm:text-right">
                         <div className="flex items-center sm:justify-end">
                           <span>{exp.period}</span>
                         </div>
                       </div>
                     </div>
-                    <a
-                      href={exp.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-lg text-primary hover:underline mb-4 group"
-                    >
-                      {exp.company}
-                      <ExternalLink className="ml-1 h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </a>
                     <ul className="list-disc list-inside mb-6 space-y-2">
                       {exp.points.map((point, i) => (
                         <li
