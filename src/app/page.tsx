@@ -3,16 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import {
-  Briefcase,
-  Code,
-  ExternalLink,
-  GraduationCap,
-  Lightbulb,
-  Moon,
-  Sun,
-  Users,
-} from "lucide-react";
+import { Code, ExternalLink, Lightbulb, Moon, Sun, Users } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
@@ -615,44 +606,6 @@ export default function Portfolio() {
     }
   };
 
-  const calculateDuration = (
-    startDate: string,
-    endDate: string | undefined,
-  ) => {
-    // Parse the start and end dates
-    const start = new Date(startDate);
-    const end = endDate ? new Date(endDate) : new Date();
-
-    // Calculate the difference in years and months
-    let years = end.getFullYear() - start.getFullYear();
-    let months = end.getMonth() - start.getMonth();
-
-    // Adjust for negative months
-    if (months < 0) {
-      years--;
-      months += 12;
-    }
-
-    // Handle cases where the start day is after the end day in the same month
-    if (start.getDate() > end.getDate()) {
-      if (months === 0) {
-        years--;
-        months = 11;
-      } else {
-        months--;
-      }
-    }
-
-    // Format the result
-    if (years === 0) {
-      return `${months} month${months === 1 ? "" : "s"}`;
-    } else if (months === 0) {
-      return `${years} year${years === 1 ? "" : "s"}`;
-    } else {
-      return `${years} year${years === 1 ? "" : "s"} ${months} month${months === 1 ? "" : "s"}`;
-    }
-  };
-
   const scrollToSection = (sectionId: string) => {
     const section = document.querySelector(`#${sectionId}`);
     if (section instanceof HTMLElement) {
@@ -939,7 +892,6 @@ export default function Portfolio() {
               <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
                 Experience
               </span>
-              <Briefcase className="ml-2 h-8 w-8" />
             </h2>
             <div className="space-y-16">
               {experiences.map((exp, index) => (
@@ -963,10 +915,7 @@ export default function Portfolio() {
                       </h3>
                       <div className="text-sm text-muted-foreground dark:text-gray-400 w-full sm:w-auto sm:text-right">
                         <div className="flex items-center sm:justify-end">
-                          <span>
-                            {exp.period} ·{" "}
-                            {calculateDuration(exp.startDate, exp.endDate)}
-                          </span>
+                          <span>{exp.period}</span>
                         </div>
                       </div>
                     </div>
@@ -1028,7 +977,6 @@ export default function Portfolio() {
               <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
                 Education
               </span>
-              <GraduationCap className="ml-2 h-8 w-8" />
             </h2>
             <div className="flex flex-row items-start gap-4 sm:gap-8">
               <div className="w-16 h-16 relative flex-shrink-0">
