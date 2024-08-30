@@ -50,8 +50,8 @@ const experiences = [
         icon: <NodeJS />,
       },
       {
-        name: "Jest",
-        color: "#99425b",
+        name: TechnologyNames.Jest,
+        color: Colors.Jest,
         icon: (
           <svg
             role="img"
@@ -74,8 +74,8 @@ const experiences = [
         ),
       },
       {
-        name: "MongoDB",
-        color: "#47A248",
+        name: TechnologyNames.MongoDB,
+        color: Colors.MongoDB,
         icon: (
           <svg
             role="img"
@@ -91,8 +91,8 @@ const experiences = [
         ),
       },
       {
-        name: "Redis",
-        color: "#C6302B",
+        name: TechnologyNames.Redis,
+        color: Colors.Redis,
         icon: (
           <svg
             viewBox="0 -18 256 256"
@@ -142,8 +142,8 @@ const experiences = [
         ),
       },
       {
-        name: "Docker",
-        color: "#2496ED",
+        name: TechnologyNames.Docker,
+        color: Colors.Docker,
         icon: (
           <svg
             role="img"
@@ -159,8 +159,8 @@ const experiences = [
         ),
       },
       {
-        name: "Github Actions",
-        color: "#2088FF",
+        name: TechnologyNames.GitHubActions,
+        color: Colors.GitHubActions,
         icon: (
           <svg
             role="img"
@@ -176,8 +176,8 @@ const experiences = [
         ),
       },
       {
-        name: "Amazon Web Services (AWS)",
-        color: "#FF9900",
+        name: TechnologyNames.AmazonWebServices,
+        color: Colors.AmazonWebServices,
         icon: (
           <svg
             width={ICON_TECHNOLOGY_SIZE}
@@ -198,8 +198,8 @@ const experiences = [
         ),
       },
       {
-        name: "Datadog",
-        color: "#632CA6",
+        name: TechnologyNames.Datadog,
+        color: Colors.Datadog,
         icon: (
           <svg
             role="img"
@@ -249,8 +249,8 @@ const experiences = [
         icon: <NodeJS />,
       },
       {
-        name: "NestJS",
-        color: "#E0234E",
+        name: TechnologyNames.NestJS,
+        color: Colors.NestJS,
         icon: (
           <svg
             role="img"
@@ -266,8 +266,8 @@ const experiences = [
         ),
       },
       {
-        name: "Jest",
-        color: "#99425b",
+        name: TechnologyNames.Jest,
+        color: Colors.Jest,
         icon: (
           <svg
             role="img"
@@ -290,8 +290,8 @@ const experiences = [
         ),
       },
       {
-        name: "MongoDB",
-        color: "#47A248",
+        name: TechnologyNames.MongoDB,
+        color: Colors.MongoDB,
         icon: (
           <svg
             role="img"
@@ -307,8 +307,8 @@ const experiences = [
         ),
       },
       {
-        name: "PostgreSQL",
-        color: "#4169E1",
+        name: TechnologyNames.PostgreSQL,
+        color: Colors.PostgreSQL,
         icon: (
           <svg
             width={ICON_TECHNOLOGY_SIZE}
@@ -345,8 +345,8 @@ const experiences = [
         ),
       },
       {
-        name: "Redis",
-        color: "#C6302B",
+        name: TechnologyNames.Redis,
+        color: Colors.Redis,
         icon: (
           <svg
             viewBox="0 -18 256 256"
@@ -396,8 +396,8 @@ const experiences = [
         ),
       },
       {
-        name: "Docker",
-        color: "#2496ED",
+        name: TechnologyNames.Docker,
+        color: Colors.Docker,
         icon: (
           <svg
             role="img"
@@ -413,8 +413,8 @@ const experiences = [
         ),
       },
       {
-        name: "Kubernetes",
-        color: "#326CE5",
+        name: TechnologyNames.Kubernetes,
+        color: Colors.Kubernetes,
         icon: (
           <svg
             role="img"
@@ -438,8 +438,8 @@ const experiences = [
         ),
       },
       {
-        name: "CircleCI",
-        color: "#727272",
+        name: TechnologyNames.CircleCI,
+        color: Colors.CircleCI,
         icon: (
           <svg
             role="img"
@@ -455,8 +455,8 @@ const experiences = [
         ),
       },
       {
-        name: "Google Cloud Platform (GCP)",
-        color: "#4285F4",
+        name: TechnologyNames.GoogleCloudPlatform,
+        color: Colors.GoogleCloudPlatform,
         icon: (
           <svg
             className="fill-current text-[color:#4285F4]"
@@ -486,8 +486,8 @@ const experiences = [
         ),
       },
       {
-        name: "Datadog",
-        color: "#632CA6",
+        name: TechnologyNames.Datadog,
+        color: Colors.Datadog,
         icon: (
           <svg
             role="img"
