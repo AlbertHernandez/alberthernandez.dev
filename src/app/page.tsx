@@ -7,10 +7,11 @@ import { Code, ExternalLink, Lightbulb, Moon, Sun, Users } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
-import { JavaScriptColor, JavaScriptIcon } from "@/shared/icons/JavaScriptIcon";
-import { NodeJSColor, NodeJSIcon } from "@/shared/icons/NodeJSIcon";
-import { ReactColor, ReactIcon } from "@/shared/icons/ReactIcon";
-import { TypeScriptColor, TypeScriptIcon } from "@/shared/icons/TypeScriptIcon";
+import { Colors } from "@/shared/colors";
+import { JavaScriptIcon } from "@/shared/icons/JavaScript";
+import { NodeJSIcon } from "@/shared/icons/NodeJS";
+import { ReactIcon } from "@/shared/icons/React";
+import { TypeScriptIcon } from "@/shared/icons/TypeScript";
 
 import { Button } from "./components/button";
 
@@ -32,22 +33,22 @@ const experiences = [
     technologies: [
       {
         name: "JavaScript",
-        color: JavaScriptColor,
+        color: Colors.JavaScript,
         icon: <JavaScriptIcon />,
       },
       {
         name: "TypeScript",
-        color: TypeScriptColor,
+        color: Colors.TypeScript,
         icon: <TypeScriptIcon />,
       },
       {
         name: "React",
-        color: ReactColor,
+        color: Colors.React,
         icon: <ReactIcon />,
       },
       {
         name: "Node.js",
-        color: NodeJSColor,
+        color: Colors.NodeJS,
         icon: <NodeJSIcon />,
       },
       {
@@ -236,17 +237,17 @@ const experiences = [
     technologies: [
       {
         name: "JavaScript",
-        color: JavaScriptColor,
+        color: Colors.JavaScript,
         icon: <JavaScriptIcon />,
       },
       {
         name: "TypeScript",
-        color: TypeScriptColor,
+        color: Colors.TypeScript,
         icon: <TypeScriptIcon />,
       },
       {
         name: "Node.js",
-        color: NodeJSColor,
+        color: Colors.NodeJS,
         icon: <NodeJSIcon />,
       },
       {

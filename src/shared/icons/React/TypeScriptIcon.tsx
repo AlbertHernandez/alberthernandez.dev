@@ -1,6 +1,4 @@
-import { HexadecimalColor, IconProps } from "@/shared/icons/types.ts";
-
-export const ReactColor: HexadecimalColor = "#61DAFB";
+import { IconProps } from "@/shared/icons/types.ts";
 
 export const ReactIcon: React.FC<IconProps> = ({
   size = 24,
