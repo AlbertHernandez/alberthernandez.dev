@@ -8,7 +8,8 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 import { Colors } from "@/shared/colors";
-import { JavaScript, NodeJS, React, TypeScript } from "@/shared/icons";
+import { React } from "@/shared/icons";
+import { Technologies } from "@/shared/technologies.tsx";
 import { TechnologyNames } from "@/shared/technology-names.ts";
 
 import { Button } from "./components/button";
@@ -29,26 +30,10 @@ const experiences = [
       "Ensure code quality and reliability through testing, using design patterns such as CQRS, event-driven architecture, and feature flags. Follow hexagonal architecture and Domain-Driven Design (DDD) principles, and employ Continuous Integration/Continuous Deployment (CI/CD) practices with daily deployments.",
     ],
     technologies: [
-      {
-        name: TechnologyNames.JavaScript,
-        color: Colors.JavaScript,
-        icon: <JavaScript />,
-      },
-      {
-        name: TechnologyNames.TypeScript,
-        color: Colors.TypeScript,
-        icon: <TypeScript />,
-      },
-      {
-        name: TechnologyNames.React,
-        color: Colors.React,
-        icon: <React />,
-      },
-      {
-        name: TechnologyNames.NodeJS,
-        color: Colors.NodeJS,
-        icon: <NodeJS />,
-      },
+      Technologies.JavaScript,
+      Technologies.TypeScript,
+      Technologies.React,
+      Technologies.NodeJS,
       {
         name: TechnologyNames.Jest,
         color: Colors.Jest,
@@ -233,21 +218,9 @@ const experiences = [
       "Develop matching systems between agents and end customers to allocate the most suitable agent based on customer profiles.",
     ],
     technologies: [
-      {
-        name: TechnologyNames.JavaScript,
-        color: Colors.JavaScript,
-        icon: <JavaScript />,
-      },
-      {
-        name: TechnologyNames.TypeScript,
-        color: Colors.TypeScript,
-        icon: <TypeScript />,
-      },
-      {
-        name: TechnologyNames.NodeJS,
-        color: Colors.NodeJS,
-        icon: <NodeJS />,
-      },
+      Technologies.JavaScript,
+      Technologies.TypeScript,
+      Technologies.NodeJS,
       {
         name: TechnologyNames.NestJS,
         color: Colors.NestJS,

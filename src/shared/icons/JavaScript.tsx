@@ -1,5 +1,8 @@
-import { IconProps } from "@/shared/icons/types.ts";
+import React from "react";
+
 import { TechnologyNames } from "@/shared/technology-names.ts";
+
+import { IconProps } from "./types";
 
 export const JavaScript: React.FC<IconProps> = ({
   size = 24,

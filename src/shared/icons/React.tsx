@@ -1,11 +1,10 @@
-import { IconProps } from "@/shared/icons/types.ts";
+import { FC } from "react";
+
 import { TechnologyNames } from "@/shared/technology-names.ts";
 
-export const React: React.FC<IconProps> = ({
-  size = 24,
-  className,
-  ...props
-}) => {
+import { IconProps } from "./types";
+
+export const React: FC<IconProps> = ({ size = 24, className, ...props }) => {
   return (
     <svg
       role="img"
