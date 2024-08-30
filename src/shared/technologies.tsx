@@ -1,4 +1,11 @@
-import { Icon, JavaScript, NodeJS, React, TypeScript } from "@/shared/icons";
+import {
+  Icon,
+  JavaScript,
+  Jest,
+  NodeJS,
+  React,
+  TypeScript,
+} from "@/shared/icons";
 
 export interface Technology {
   name: string;
@@ -6,7 +13,12 @@ export interface Technology {
   icon: Icon;
 }
 
-export type TechnologyKey = "NodeJS" | "JavaScript" | "React" | "TypeScript";
+export type TechnologyKey =
+  | "NodeJS"
+  | "JavaScript"
+  | "React"
+  | "TypeScript"
+  | "Jest";
 
 export const Technologies: { [key in TechnologyKey]: Technology } = {
   NodeJS: {
@@ -28,5 +40,10 @@ export const Technologies: { [key in TechnologyKey]: Technology } = {
     name: "TypeScript",
     color: "#3178C6",
     icon: <TypeScript />,
+  },
+  Jest: {
+    name: "Jest",
+    color: "#99425b",
+    icon: <Jest />,
   },
 } as const;
