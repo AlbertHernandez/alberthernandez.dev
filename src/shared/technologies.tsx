@@ -2,6 +2,7 @@ import {
   Icon,
   JavaScript,
   Jest,
+  MongoDB,
   NodeJS,
   React,
   TypeScript,
@@ -18,7 +19,8 @@ export type TechnologyKey =
   | "JavaScript"
   | "React"
   | "TypeScript"
-  | "Jest";
+  | "Jest"
+  | "MongoDB";
 
 export const Technologies: { [key in TechnologyKey]: Technology } = {
   NodeJS: {
@@ -45,5 +47,10 @@ export const Technologies: { [key in TechnologyKey]: Technology } = {
     name: "Jest",
     color: "#99425b",
     icon: <Jest />,
+  },
+  MongoDB: {
+    name: "MongoDB",
+    color: "#47A248",
+    icon: <MongoDB />,
   },
 } as const;
