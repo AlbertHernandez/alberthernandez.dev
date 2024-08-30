@@ -14,7 +14,7 @@ export const JavaScriptIcon: React.FC<IconProps> = ({
       width={size}
       height={size}
       xmlns="http://www.w3.org/2000/svg"
-      className={`fill-current text-[color:${JavaScriptColor}] ${className || ""}`}
+      className={`fill-current text-[color:#f7df1e] ${className || ""}`}
       {...props}
     >
       <title>JavaScript</title>
