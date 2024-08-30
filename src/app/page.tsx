@@ -8,10 +8,8 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 import { Colors } from "@/shared/colors";
-import { JavaScriptIcon } from "@/shared/icons/JavaScript";
-import { NodeJSIcon } from "@/shared/icons/NodeJS";
-import { ReactIcon } from "@/shared/icons/React";
-import { TypeScriptIcon } from "@/shared/icons/TypeScript";
+import { JavaScript, NodeJS, React, TypeScript } from "@/shared/icons";
+import { TechnologyNames } from "@/shared/technology-names.ts";
 
 import { Button } from "./components/button";
 
@@ -32,24 +30,24 @@ const experiences = [
     ],
     technologies: [
       {
-        name: "JavaScript",
+        name: TechnologyNames.JavaScript,
         color: Colors.JavaScript,
-        icon: <JavaScriptIcon />,
+        icon: <JavaScript />,
       },
       {
-        name: "TypeScript",
+        name: TechnologyNames.TypeScript,
         color: Colors.TypeScript,
-        icon: <TypeScriptIcon />,
+        icon: <TypeScript />,
       },
       {
-        name: "React",
+        name: TechnologyNames.React,
         color: Colors.React,
-        icon: <ReactIcon />,
+        icon: <React />,
       },
       {
-        name: "Node.js",
+        name: TechnologyNames.NodeJS,
         color: Colors.NodeJS,
-        icon: <NodeJSIcon />,
+        icon: <NodeJS />,
       },
       {
         name: "Jest",
@@ -236,19 +234,19 @@ const experiences = [
     ],
     technologies: [
       {
-        name: "JavaScript",
+        name: TechnologyNames.JavaScript,
         color: Colors.JavaScript,
-        icon: <JavaScriptIcon />,
+        icon: <JavaScript />,
       },
       {
-        name: "TypeScript",
+        name: TechnologyNames.TypeScript,
         color: Colors.TypeScript,
-        icon: <TypeScriptIcon />,
+        icon: <TypeScript />,
       },
       {
-        name: "Node.js",
+        name: TechnologyNames.NodeJS,
         color: Colors.NodeJS,
-        icon: <NodeJSIcon />,
+        icon: <NodeJS />,
       },
       {
         name: "NestJS",
