@@ -2,6 +2,7 @@ export * from "./AmazonWebServices";
 export * from "./CircleCI";
 export * from "./Datadog";
 export * from "./Docker";
+export * from "./GitHub";
 export * from "./GitHubActions";
 export * from "./Gmail";
 export * from "./GoogleCloudPlatform";
