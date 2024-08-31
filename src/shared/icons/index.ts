@@ -18,3 +18,4 @@ export * from "./React";
 export * from "./Redis";
 export type { Icon } from "./types";
 export * from "./TypeScript";
+export * from "./X";
