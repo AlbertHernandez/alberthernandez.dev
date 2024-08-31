@@ -1,13 +1,15 @@
 import React from "react";
 
 import { ThemeToggleButton } from "@/app/components/ThemeToggleButton";
+import { useDelayedVisibility } from "@/shared/hooks";
 
 interface HeaderProps {
-  isVisible: boolean;
   scrollTo: (section: string) => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({ isVisible, scrollTo }) => {
+export const Header: React.FC<HeaderProps> = ({ scrollTo }) => {
+  const { isVisible } = useDelayedVisibility();
+
   return (
     <header
       className={`fixed left-1/2 transform -translate-x-1/2 z-50 rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-lg transition-all duration-500 ease-in-out ${
