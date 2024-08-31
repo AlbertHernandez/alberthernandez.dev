@@ -1,4 +1,5 @@
 import {
+  Docker,
   Icon,
   JavaScript,
   Jest,
@@ -22,7 +23,8 @@ export type TechnologyKey =
   | "TypeScript"
   | "Jest"
   | "MongoDB"
-  | "Redis";
+  | "Redis"
+  | "Docker";
 
 export const Technologies: { [key in TechnologyKey]: Technology } = {
   NodeJS: {
@@ -59,5 +61,10 @@ export const Technologies: { [key in TechnologyKey]: Technology } = {
     name: "Redis",
     color: "#C6302B",
     icon: <Redis />,
+  },
+  Docker: {
+    name: "Docker",
+    color: "#2496ED",
+    icon: <Docker />,
   },
 } as const;
