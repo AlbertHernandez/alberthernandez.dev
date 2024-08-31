@@ -1,20 +1,22 @@
 import React from "react";
 
+import { defaultIconProps } from "./defaultIconProps";
 import { IconProps } from "./types";
 
 export const GoogleCloudPlatform: React.FC<IconProps> = ({
-  size = 24,
-  className,
-  ...props
+  ...clientProps
 }) => {
+  const { size, className, ...props } = {
+    ...defaultIconProps,
+    viewBox: "0 0 256 206",
+    ...clientProps,
+  };
+
   return (
     <svg
-      role="img"
-      viewBox="0 0 256 206"
       width={size}
       height={size}
-      xmlns="http://www.w3.org/2000/svg"
-      className={`fill-current text-[color:#4285F4] ${className || ""}`}
+      className={`text-[color:#4285F4] ${className}`}
       {...props}
     >
       <title>Google Cloud Platform</title>

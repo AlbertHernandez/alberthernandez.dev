@@ -1,16 +1,16 @@
 import { FC } from "react";
 
+import { defaultIconProps } from "./defaultIconProps";
 import { IconProps } from "./types";
 
-export const React: FC<IconProps> = ({ size = 24, className, ...props }) => {
+export const React: FC<IconProps> = ({ ...clientProps }) => {
+  const { size, className, ...props } = { ...defaultIconProps, ...clientProps };
+
   return (
     <svg
-      role="img"
-      viewBox="0 0 24 24"
       width={size}
       height={size}
-      xmlns="http://www.w3.org/2000/svg"
-      className={`fill-current text-[color:#61DAFB] ${className || ""}`}
+      className={`text-[color:#61DAFB] ${className || ""}`}
       {...props}
     >
       <title>React</title>

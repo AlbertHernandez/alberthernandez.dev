@@ -1,20 +1,16 @@
 import React from "react";
 
+import { defaultIconProps } from "./defaultIconProps";
 import { IconProps } from "./types";
 
-export const TypeScript: React.FC<IconProps> = ({
-  size = 24,
-  className,
-  ...props
-}) => {
+export const TypeScript: React.FC<IconProps> = ({ ...clientProps }) => {
+  const { size, className, ...props } = { ...defaultIconProps, ...clientProps };
+
   return (
     <svg
-      role="img"
-      viewBox="0 0 24 24"
       width={size}
       height={size}
-      xmlns="http://www.w3.org/2000/svg"
-      className={`fill-current text-[color:#3178C6] ${className || ""}`}
+      className={`text-[color:#3178C6] ${className}`}
       {...props}
     >
       <title>TypeScript</title>

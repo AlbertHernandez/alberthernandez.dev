@@ -1,20 +1,20 @@
 import React from "react";
 
+import { defaultIconProps } from "./defaultIconProps";
 import { IconProps } from "./types";
 
-export const Redis: React.FC<IconProps> = ({
-  size = 24,
-  className,
-  ...props
-}) => {
+export const Redis: React.FC<IconProps> = ({ ...clientProps }) => {
+  const { size, className, ...props } = {
+    ...defaultIconProps,
+    viewBox: "0 -18 256 256",
+    ...clientProps,
+  };
+
   return (
     <svg
-      role="img"
-      viewBox="0 -18 256 256"
       width={size}
       height={size}
-      xmlns="http://www.w3.org/2000/svg"
-      className={`fill-current text-[color:#C6302B] ${className || ""}`}
+      className={`text-[color:#C6302B] ${className}`}
       {...props}
     >
       <title>Redis</title>

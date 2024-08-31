@@ -1,20 +1,17 @@
 import React from "react";
 
+import { defaultIconProps } from "@/shared/icons/defaultIconProps.ts";
+
 import { IconProps } from "./types";
 
-export const MongoDB: React.FC<IconProps> = ({
-  size = 24,
-  className,
-  ...props
-}) => {
+export const MongoDB: React.FC<IconProps> = ({ ...clientProps }) => {
+  const { size, className, ...props } = { ...defaultIconProps, ...clientProps };
+
   return (
     <svg
-      role="img"
-      viewBox="0 0 24 24"
       width={size}
       height={size}
-      xmlns="http://www.w3.org/2000/svg"
-      className={`fill-current text-[color:#47A248] ${className || ""}`}
+      className={`text-[color:#47A248] ${className}`}
       {...props}
     >
       <title>MongoDB</title>

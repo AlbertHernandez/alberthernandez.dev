@@ -113,7 +113,7 @@ export default function Portfolio() {
                   aria-label="Email"
                   className="text-muted-foreground hover:text-primary transition-colors duration-200"
                 >
-                  <Gmail className="w-6 h-6 transform transition-transform duration-200 hover:scale-110" />
+                  <Gmail className="fill-current w-6 h-6 transform transition-transform duration-200 hover:scale-110" />
                 </Link>
                 <Link
                   href="https://github.com/AlbertHernandez"
@@ -121,7 +121,7 @@ export default function Portfolio() {
                   aria-label="GitHub"
                   className="text-muted-foreground hover:text-primary transition-colors duration-200"
                 >
-                  <GitHub className="w-6 h-6 transform transition-transform duration-200 hover:scale-110" />
+                  <GitHub className="fill-current w-6 h-6 transform transition-transform duration-200 hover:scale-110" />
                 </Link>
                 <Link
                   href="https://www.linkedin.com/in/albert-hernandez-dev"
@@ -129,7 +129,7 @@ export default function Portfolio() {
                   aria-label="LinkedIn"
                   className="text-muted-foreground hover:text-primary transition-colors duration-200"
                 >
-                  <LinkedIn className="w-6 h-6 transform transition-transform duration-200 hover:scale-110" />
+                  <LinkedIn className="fill-current w-6 h-6 transform transition-transform duration-200 hover:scale-110" />
                 </Link>
                 <Link
                   href="https://x.com/AlbertHernandev"
@@ -137,7 +137,7 @@ export default function Portfolio() {
                   aria-label="X"
                   className="text-muted-foreground hover:text-primary transition-colors duration-200"
                 >
-                  <X className="w-6 h-6 transform transition-transform duration-200 hover:scale-110" />
+                  <X className="fill-current w-6 h-6 transform transition-transform duration-200 hover:scale-110" />
                 </Link>
                 <Link
                   href="https://www.youtube.com/@AlbertHernandez"
@@ -145,7 +145,7 @@ export default function Portfolio() {
                   aria-label="YouTube"
                   className="text-muted-foreground hover:text-primary transition-colors duration-200"
                 >
-                  <YouTube className="w-6 h-6 transform transition-transform duration-200 hover:scale-110" />
+                  <YouTube className="fill-current w-6 h-6 transform transition-transform duration-200 hover:scale-110" />
                 </Link>
               </div>
             </div>
@@ -216,7 +216,7 @@ export default function Portfolio() {
               </div>
               <div className="flex items-start space-x-4">
                 <YouTube
-                  className="w-8 h-8 text-primary dark:text-primary-dark flex-shrink-0"
+                  className="fill-current w-8 h-8 text-primary dark:text-primary-dark flex-shrink-0"
                   style={{ marginTop: "-2px" }}
                 />
                 <div>
@@ -399,7 +399,7 @@ export default function Portfolio() {
               aria-label="Email"
               className="text-muted-foreground hover:text-primary transition-colors duration-200"
             >
-              <Gmail className="w-6 h-6 transform transition-transform duration-200 hover:scale-110" />
+              <Gmail className="fill-current w-6 h-6 transform transition-transform duration-200 hover:scale-110" />
             </Link>
             <Link
               href="https://github.com/AlbertHernandez"
@@ -415,7 +415,7 @@ export default function Portfolio() {
               aria-label="LinkedIn"
               className="text-muted-foreground hover:text-primary transition-colors duration-200"
             >
-              <LinkedIn className="w-6 h-6 transform transition-transform duration-200 hover:scale-110" />
+              <LinkedIn className="fill-current w-6 h-6 transform transition-transform duration-200 hover:scale-110" />
             </Link>
             <Link
               href="https://x.com/AlbertHernandev"
@@ -423,7 +423,7 @@ export default function Portfolio() {
               aria-label="X"
               className="text-muted-foreground hover:text-primary transition-colors duration-200"
             >
-              <X className="w-6 h-6 transform transition-transform duration-200 hover:scale-110" />
+              <X className="fill-current w-6 h-6 transform transition-transform duration-200 hover:scale-110" />
             </Link>
             <Link
               href="https://www.youtube.com/@AlbertHernandez"
@@ -431,7 +431,7 @@ export default function Portfolio() {
               aria-label="YouTube"
               className="text-muted-foreground hover:text-primary transition-colors duration-200"
             >
-              <YouTube className="w-6 h-6 transform transition-transform duration-200 hover:scale-110" />
+              <YouTube className="fill-current w-6 h-6 transform transition-transform duration-200 hover:scale-110" />
             </Link>
           </div>
         </div>

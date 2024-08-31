@@ -1,20 +1,20 @@
 import React from "react";
 
+import { defaultIconProps } from "./defaultIconProps";
 import { IconProps } from "./types";
 
-export const Kubernetes: React.FC<IconProps> = ({
-  size = 24,
-  className,
-  ...props
-}) => {
+export const Kubernetes: React.FC<IconProps> = ({ ...clientProps }) => {
+  const { size, className, ...props } = {
+    ...defaultIconProps,
+    viewBox: "0 0 16 16",
+    ...clientProps,
+  };
+
   return (
     <svg
-      role="img"
-      viewBox="0 0 16 16"
       width={size}
       height={size}
-      xmlns="http://www.w3.org/2000/svg"
-      className={`fill-current text-[color:#2496ED] ${className || ""}`}
+      className={`text-[color:#2496ED] ${className}`}
       {...props}
     >
       <title>Kubernetes</title>
