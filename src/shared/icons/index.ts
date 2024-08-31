@@ -10,6 +10,7 @@ export * from "./GoogleCloudPlatform";
 export * from "./JavaScript";
 export * from "./Jest";
 export * from "./Kubernetes";
+export * from "./Lightbulb";
 export * from "./LinkedIn";
 export * from "./MongoDB";
 export * from "./Moon";
