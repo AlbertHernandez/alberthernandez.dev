@@ -3,6 +3,7 @@ import {
   Icon,
   JavaScript,
   Jest,
+  Kubernetes,
   MongoDB,
   NodeJS,
   React,
@@ -24,7 +25,8 @@ export type TechnologyKey =
   | "Jest"
   | "MongoDB"
   | "Redis"
-  | "Docker";
+  | "Docker"
+  | "Kubernetes";
 
 export const Technologies: { [key in TechnologyKey]: Technology } = {
   NodeJS: {
@@ -66,5 +68,10 @@ export const Technologies: { [key in TechnologyKey]: Technology } = {
     name: "Docker",
     color: "#2496ED",
     icon: <Docker />,
+  },
+  Kubernetes: {
+    name: "Kubernetes",
+    color: "#326DE6",
+    icon: <Kubernetes />,
   },
 } as const;

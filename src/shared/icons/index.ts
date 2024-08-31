@@ -1,6 +1,7 @@
 export * from "./Docker.tsx";
 export * from "./JavaScript.tsx";
 export * from "./Jest.tsx";
+export * from "./Kubernetes.tsx";
 export * from "./MongoDB.tsx";
 export * from "./NodeJS";
 export * from "./NodeJS";
