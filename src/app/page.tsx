@@ -3,12 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { ExternalLink } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 import {
   Code,
+  ExternalLink,
   GitHub,
   Gmail,
   Lightbulb,
