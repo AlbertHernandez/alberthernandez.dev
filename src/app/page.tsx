@@ -9,11 +9,10 @@ import { Footer } from "@/app/components/Footer";
 import { Header } from "@/app/components/Header";
 import { Hero } from "@/app/components/Hero";
 import { educationExperiences, workExperiences } from "@/app/data";
-import { useMount, useSmoothScroll } from "@/shared/hooks";
+import { useMount } from "@/shared/hooks";
 
 export default function Portfolio() {
   const { mounted } = useMount();
-  const { scrollTo } = useSmoothScroll();
 
   if (!mounted) return;
 
@@ -22,7 +21,7 @@ export default function Portfolio() {
       <a href="#main-content" className="sr-only focus:not-sr-only">
         Skip to main content
       </a>
-      <Header scrollTo={scrollTo} />
+      <Header />
       <main id="main-content" className="flex-1 pt-16">
         <Hero />
         <AboutMe />
