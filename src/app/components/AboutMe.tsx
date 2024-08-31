@@ -10,6 +10,18 @@ interface FeatureProps {
   description: React.ReactNode;
 }
 
+const Feature: React.FC<FeatureProps> = ({ icon, title, description }) => (
+  <div className="flex items-start space-x-4">
+    <div className="flex-shrink-0 -mt-0.5" aria-hidden="true">
+      {icon}
+    </div>
+    <div>
+      <h3 className="text-xl font-bold mb-2">{title}</h3>
+      <p className="text-gray-600 dark:text-gray-300">{description}</p>
+    </div>
+  </div>
+);
+
 export const AboutMe: React.FC = () => {
   const features: FeatureProps[] = [
     {
@@ -72,15 +84,7 @@ export const AboutMe: React.FC = () => {
         </p>
         <div className="grid md:grid-cols-2 gap-8">
           {features.map(feature => (
-            <div key={feature.title} className="flex items-start space-x-4">
-              <div className="flex-shrink-0 -mt-0.5">{feature.icon}</div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  {feature.description}
-                </p>
-              </div>
-            </div>
+            <Feature key={feature.title} {...feature} />
           ))}
         </div>
       </div>
