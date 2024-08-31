@@ -3,7 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { SocialLinks } from "@/app/components/SocialLinks.tsx";
+import { Footer } from "@/app/components/footer";
+import { SocialLinks } from "@/app/components/SocialLinks";
 import { ThemeToggleButton } from "@/app/components/ThemeToggleButton";
 import { educationExperiences, workExperiences } from "@/app/data";
 import {
@@ -12,7 +13,7 @@ import {
   useSmoothScroll,
 } from "@/shared/hooks";
 import { Code, ExternalLink, Lightbulb, Users, YouTube } from "@/shared/icons";
-import { formatDateRange } from "@/shared/utils/dateFormatter.ts";
+import { formatDateRange } from "@/shared/utils/dateFormatter";
 
 export default function Portfolio() {
   const { mounted } = useMount();
@@ -339,14 +340,7 @@ export default function Portfolio() {
           </div>
         </section>
       </main>
-      <footer className="py-8 md:py-12" role="contentinfo">
-        <div className="container mx-auto max-w-[1042px] flex flex-col md:flex-row items-center justify-between">
-          <p className="text-sm leading-loose text-muted-foreground dark:text-gray-400 mb-4 md:mb-0">
-            Built by Albert Hernández. All rights reserved.
-          </p>
-          <SocialLinks />
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
