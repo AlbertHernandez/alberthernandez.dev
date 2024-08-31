@@ -22,6 +22,7 @@ import {
   YouTube,
 } from "@/shared/icons";
 import { Technologies } from "@/shared/technologies";
+import { formatDateRange } from "@/shared/utils/dateFormatter.ts";
 
 const workExperiences: WorkExperience[] = [
   {
@@ -30,7 +31,7 @@ const workExperiences: WorkExperience[] = [
     companyWebsite: "https://edpuzzle.com",
     jobTitle: "Senior Software Engineer",
     employmentPeriod: {
-      startDate: new Date("2024-05-01"),
+      start: new Date("2024-05-01"),
     },
     responsibilities: [
       "Develop an education platform used by millions of teachers and students worldwide, featuring high-performance systems with over 300 million requests per day.",
@@ -57,8 +58,8 @@ const workExperiences: WorkExperience[] = [
     companyWebsite: "https://www.coverwallet.com",
     jobTitle: "Senior Software Engineer",
     employmentPeriod: {
-      startDate: new Date("2019-02-01"),
-      endDate: new Date("2024-05-01"),
+      start: new Date("2019-02-01"),
+      end: new Date("2024-05-01"),
     },
     responsibilities: [
       "Create internal libraries, making them independent of any specific framework so that all microservices in the platform could utilize them.",
@@ -90,20 +91,6 @@ export default function Portfolio() {
   const { mounted } = useMount();
   const { isVisible: isHeaderVisible } = useDelayedVisibility();
   const { scrollTo } = useSmoothScroll();
-
-  const formatDate = (date?: Date): string => {
-    if (!date) return "Present";
-    return date.toLocaleDateString("en-US", {
-      month: "short",
-      year: "numeric",
-    });
-  };
-
-  const formatEmploymentPeriod = (
-    employmentPeriod: WorkExperience["employmentPeriod"],
-  ): string => {
-    return `${formatDate(employmentPeriod.startDate)} - ${formatDate(employmentPeriod.endDate)}`;
-  };
 
   if (!mounted) return;
 
@@ -362,9 +349,9 @@ export default function Portfolio() {
                       <div className="text-sm text-muted-foreground dark:text-gray-400 w-full sm:w-auto sm:text-right">
                         <div className="flex items-center sm:justify-end">
                           <span>
-                            {formatEmploymentPeriod(
-                              experience.employmentPeriod,
-                            )}
+                            {formatDateRange(experience.employmentPeriod, {
+                              format: "month-year",
+                            })}
                           </span>
                         </div>
                       </div>
