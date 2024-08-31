@@ -3,8 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { useTheme } from "next-themes";
-
+import { ThemeToggleButton } from "@/app/components/ThemeToggleButton";
 import { WorkExperience } from "@/app/types.ts";
 import {
   useDelayedVisibility,
@@ -18,15 +17,11 @@ import {
   Gmail,
   Lightbulb,
   LinkedIn,
-  Moon,
-  Sun,
   Users,
   X,
   YouTube,
 } from "@/shared/icons";
 import { Technologies } from "@/shared/technologies";
-
-import { Button } from "./components/button";
 
 const workExperiences: WorkExperience[] = [
   {
@@ -92,26 +87,9 @@ const workExperiences: WorkExperience[] = [
 ];
 
 export default function Portfolio() {
-  const { setTheme, resolvedTheme } = useTheme();
   const { mounted } = useMount();
   const { isVisible: isHeaderVisible } = useDelayedVisibility();
   const { scrollTo } = useSmoothScroll();
-
-  const getThemeIcon = () => {
-    if (resolvedTheme === "light") {
-      return <Sun className="h-5 w-5" aria-hidden="true" />;
-    } else if (resolvedTheme === "dark") {
-      return <Moon className="h-5 w-5" aria-hidden="true" />;
-    }
-  };
-
-  const toggleTheme = () => {
-    if (resolvedTheme === "light") {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
-  };
 
   const formatDate = (date?: Date): string => {
     if (!date) return "Present";
@@ -173,23 +151,7 @@ export default function Portfolio() {
             </button>
           </div>
           <div className="relative">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={toggleTheme}
-              className="rounded-full group hover:bg-transparent transition-all ease-in-out"
-              aria-label="Toggle theme"
-            >
-              <div
-                className={`transition-transform duration-300 ${
-                  resolvedTheme === "dark"
-                    ? "hover:-rotate-12"
-                    : "hover:rotate-12"
-                }`}
-              >
-                {getThemeIcon()}
-              </div>
-            </Button>
+            <ThemeToggleButton className="group transition-all ease-in-out" />
           </div>
         </nav>
       </header>
