@@ -2,19 +2,23 @@ import { Technology } from "@/shared/technologies.tsx";
 import { DateRange } from "@/shared/types";
 
 export interface WorkExperience {
-  companyName: string;
-  companyLogo: string;
-  companyWebsite: string;
+  company: {
+    name: string;
+    logo: string;
+    website: string;
+  };
   jobTitle: string;
-  employmentPeriod: DateRange; // If there is no 'end' in the range, the period is ongoing
+  duration: DateRange; // If there is no 'end' in the range, the period is ongoing
   responsibilities: string[];
   technologiesUsed: Technology[];
 }
 
 export interface Education {
-  institutionName: string;
-  institutionLogo: string;
-  institutionWebsite: string;
+  institution: {
+    name: string;
+    logo: string;
+    website: string;
+  };
   degree: string;
-  period: DateRange;
+  duration: DateRange;
 }

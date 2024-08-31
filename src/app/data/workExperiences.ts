@@ -1,13 +1,15 @@
-import { WorkExperience } from "@/app/types.ts";
+import { WorkExperience } from "@/app/data/types.ts";
 import { Technologies } from "@/shared/technologies.tsx";
 
 export const workExperiences: WorkExperience[] = [
   {
-    companyName: "Edpuzzle",
-    companyLogo: "/edpuzzle.webp",
-    companyWebsite: "https://edpuzzle.com",
+    company: {
+      name: "Edpuzzle",
+      logo: "/edpuzzle.webp",
+      website: "https://edpuzzle.com",
+    },
     jobTitle: "Senior Software Engineer",
-    employmentPeriod: {
+    duration: {
       start: new Date("2024-05-01"),
     },
     responsibilities: [
@@ -30,11 +32,13 @@ export const workExperiences: WorkExperience[] = [
     ],
   },
   {
-    companyName: "CoverWallet, an Aon company",
-    companyLogo: "/coverwallet.webp",
-    companyWebsite: "https://www.coverwallet.com",
+    company: {
+      name: "CoverWallet, an Aon company",
+      logo: "/coverwallet.webp",
+      website: "https://www.coverwallet.com",
+    },
     jobTitle: "Senior Software Engineer",
-    employmentPeriod: {
+    duration: {
       start: new Date("2019-02-01"),
       end: new Date("2024-05-01"),
     },
@@ -62,4 +66,4 @@ export const workExperiences: WorkExperience[] = [
       Technologies.Datadog,
     ],
   },
-];
+] as const;

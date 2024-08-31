@@ -251,7 +251,7 @@ export default function Portfolio() {
             <div className="space-y-16">
               {workExperiences.map((experience, index) => (
                 <div
-                  key={experience.companyName}
+                  key={experience.company.name}
                   className="relative flex items-start"
                 >
                   {index !== workExperiences.length - 1 && (
@@ -259,8 +259,8 @@ export default function Portfolio() {
                   )}
                   <div className="flex-shrink-0 w-12 h-12 rounded-full border-4 border-white dark:border-gray-800 bg-white dark:bg-gray-800 z-10">
                     <Image
-                      src={experience.companyLogo}
-                      alt={`${experience.companyName} logo`}
+                      src={experience.company.logo}
+                      alt={`${experience.company.name} logo`}
                       width={48}
                       height={48}
                       className="rounded-full"
@@ -270,12 +270,12 @@ export default function Portfolio() {
                     <div className="flex flex-col sm:flex-row justify-between items-start mb-2">
                       <div>
                         <a
-                          href={experience.companyWebsite}
+                          href={experience.company.website}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center text-xl font-bold text-primary hover:underline mb-1 group"
                         >
-                          {experience.companyName}
+                          {experience.company.name}
                           <ExternalLink className="ml-1 h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                         </a>
                         <h3 className="text-lg font-semibold mb-2 sm:mb-0">
@@ -285,7 +285,7 @@ export default function Portfolio() {
                       <div className="text-sm text-muted-foreground dark:text-gray-400 w-full sm:w-auto sm:text-right">
                         <div className="flex items-center sm:justify-end">
                           <span>
-                            {formatDateRange(experience.employmentPeriod, {
+                            {formatDateRange(experience.duration, {
                               format: "month-year",
                             })}
                           </span>
@@ -344,15 +344,15 @@ export default function Portfolio() {
             </h2>
             {educationExperiences.map((education, index) => (
               <div
-                key={education.institutionName}
+                key={education.institution.name}
                 className={`flex flex-row items-start gap-4 sm:gap-8 ${
                   index === educationExperiences.length - 1 ? "" : "mb-4"
                 }`}
               >
                 <div className="w-16 h-16 relative flex-shrink-0">
                   <Image
-                    src={education.institutionLogo}
-                    alt={`${education.institutionName} logo`}
+                    src={education.institution.logo}
+                    alt={`${education.institution.name} logo`}
                     layout="fill"
                     objectFit="contain"
                     className="rounded-full"
@@ -361,18 +361,18 @@ export default function Portfolio() {
                 <div className="flex flex-col flex-grow">
                   <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
                     <Link
-                      href={education.institutionWebsite}
+                      href={education.institution.website}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-xl sm:text-2xl font-bold text-primary hover:underline inline-flex items-center group"
                     >
-                      {education.institutionName}
+                      {education.institution.name}
                       <ExternalLink className="ml-1 h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                     </Link>
                     <div className="text-sm text-muted-foreground dark:text-gray-400 w-full sm:w-auto sm:text-right mt-1 sm:mt-0">
                       <div className="flex items-center sm:justify-end">
                         <span>
-                          {formatDateRange(education.period, {
+                          {formatDateRange(education.duration, {
                             format: "year",
                           })}
                         </span>
