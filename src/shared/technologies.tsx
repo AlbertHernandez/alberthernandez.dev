@@ -1,6 +1,7 @@
 import {
   CircleCI,
   Docker,
+  GoogleCloudPlatform,
   Icon,
   JavaScript,
   Jest,
@@ -28,7 +29,8 @@ export type TechnologyKey =
   | "Redis"
   | "Docker"
   | "Kubernetes"
-  | "CircleCI";
+  | "CircleCI"
+  | "GoogleCloudPlatform";
 
 export const Technologies: { [key in TechnologyKey]: Technology } = {
   NodeJS: {
@@ -80,5 +82,10 @@ export const Technologies: { [key in TechnologyKey]: Technology } = {
     name: "CircleCI",
     color: "#727272",
     icon: <CircleCI />,
+  },
+  GoogleCloudPlatform: {
+    name: "Google Cloud Platform",
+    color: "#4285F4",
+    icon: <GoogleCloudPlatform />,
   },
 } as const;

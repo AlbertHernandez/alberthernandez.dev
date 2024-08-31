@@ -1,5 +1,6 @@
 export * from "./CircleCI.tsx";
 export * from "./Docker.tsx";
+export * from "./GoogleCloudPlatform.tsx";
 export * from "./JavaScript.tsx";
 export * from "./Jest.tsx";
 export * from "./Kubernetes.tsx";
