@@ -4,7 +4,56 @@ import React from "react";
 
 import { Code, Lightbulb, Users, YouTube } from "@/shared/icons";
 
+interface FeatureProps {
+  icon: React.ReactNode;
+  title: string;
+  description: React.ReactNode;
+}
+
 export const AboutMe: React.FC = () => {
+  const features: FeatureProps[] = [
+    {
+      icon: <Code className="w-8 h-8 text-primary dark:text-primary-dark" />,
+      title: "Backend Developer",
+      description:
+        "Software Engineer with expertise in backend services, driving efficiency and scalability in complex systems to support millions of users.",
+    },
+    {
+      icon: <Users className="w-8 h-8 text-primary dark:text-primary-dark" />,
+      title: "Cross-functional Collaborator",
+      description:
+        "With experience in frontend, backend, and SRE teams, I enjoy collaborating with cross-functional teams to bring innovative ideas to life.",
+    },
+    {
+      icon: (
+        <Lightbulb className="w-8 h-8 text-primary dark:text-primary-dark" />
+      ),
+      title: "Value-Driven Solutions",
+      description:
+        "I am passionate about working in product and platform teams, creating digital solutions that deliver value and impact end users.",
+    },
+    {
+      icon: (
+        <YouTube className="fill-current w-8 h-8 text-primary dark:text-primary-dark" />
+      ),
+      title: "Content Creator",
+      description: (
+        <>
+          In my free time, I create programming videos on{" "}
+          <Link
+            href="https://www.youtube.com/@AlbertHernandez"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary dark:text-primary-dark hover:underline"
+          >
+            YouTube
+          </Link>
+          , where I combine my passion for teaching with programming.
+        </>
+      ),
+    },
+  ];
+
   return (
     <section
       id="about-me"
@@ -22,71 +71,17 @@ export const AboutMe: React.FC = () => {
           platform teams.
         </p>
         <div className="grid md:grid-cols-2 gap-8">
-          <div className="flex items-start space-x-4">
-            <Code
-              className="w-8 h-8 text-primary dark:text-primary-dark flex-shrink-0"
-              style={{ marginTop: "-2px" }}
-            />
-            <div>
-              <h3 className="text-xl font-bold mb-2">Backend Developer</h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                Software Engineer with expertise in backend services, driving
-                efficiency and scalability in complex systems to support
-                millions of users.
-              </p>
+          {features.map(feature => (
+            <div key={feature.title} className="flex items-start space-x-4">
+              <div className="flex-shrink-0 -mt-0.5">{feature.icon}</div>
+              <div>
+                <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  {feature.description}
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="flex items-start space-x-4">
-            <Users
-              className="w-8 h-8 text-primary dark:text-primary-dark flex-shrink-0"
-              style={{ marginTop: "-2px" }}
-            />
-            <div>
-              <h3 className="text-xl font-bold mb-2">
-                Cross-functional Collaborator
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                With experience in frontend, backend, and SRE teams, I enjoy
-                collaborating with cross-functional teams to bring innovative
-                ideas to life.
-              </p>
-            </div>
-          </div>
-          <div className="flex items-start space-x-4">
-            <Lightbulb
-              className="w-8 h-8 text-primary dark:text-primary-dark flex-shrink-0"
-              style={{ marginTop: "-2px" }}
-            />
-            <div>
-              <h3 className="text-xl font-bold mb-2">Value-Driven Solutions</h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                I am passionate about working in product and platform teams,
-                creating digital solutions that deliver value and impact end
-                users.
-              </p>
-            </div>
-          </div>
-          <div className="flex items-start space-x-4">
-            <YouTube
-              className="fill-current w-8 h-8 text-primary dark:text-primary-dark flex-shrink-0"
-              style={{ marginTop: "-2px" }}
-            />
-            <div>
-              <h3 className="text-xl font-bold mb-2">Content Creator</h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                In my free time, I create programming videos on{" "}
-                <Link
-                  href="https://www.youtube.com/@AlbertHernandez"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary dark:text-primary-dark hover:underline"
-                >
-                  YouTube
-                </Link>
-                , where I combine my passion for teaching with programming.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
