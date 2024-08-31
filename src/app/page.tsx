@@ -7,7 +7,7 @@ import { Code, ExternalLink, Lightbulb, Moon, Sun, Users } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
-import { GitHub, Gmail, LinkedIn, X } from "@/shared/icons";
+import { GitHub, Gmail, LinkedIn, X, YouTube } from "@/shared/icons";
 import { Technologies } from "@/shared/technologies";
 
 import { Button } from "./components/button";
@@ -240,15 +240,7 @@ export default function Portfolio() {
                   aria-label="YouTube"
                   className="text-muted-foreground hover:text-primary transition-colors duration-200"
                 >
-                  <svg
-                    role="img"
-                    className="fill-current w-6 h-6 transform transition-transform duration-200 hover:scale-110"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>YouTube</title>
-                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                  </svg>
+                  <YouTube className="w-6 h-6 transform transition-transform duration-200 hover:scale-110" />
                 </Link>
               </div>
             </div>
@@ -318,17 +310,10 @@ export default function Portfolio() {
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <svg
+                <YouTube
                   className="w-8 h-8 text-primary dark:text-primary-dark flex-shrink-0"
-                  xmlns="http://www.w3.org/2000/svg"
-                  role="img"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
                   style={{ marginTop: "-2px" }}
-                >
-                  <title>YouTube</title>
-                  <path d="M23.498 6.186a2.963 2.963 0 0 0-2.084-2.084C19.963 3.5 12 3.5 12 3.5s-7.963 0-9.414.602A2.963 2.963 0 0 0 .502 6.186C0 7.638 0 12 0 12s0 4.362.502 5.814a2.963 2.963 0 0 0 2.084 2.084C4.037 20.5 12 20.5 12 20.5s7.963 0 9.414-.602a2.963 2.963 0 0 0 2.084-2.084C24 16.362 24 12 24 12s0-4.362-.502-5.814zM9.546 15.568V8.432L15.818 12l-6.272 3.568z" />
-                </svg>
+                />
                 <div>
                   <h3 className="text-xl font-bold mb-2">Content Creator</h3>
                   <p className="text-gray-600 dark:text-gray-300">
@@ -523,15 +508,7 @@ export default function Portfolio() {
               aria-label="YouTube"
               className="text-muted-foreground hover:text-primary transition-colors duration-200"
             >
-              <svg
-                role="img"
-                className="fill-current w-6 h-6 transform transition-transform duration-200 hover:scale-110"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>YouTube</title>
-                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-              </svg>
+              <YouTube className="w-6 h-6 transform transition-transform duration-200 hover:scale-110" />
             </Link>
           </div>
         </div>
