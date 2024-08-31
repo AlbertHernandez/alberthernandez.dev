@@ -15,6 +15,7 @@ import {
   Redis,
   TypeScript,
 } from "@/shared/icons";
+import { NestJS } from "@/shared/icons/NestJS.tsx";
 
 export interface Technology {
   name: string;
@@ -36,7 +37,8 @@ export type TechnologyKey =
   | "GoogleCloudPlatform"
   | "Datadog"
   | "GitHubActions"
-  | "AmazonWebServices";
+  | "AmazonWebServices"
+  | "NestJS";
 
 export const Technologies: { [key in TechnologyKey]: Technology } = {
   NodeJS: {
@@ -108,5 +110,10 @@ export const Technologies: { [key in TechnologyKey]: Technology } = {
     name: "Amazon Web Services",
     color: "#FF9900",
     icon: <AmazonWebServices />,
+  },
+  NestJS: {
+    name: "NestJS",
+    color: "#E0234E",
+    icon: <NestJS />,
   },
 } as const;
