@@ -5,6 +5,7 @@ import {
   MongoDB,
   NodeJS,
   React,
+  Redis,
   TypeScript,
 } from "@/shared/icons";
 
@@ -20,7 +21,8 @@ export type TechnologyKey =
   | "React"
   | "TypeScript"
   | "Jest"
-  | "MongoDB";
+  | "MongoDB"
+  | "Redis";
 
 export const Technologies: { [key in TechnologyKey]: Technology } = {
   NodeJS: {
@@ -52,5 +54,10 @@ export const Technologies: { [key in TechnologyKey]: Technology } = {
     name: "MongoDB",
     color: "#47A248",
     icon: <MongoDB />,
+  },
+  Redis: {
+    name: "Redis",
+    color: "#C6302B",
+    icon: <Redis />,
   },
 } as const;

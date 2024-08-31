@@ -4,5 +4,6 @@ export * from "./MongoDB.tsx";
 export * from "./NodeJS";
 export * from "./NodeJS";
 export * from "./React";
+export * from "./Redis.tsx";
 export type { Icon } from "./types.ts";
 export * from "./TypeScript";
