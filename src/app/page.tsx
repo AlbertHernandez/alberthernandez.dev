@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { ExternalLink, Lightbulb, Moon, Sun } from "lucide-react";
+import { ExternalLink, Lightbulb, Moon } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
@@ -12,6 +12,7 @@ import {
   GitHub,
   Gmail,
   LinkedIn,
+  Sun,
   Users,
   X,
   YouTube,

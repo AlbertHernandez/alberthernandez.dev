@@ -17,6 +17,7 @@ export * from "./NodeJS";
 export * from "./PostgreSQL";
 export * from "./React";
 export * from "./Redis";
+export * from "./Sun";
 export type { Icon } from "./types";
 export * from "./TypeScript";
 export * from "./Users";
