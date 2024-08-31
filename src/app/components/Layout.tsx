@@ -1,6 +1,4 @@
-"use client";
-
-import React from "react";
+import React, { Suspense } from "react";
 
 import { Footer } from "@/app/components/Footer";
 import { Header } from "@/app/components/Header";
@@ -22,7 +20,9 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
       </a>
       <Header />
       <main id="main-content" className="flex-1 pt-16">
-        {children}
+        <Suspense fallback={<div className="text-center py-8">Loading...</div>}>
+          {children}
+        </Suspense>
       </main>
       <Footer />
     </div>
