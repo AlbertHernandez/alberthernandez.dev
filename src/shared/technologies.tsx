@@ -2,6 +2,7 @@ import {
   CircleCI,
   Datadog,
   Docker,
+  GitHubActions,
   GoogleCloudPlatform,
   Icon,
   JavaScript,
@@ -32,7 +33,8 @@ export type TechnologyKey =
   | "Kubernetes"
   | "CircleCI"
   | "GoogleCloudPlatform"
-  | "Datadog";
+  | "Datadog"
+  | "GitHubActions";
 
 export const Technologies: { [key in TechnologyKey]: Technology } = {
   NodeJS: {
@@ -94,5 +96,10 @@ export const Technologies: { [key in TechnologyKey]: Technology } = {
     name: "Datadog",
     color: "#632CA6",
     icon: <Datadog />,
+  },
+  GitHubActions: {
+    name: "GitHub Actions",
+    color: "#2088FF",
+    icon: <GitHubActions />,
   },
 } as const;
