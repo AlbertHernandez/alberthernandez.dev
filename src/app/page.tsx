@@ -3,11 +3,19 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { ExternalLink, Lightbulb, Moon, Sun, Users } from "lucide-react";
+import { ExternalLink, Lightbulb, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
-import { Code, GitHub, Gmail, LinkedIn, X, YouTube } from "@/shared/icons";
+import {
+  Code,
+  GitHub,
+  Gmail,
+  LinkedIn,
+  Users,
+  X,
+  YouTube,
+} from "@/shared/icons";
 import { Technologies } from "@/shared/technologies";
 
 import { Button } from "./components/button";

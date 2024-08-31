@@ -19,5 +19,6 @@ export * from "./React";
 export * from "./Redis";
 export type { Icon } from "./types";
 export * from "./TypeScript";
+export * from "./Users";
 export * from "./X";
 export * from "./YouTube";
