@@ -4,9 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
 
 import { WorkExperience } from "@/app/types.ts";
+import { useDelayedVisibility, useMount } from "@/shared/hooks";
 import {
   Code,
   ExternalLink,
@@ -89,14 +89,8 @@ const workExperiences: WorkExperience[] = [
 
 export default function Portfolio() {
   const { setTheme, resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-    const timer = setTimeout(() => setVisible(true), 100);
-    return () => clearTimeout(timer);
-  }, []);
+  const { mounted } = useMount();
+  const { isVisible: isHeaderVisible } = useDelayedVisibility();
 
   const getThemeIcon = () => {
     if (resolvedTheme === "light") {
@@ -144,7 +138,7 @@ export default function Portfolio() {
       </a>
       <header
         className={`fixed left-1/2 transform -translate-x-1/2 z-50 rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-lg transition-all duration-500 ease-in-out ${
-          visible ? "top-4 opacity-100" : "-top-full opacity-0"
+          isHeaderVisible ? "top-4 opacity-100" : "-top-full opacity-0"
         }`}
       >
         <nav
