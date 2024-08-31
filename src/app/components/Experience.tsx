@@ -2,7 +2,8 @@ import Image from "next/image";
 
 import React from "react";
 
-import { WorkExperience } from "@/app/data/types.ts";
+import { TechnologyTag } from "@/app/components/TechnologyTag";
+import { WorkExperience } from "@/app/data/types";
 import { ExternalLink } from "@/shared/icons";
 import { formatDateRange } from "@/shared/utils/dateFormatter";
 
@@ -77,25 +78,13 @@ export const Experience: React.FC<ExperienceProps> = ({ experiences }) => {
                   ))}
                 </ul>
                 <div className="flex flex-wrap gap-3">
-                  {experience.technologiesUsed.map((tech, i) => (
-                    <div
-                      key={i}
-                      className="flex items-center px-3 py-2 rounded-lg transition-colors duration-200"
-                      style={{
-                        backgroundColor: `#6767671A`,
-                      }}
-                      onMouseEnter={e => {
-                        e.currentTarget.style.backgroundColor = `${tech.color}33`;
-                      }}
-                      onMouseLeave={e => {
-                        e.currentTarget.style.backgroundColor = `#6767671A`;
-                      }}
-                    >
-                      <div className="w-4 h-4 mr-1.5 flex items-center justify-center">
-                        {tech.icon}
-                      </div>
-                      <span className="text-xs font-medium">{tech.name}</span>
-                    </div>
+                  {experience.technologiesUsed.map(tech => (
+                    <TechnologyTag
+                      key={tech.name}
+                      name={tech.name}
+                      icon={tech.icon}
+                      color={tech.color}
+                    />
                   ))}
                 </div>
               </div>
