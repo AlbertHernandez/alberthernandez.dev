@@ -3,6 +3,7 @@ export * from "./CircleCI";
 export * from "./Datadog";
 export * from "./Docker";
 export * from "./GitHubActions";
+export * from "./Gmail";
 export * from "./GoogleCloudPlatform";
 export * from "./JavaScript";
 export * from "./Jest";
