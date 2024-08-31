@@ -13,7 +13,7 @@ export const Education: React.FC<EducationProps> = ({
   return (
     <section
       id="education"
-      className="py-12 md:py-16 lg:py-20 bg-gray-50 dark:bg-gray-800"
+      className="py-12 md:py-16 lg:py-18 bg-gray-50 dark:bg-gray-800"
     >
       <div className="container mx-auto max-w-[1042px]">
         <h2 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl mb-8 text-primary">
