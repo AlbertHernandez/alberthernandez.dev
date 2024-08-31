@@ -3,6 +3,6 @@ import React from "react";
 
 import { IconProps } from "./types";
 
-export const Users: React.FC<IconProps> = ({ className, ...props }) => {
-  return <LucideUsers className={className} {...props} />;
+export const Users: React.FC<IconProps> = ({ ...props }) => {
+  return <LucideUsers {...props} />;
 };
