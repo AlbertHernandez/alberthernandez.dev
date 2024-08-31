@@ -1,5 +1,6 @@
 export * from "./AmazonWebServices";
 export * from "./CircleCI";
+export * from "./Code";
 export * from "./Datadog";
 export * from "./Docker";
 export * from "./GitHub";
