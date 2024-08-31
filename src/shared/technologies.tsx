@@ -1,4 +1,5 @@
 import {
+  CircleCI,
   Docker,
   Icon,
   JavaScript,
@@ -26,7 +27,8 @@ export type TechnologyKey =
   | "MongoDB"
   | "Redis"
   | "Docker"
-  | "Kubernetes";
+  | "Kubernetes"
+  | "CircleCI";
 
 export const Technologies: { [key in TechnologyKey]: Technology } = {
   NodeJS: {
@@ -73,5 +75,10 @@ export const Technologies: { [key in TechnologyKey]: Technology } = {
     name: "Kubernetes",
     color: "#326DE6",
     icon: <Kubernetes />,
+  },
+  CircleCI: {
+    name: "CircleCI",
+    color: "#727272",
+    icon: <CircleCI />,
   },
 } as const;
