@@ -28,8 +28,9 @@ const experiences = [
     company: "Edpuzzle",
     logo: "/edpuzzle.webp",
     role: "Senior Software Engineer",
-    period: "May 2024 - Present",
-    startDate: "2024-05-01",
+    employmentDuration: {
+      startDate: new Date("2024-05-01"),
+    },
     website: "https://edpuzzle.com",
     points: [
       "Develop an education platform used by millions of teachers and students worldwide, featuring high-performance systems with over 300 million requests per day.",
@@ -54,9 +55,10 @@ const experiences = [
     company: "CoverWallet, an Aon company",
     logo: "/coverwallet.webp",
     role: "Senior Software Engineer",
-    period: "Feb 2019 - May 2024",
-    startDate: "2019-02-01",
-    endDate: "2024-05-01",
+    employmentDuration: {
+      startDate: new Date("2019-02-01"),
+      endDate: new Date("2024-05-01"),
+    },
     website: "https://www.coverwallet.com",
     points: [
       "Create internal libraries, making them independent of any specific framework so that all microservices in the platform could utilize them.",
@@ -116,6 +118,21 @@ export default function Portfolio() {
     } else {
       setTheme("light");
     }
+  };
+
+  const formatDate = (date?: Date): string => {
+    if (!date) return "Present";
+    return date.toLocaleDateString("en-US", {
+      month: "short",
+      year: "numeric",
+    });
+  };
+
+  const formatPeriod = (duration: {
+    startDate: Date;
+    endDate?: Date;
+  }): string => {
+    return `${formatDate(duration.startDate)} - ${formatDate(duration.endDate)}`;
   };
 
   if (!mounted) return;
@@ -387,7 +404,7 @@ export default function Portfolio() {
                       </div>
                       <div className="text-sm text-muted-foreground dark:text-gray-400 w-full sm:w-auto sm:text-right">
                         <div className="flex items-center sm:justify-end">
-                          <span>{exp.period}</span>
+                          <span>{formatPeriod(exp.employmentDuration)}</span>
                         </div>
                       </div>
                     </div>
