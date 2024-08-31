@@ -6,7 +6,11 @@ import Link from "next/link";
 import { useTheme } from "next-themes";
 
 import { WorkExperience } from "@/app/types.ts";
-import { useDelayedVisibility, useMount } from "@/shared/hooks";
+import {
+  useDelayedVisibility,
+  useMount,
+  useSmoothScroll,
+} from "@/shared/hooks";
 import {
   Code,
   ExternalLink,
@@ -91,19 +95,13 @@ export default function Portfolio() {
   const { setTheme, resolvedTheme } = useTheme();
   const { mounted } = useMount();
   const { isVisible: isHeaderVisible } = useDelayedVisibility();
+  const { scrollTo } = useSmoothScroll();
 
   const getThemeIcon = () => {
     if (resolvedTheme === "light") {
       return <Sun className="h-5 w-5" aria-hidden="true" />;
     } else if (resolvedTheme === "dark") {
       return <Moon className="h-5 w-5" aria-hidden="true" />;
-    }
-  };
-
-  const scrollToSection = (sectionId: string) => {
-    const section = document.querySelector(`#${sectionId}`);
-    if (section instanceof HTMLElement) {
-      section.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -146,7 +144,7 @@ export default function Portfolio() {
           aria-label="Main"
         >
           <button
-            onClick={() => scrollToSection("about")}
+            onClick={() => scrollTo("about")}
             className="flex items-center space-x-2"
             aria-label="Go to About section"
           >
@@ -156,19 +154,19 @@ export default function Portfolio() {
           </button>
           <div className="hidden md:flex items-center space-x-4 text-sm font-medium">
             <button
-              onClick={() => scrollToSection("about-me")}
+              onClick={() => scrollTo("about-me")}
               className="text-primary transition-all ease-in-out hover:scale-110"
             >
               About Me
             </button>
             <button
-              onClick={() => scrollToSection("experience")}
+              onClick={() => scrollTo("experience")}
               className="text-primary transition-all ease-in-out hover:scale-110"
             >
               Experience
             </button>
             <button
-              onClick={() => scrollToSection("education")}
+              onClick={() => scrollTo("education")}
               className="text-primary transition-all ease-in-out hover:scale-110"
             >
               Education
