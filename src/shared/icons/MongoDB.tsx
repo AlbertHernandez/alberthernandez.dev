@@ -10,7 +10,7 @@ export const MongoDB: React.FC<IconProps> = ({
   return (
     <svg
       role="img"
-      viewBox="0 0 32 32"
+      viewBox="0 0 24 24"
       width={size}
       height={size}
       xmlns="http://www.w3.org/2000/svg"
