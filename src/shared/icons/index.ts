@@ -9,6 +9,7 @@ export * from "./GoogleCloudPlatform";
 export * from "./JavaScript";
 export * from "./Jest";
 export * from "./Kubernetes";
+export * from "./LinkedIn";
 export * from "./MongoDB";
 export * from "./NodeJS";
 export * from "./NodeJS";
