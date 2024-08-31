@@ -1,6 +1,6 @@
-import { Education } from "@/app/data/types.ts";
+import { EducationExperience } from "@/app/data/types.ts";
 
-export const educationExperiences: Education[] = [
+export const educationExperiences: EducationExperience[] = [
   {
     institution: {
       name: "Universitat Politècnica de València (UPV)",

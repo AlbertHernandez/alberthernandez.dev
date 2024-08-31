@@ -13,7 +13,7 @@ export interface WorkExperience {
   technologiesUsed: Technology[];
 }
 
-export interface Education {
+export interface EducationExperience {
   institution: {
     name: string;
     logo: string;
