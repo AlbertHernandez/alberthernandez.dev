@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
+import { WorkExperience } from "@/app/types.ts";
 import {
   Code,
   ExternalLink,
@@ -23,21 +24,21 @@ import { Technologies } from "@/shared/technologies";
 
 import { Button } from "./components/button";
 
-const experiences = [
+const workExperiences: WorkExperience[] = [
   {
-    company: "Edpuzzle",
-    logo: "/edpuzzle.webp",
-    role: "Senior Software Engineer",
-    employmentDuration: {
+    companyName: "Edpuzzle",
+    companyLogo: "/edpuzzle.webp",
+    companyWebsite: "https://edpuzzle.com",
+    jobTitle: "Senior Software Engineer",
+    employmentPeriod: {
       startDate: new Date("2024-05-01"),
     },
-    website: "https://edpuzzle.com",
-    points: [
+    responsibilities: [
       "Develop an education platform used by millions of teachers and students worldwide, featuring high-performance systems with over 300 million requests per day.",
       "Create search and recommendation tools enabling teachers to discover new materials for their students according to their profiles and preferences.",
       "Ensure code quality and reliability through testing, using design patterns such as CQRS, event-driven architecture, and feature flags. Follow hexagonal architecture and Domain-Driven Design (DDD) principles, and employ Continuous Integration/Continuous Deployment (CI/CD) practices with daily deployments.",
     ],
-    technologies: [
+    technologiesUsed: [
       Technologies.JavaScript,
       Technologies.TypeScript,
       Technologies.React,
@@ -52,15 +53,15 @@ const experiences = [
     ],
   },
   {
-    company: "CoverWallet, an Aon company",
-    logo: "/coverwallet.webp",
-    role: "Senior Software Engineer",
-    employmentDuration: {
+    companyName: "CoverWallet, an Aon company",
+    companyLogo: "/coverwallet.webp",
+    companyWebsite: "https://www.coverwallet.com",
+    jobTitle: "Senior Software Engineer",
+    employmentPeriod: {
       startDate: new Date("2019-02-01"),
       endDate: new Date("2024-05-01"),
     },
-    website: "https://www.coverwallet.com",
-    points: [
+    responsibilities: [
       "Create internal libraries, making them independent of any specific framework so that all microservices in the platform could utilize them.",
       "Integrate Feature Flag systems, Observability, Cloud Native Development, and Trunk-based development practices, which helped teams deliver software with a greater quality and reliability.",
       "Optimize import and export processes by designing ETLs to reduce manual work for agents, achieving over 80% time savings. Create of a backoffice to visualize, execute, and monitor them in real-time.",
@@ -68,7 +69,7 @@ const experiences = [
       "Enhanced a public API to enable external developers to interact with the platform easily.",
       "Develop matching systems between agents and end customers to allocate the most suitable agent based on customer profiles.",
     ],
-    technologies: [
+    technologiesUsed: [
       Technologies.JavaScript,
       Technologies.TypeScript,
       Technologies.NodeJS,
@@ -128,11 +129,10 @@ export default function Portfolio() {
     });
   };
 
-  const formatPeriod = (duration: {
-    startDate: Date;
-    endDate?: Date;
-  }): string => {
-    return `${formatDate(duration.startDate)} - ${formatDate(duration.endDate)}`;
+  const formatEmploymentPeriod = (
+    employmentPeriod: WorkExperience["employmentPeriod"],
+  ): string => {
+    return `${formatDate(employmentPeriod.startDate)} - ${formatDate(employmentPeriod.endDate)}`;
   };
 
   if (!mounted) return;
@@ -372,15 +372,18 @@ export default function Portfolio() {
               </span>
             </h2>
             <div className="space-y-16">
-              {experiences.map((exp, index) => (
-                <div key={exp.company} className="relative flex items-start">
-                  {index !== experiences.length - 1 && (
+              {workExperiences.map((experience, index) => (
+                <div
+                  key={experience.companyName}
+                  className="relative flex items-start"
+                >
+                  {index !== workExperiences.length - 1 && (
                     <div className="absolute top-0 left-6 h-[calc(100%+4rem)] w-px bg-gray-300 dark:bg-gray-700" />
                   )}
                   <div className="flex-shrink-0 w-12 h-12 rounded-full border-4 border-white dark:border-gray-800 bg-white dark:bg-gray-800 z-10">
                     <Image
-                      src={exp.logo}
-                      alt={`${exp.company} logo`}
+                      src={experience.companyLogo}
+                      alt={`${experience.companyName} logo`}
                       width={48}
                       height={48}
                       className="rounded-full"
@@ -390,36 +393,40 @@ export default function Portfolio() {
                     <div className="flex flex-col sm:flex-row justify-between items-start mb-2">
                       <div>
                         <a
-                          href={exp.website}
+                          href={experience.companyWebsite}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center text-xl font-bold text-primary hover:underline mb-1 group"
                         >
-                          {exp.company}
+                          {experience.companyName}
                           <ExternalLink className="ml-1 h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                         </a>
                         <h3 className="text-lg font-semibold mb-2 sm:mb-0">
-                          {exp.role}
+                          {experience.jobTitle}
                         </h3>
                       </div>
                       <div className="text-sm text-muted-foreground dark:text-gray-400 w-full sm:w-auto sm:text-right">
                         <div className="flex items-center sm:justify-end">
-                          <span>{formatPeriod(exp.employmentDuration)}</span>
+                          <span>
+                            {formatEmploymentPeriod(
+                              experience.employmentPeriod,
+                            )}
+                          </span>
                         </div>
                       </div>
                     </div>
                     <ul className="list-disc list-inside mb-6 space-y-2">
-                      {exp.points.map((point, i) => (
+                      {experience.responsibilities.map((responsibility, i) => (
                         <li
                           key={i}
                           className="text-sm leading-relaxed dark:text-gray-300"
                         >
-                          {point}
+                          {responsibility}
                         </li>
                       ))}
                     </ul>
                     <div className="flex flex-wrap gap-3">
-                      {exp.technologies.map((tech, i) => (
+                      {experience.technologiesUsed.map((tech, i) => (
                         <div
                           key={i}
                           className="flex items-center px-3 py-2 rounded-lg transition-colors duration-200"
