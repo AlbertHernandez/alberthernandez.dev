@@ -1,4 +1,5 @@
 import {
+  AmazonWebServices,
   CircleCI,
   Datadog,
   Docker,
@@ -34,7 +35,8 @@ export type TechnologyKey =
   | "CircleCI"
   | "GoogleCloudPlatform"
   | "Datadog"
-  | "GitHubActions";
+  | "GitHubActions"
+  | "AmazonWebServices";
 
 export const Technologies: { [key in TechnologyKey]: Technology } = {
   NodeJS: {
@@ -101,5 +103,10 @@ export const Technologies: { [key in TechnologyKey]: Technology } = {
     name: "GitHub Actions",
     color: "#2088FF",
     icon: <GitHubActions />,
+  },
+  AmazonWebServices: {
+    name: "Amazon Web Services",
+    color: "#FF9900",
+    icon: <AmazonWebServices />,
   },
 } as const;
