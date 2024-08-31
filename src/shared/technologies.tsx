@@ -11,6 +11,7 @@ import {
   Kubernetes,
   MongoDB,
   NodeJS,
+  PostgreSQL,
   React,
   Redis,
   TypeScript,
@@ -38,7 +39,8 @@ export type TechnologyKey =
   | "Datadog"
   | "GitHubActions"
   | "AmazonWebServices"
-  | "NestJS";
+  | "NestJS"
+  | "PostgreSQL";
 
 export const Technologies: { [key in TechnologyKey]: Technology } = {
   NodeJS: {
@@ -115,5 +117,10 @@ export const Technologies: { [key in TechnologyKey]: Technology } = {
     name: "NestJS",
     color: "#E0234E",
     icon: <NestJS />,
+  },
+  PostgreSQL: {
+    name: "PostgreSQL",
+    color: "#4169E1",
+    icon: <PostgreSQL />,
   },
 } as const;

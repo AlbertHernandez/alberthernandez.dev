@@ -10,6 +10,7 @@ export * from "./Kubernetes";
 export * from "./MongoDB";
 export * from "./NodeJS";
 export * from "./NodeJS";
+export * from "./PostgreSQL";
 export * from "./React";
 export * from "./Redis";
 export type { Icon } from "./types";
