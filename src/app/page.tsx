@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { SocialLinks } from "@/app/components/SocialLinks.tsx";
 import { ThemeToggleButton } from "@/app/components/ThemeToggleButton";
 import { educationExperiences, workExperiences } from "@/app/data";
 import {
@@ -10,17 +11,7 @@ import {
   useMount,
   useSmoothScroll,
 } from "@/shared/hooks";
-import {
-  Code,
-  ExternalLink,
-  GitHub,
-  Gmail,
-  Lightbulb,
-  LinkedIn,
-  Users,
-  X,
-  YouTube,
-} from "@/shared/icons";
+import { Code, ExternalLink, Lightbulb, Users, YouTube } from "@/shared/icons";
 import { formatDateRange } from "@/shared/utils/dateFormatter.ts";
 
 export default function Portfolio() {
@@ -107,47 +98,7 @@ export default function Portfolio() {
                 efficient systems. I also create content on YouTube about web
                 programing. Let&apos;s connect!
               </p>
-              <div className="flex space-x-4">
-                <Link
-                  href="mailto:alberthernandezdev@gmail.com"
-                  aria-label="Email"
-                  className="text-muted-foreground hover:text-primary transition-colors duration-200"
-                >
-                  <Gmail className="fill-current w-6 h-6 transform transition-transform duration-200 hover:scale-110" />
-                </Link>
-                <Link
-                  href="https://github.com/AlbertHernandez"
-                  target="_blank"
-                  aria-label="GitHub"
-                  className="text-muted-foreground hover:text-primary transition-colors duration-200"
-                >
-                  <GitHub className="fill-current w-6 h-6 transform transition-transform duration-200 hover:scale-110" />
-                </Link>
-                <Link
-                  href="https://www.linkedin.com/in/albert-hernandez-dev"
-                  target="_blank"
-                  aria-label="LinkedIn"
-                  className="text-muted-foreground hover:text-primary transition-colors duration-200"
-                >
-                  <LinkedIn className="fill-current w-6 h-6 transform transition-transform duration-200 hover:scale-110" />
-                </Link>
-                <Link
-                  href="https://x.com/AlbertHernandev"
-                  target="_blank"
-                  aria-label="X"
-                  className="text-muted-foreground hover:text-primary transition-colors duration-200"
-                >
-                  <X className="fill-current w-6 h-6 transform transition-transform duration-200 hover:scale-110" />
-                </Link>
-                <Link
-                  href="https://www.youtube.com/@AlbertHernandez"
-                  target="_blank"
-                  aria-label="YouTube"
-                  className="text-muted-foreground hover:text-primary transition-colors duration-200"
-                >
-                  <YouTube className="fill-current w-6 h-6 transform transition-transform duration-200 hover:scale-110" />
-                </Link>
-              </div>
+              <SocialLinks />
             </div>
           </div>
         </section>
@@ -393,47 +344,7 @@ export default function Portfolio() {
           <p className="text-sm leading-loose text-muted-foreground dark:text-gray-400 mb-4 md:mb-0">
             Built by Albert Hernández. All rights reserved.
           </p>
-          <div className="flex space-x-4">
-            <Link
-              href="mailto:alberthernandezdev@gmail.com"
-              aria-label="Email"
-              className="text-muted-foreground hover:text-primary transition-colors duration-200"
-            >
-              <Gmail className="fill-current w-6 h-6 transform transition-transform duration-200 hover:scale-110" />
-            </Link>
-            <Link
-              href="https://github.com/AlbertHernandez"
-              target="_blank"
-              aria-label="GitHub"
-              className="text-muted-foreground hover:text-primary transition-colors duration-200"
-            >
-              <GitHub className="fill-current w-6 h-6 transform transition-transform duration-200 hover:scale-110" />
-            </Link>
-            <Link
-              href="https://www.linkedin.com/in/albert-hernandez-dev"
-              target="_blank"
-              aria-label="LinkedIn"
-              className="text-muted-foreground hover:text-primary transition-colors duration-200"
-            >
-              <LinkedIn className="fill-current w-6 h-6 transform transition-transform duration-200 hover:scale-110" />
-            </Link>
-            <Link
-              href="https://x.com/AlbertHernandev"
-              target="_blank"
-              aria-label="X"
-              className="text-muted-foreground hover:text-primary transition-colors duration-200"
-            >
-              <X className="fill-current w-6 h-6 transform transition-transform duration-200 hover:scale-110" />
-            </Link>
-            <Link
-              href="https://www.youtube.com/@AlbertHernandez"
-              target="_blank"
-              aria-label="YouTube"
-              className="text-muted-foreground hover:text-primary transition-colors duration-200"
-            >
-              <YouTube className="fill-current w-6 h-6 transform transition-transform duration-200 hover:scale-110" />
-            </Link>
-          </div>
+          <SocialLinks />
         </div>
       </footer>
     </div>
