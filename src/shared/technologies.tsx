@@ -1,5 +1,6 @@
 import {
   CircleCI,
+  Datadog,
   Docker,
   GoogleCloudPlatform,
   Icon,
@@ -30,7 +31,8 @@ export type TechnologyKey =
   | "Docker"
   | "Kubernetes"
   | "CircleCI"
-  | "GoogleCloudPlatform";
+  | "GoogleCloudPlatform"
+  | "Datadog";
 
 export const Technologies: { [key in TechnologyKey]: Technology } = {
   NodeJS: {
@@ -87,5 +89,10 @@ export const Technologies: { [key in TechnologyKey]: Technology } = {
     name: "Google Cloud Platform",
     color: "#4285F4",
     icon: <GoogleCloudPlatform />,
+  },
+  Datadog: {
+    name: "Datadog",
+    color: "#632CA6",
+    icon: <Datadog />,
   },
 } as const;

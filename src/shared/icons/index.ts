@@ -1,4 +1,5 @@
 export * from "./CircleCI.tsx";
+export * from "./Datadog.tsx";
 export * from "./Docker.tsx";
 export * from "./GoogleCloudPlatform.tsx";
 export * from "./JavaScript.tsx";
