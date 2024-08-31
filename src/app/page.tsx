@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { ThemeToggleButton } from "@/app/components/ThemeToggleButton";
-import { WorkExperience } from "@/app/types.ts";
+import { educationExperiences, workExperiences } from "@/app/data";
 import {
   useDelayedVisibility,
   useMount,
@@ -21,71 +21,7 @@ import {
   X,
   YouTube,
 } from "@/shared/icons";
-import { Technologies } from "@/shared/technologies";
 import { formatDateRange } from "@/shared/utils/dateFormatter.ts";
-
-const workExperiences: WorkExperience[] = [
-  {
-    companyName: "Edpuzzle",
-    companyLogo: "/edpuzzle.webp",
-    companyWebsite: "https://edpuzzle.com",
-    jobTitle: "Senior Software Engineer",
-    employmentPeriod: {
-      start: new Date("2024-05-01"),
-    },
-    responsibilities: [
-      "Develop an education platform used by millions of teachers and students worldwide, featuring high-performance systems with over 300 million requests per day.",
-      "Create search and recommendation tools enabling teachers to discover new materials for their students according to their profiles and preferences.",
-      "Ensure code quality and reliability through testing, using design patterns such as CQRS, event-driven architecture, and feature flags. Follow hexagonal architecture and Domain-Driven Design (DDD) principles, and employ Continuous Integration/Continuous Deployment (CI/CD) practices with daily deployments.",
-    ],
-    technologiesUsed: [
-      Technologies.JavaScript,
-      Technologies.TypeScript,
-      Technologies.React,
-      Technologies.NodeJS,
-      Technologies.Jest,
-      Technologies.MongoDB,
-      Technologies.Redis,
-      Technologies.Docker,
-      Technologies.GitHubActions,
-      Technologies.AmazonWebServices,
-      Technologies.Datadog,
-    ],
-  },
-  {
-    companyName: "CoverWallet, an Aon company",
-    companyLogo: "/coverwallet.webp",
-    companyWebsite: "https://www.coverwallet.com",
-    jobTitle: "Senior Software Engineer",
-    employmentPeriod: {
-      start: new Date("2019-02-01"),
-      end: new Date("2024-05-01"),
-    },
-    responsibilities: [
-      "Create internal libraries, making them independent of any specific framework so that all microservices in the platform could utilize them.",
-      "Integrate Feature Flag systems, Observability, Cloud Native Development, and Trunk-based development practices, which helped teams deliver software with a greater quality and reliability.",
-      "Optimize import and export processes by designing ETLs to reduce manual work for agents, achieving over 80% time savings. Create of a backoffice to visualize, execute, and monitor them in real-time.",
-      "Design and implement bridges between cloud systems like GCP and Salesforce, enabling real-time communication via events between both solutions.",
-      "Enhanced a public API to enable external developers to interact with the platform easily.",
-      "Develop matching systems between agents and end customers to allocate the most suitable agent based on customer profiles.",
-    ],
-    technologiesUsed: [
-      Technologies.JavaScript,
-      Technologies.TypeScript,
-      Technologies.NodeJS,
-      Technologies.NestJS,
-      Technologies.Jest,
-      Technologies.MongoDB,
-      Technologies.PostgreSQL,
-      Technologies.Redis,
-      Technologies.Docker,
-      Technologies.Kubernetes,
-      Technologies.CircleCI,
-      Technologies.GoogleCloudPlatform,
-      Technologies.Datadog,
-    ],
-  },
-];
 
 export default function Portfolio() {
   const { mounted } = useMount();
@@ -406,38 +342,49 @@ export default function Portfolio() {
                 Education
               </span>
             </h2>
-            <div className="flex flex-row items-start gap-4 sm:gap-8">
-              <div className="w-16 h-16 relative flex-shrink-0">
-                <Image
-                  src="/upv.webp"
-                  alt="Universitat Politecnica de Valencia logo"
-                  layout="fill"
-                  objectFit="contain"
-                  className="rounded-full"
-                />
-              </div>
-              <div className="flex flex-col flex-grow">
-                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
-                  <Link
-                    href="https://www.upv.es"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xl sm:text-2xl font-bold text-primary hover:underline inline-flex items-center group"
-                  >
-                    Universitat Politècnica de València (UPV)
-                    <ExternalLink className="ml-1 h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </Link>
-                  <div className="text-sm text-muted-foreground dark:text-gray-400 w-full sm:w-auto sm:text-right mt-1 sm:mt-0">
-                    <div className="flex items-center sm:justify-end">
-                      <span>2015 - 2019</span>
+            {educationExperiences.map((education, index) => (
+              <div
+                key={education.institutionName}
+                className={`flex flex-row items-start gap-4 sm:gap-8 ${
+                  index === educationExperiences.length - 1 ? "" : "mb-4"
+                }`}
+              >
+                <div className="w-16 h-16 relative flex-shrink-0">
+                  <Image
+                    src={education.institutionLogo}
+                    alt={`${education.institutionName} logo`}
+                    layout="fill"
+                    objectFit="contain"
+                    className="rounded-full"
+                  />
+                </div>
+                <div className="flex flex-col flex-grow">
+                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
+                    <Link
+                      href={education.institutionWebsite}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xl sm:text-2xl font-bold text-primary hover:underline inline-flex items-center group"
+                    >
+                      {education.institutionName}
+                      <ExternalLink className="ml-1 h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </Link>
+                    <div className="text-sm text-muted-foreground dark:text-gray-400 w-full sm:w-auto sm:text-right mt-1 sm:mt-0">
+                      <div className="flex items-center sm:justify-end">
+                        <span>
+                          {formatDateRange(education.period, {
+                            format: "year",
+                          })}
+                        </span>
+                      </div>
                     </div>
                   </div>
+                  <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-4">
+                    {education.degree}
+                  </p>
                 </div>
-                <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-4">
-                  Bachelor&apos;s Degree in Computer Science
-                </p>
               </div>
-            </div>
+            ))}
           </div>
         </section>
       </main>

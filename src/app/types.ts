@@ -10,3 +10,11 @@ export interface WorkExperience {
   responsibilities: string[];
   technologiesUsed: Technology[];
 }
+
+export interface Education {
+  institutionName: string;
+  institutionLogo: string;
+  institutionWebsite: string;
+  degree: string;
+  period: DateRange;
+}
