@@ -2,21 +2,8 @@
 
 import React from "react";
 
-import { AboutMe } from "@/app/components/AboutMe";
-import { Education } from "@/app/components/Education";
-import { Experience } from "@/app/components/Experience";
-import { Hero } from "@/app/components/Hero";
-import { Layout } from "@/app/components/Layout";
-import { getProfile } from "@/app/repositories";
+import Portfolio from "@/pages/portfolio";
 
-export default function Portfolio() {
-  const profile = getProfile();
-  return (
-    <Layout profile={profile}>
-      <Hero profile={profile} />
-      <AboutMe about={profile.about} />
-      <Experience workExperiences={profile.workExperiences} />
-      <Education educationExperiences={profile.educationExperiences} />
-    </Layout>
-  );
+export default function WebSite() {
+  return <Portfolio />;
 }

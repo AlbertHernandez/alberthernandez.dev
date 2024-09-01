@@ -1,5 +1,5 @@
 import { Profile } from "@/shared/types";
-import { getYearsFromDate } from "@/shared/utils/getYearsFromDate.ts";
+import { getYearsFromDate } from "@/shared/utils";
 
 const firstJobStartDate = new Date("2019-02-01");
 

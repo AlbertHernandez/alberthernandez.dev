@@ -1,4 +1,4 @@
-import { IconName } from "@/shared/icons/types.ts";
+import { IconName } from "@/shared/icons";
 
 export interface Highlights {
   icon: IconName;
