@@ -13,7 +13,7 @@ interface EducationCardProps {
 
 export const EducationCard: React.FC<EducationCardProps> = ({ education }) => {
   return (
-    <article className="flex flex-col sm:flex-row items-start gap-4 sm:gap-8">
+    <article className="flex flex-row items-start gap-4 sm:gap-8">
       <div className="w-16 h-16 relative flex-shrink-0">
         <Image
           src={education.institution.logo}
