@@ -4,14 +4,12 @@ import React from "react";
 
 import { Footer } from "@/shared/components";
 import useMount from "@/shared/hooks/useMount.ts";
+import { Profile } from "@/shared/types";
 
 import { PortfolioNavBar } from "./components";
-import { getProfile } from "./repositories";
 import { AboutMe, Education, Experience, Hero } from "./sections";
 
-export const Portfolio = () => {
-  const profile = getProfile();
-
+export const Portfolio: React.FC<{ profile: Profile }> = ({ profile }) => {
   const { mounted } = useMount();
 
   if (!mounted) return;
