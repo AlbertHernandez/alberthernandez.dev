@@ -3,9 +3,9 @@ import Link from "next/link";
 
 import React from "react";
 
-import { ExternalLink } from "@/icons";
-import { EducationExperience } from "@/types";
-import { formatDateRange } from "@/utils";
+import { ExternalLink } from "@/shared/icons";
+import { EducationExperience } from "@/shared/types";
+import { formatDateRange } from "@/shared/utils";
 
 interface EducationCardProps {
   education: EducationExperience;

@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Button } from "@/components";
-import { Moon, Sun } from "@/icons";
+import { Button } from "@/shared/components";
+import { Moon, Sun } from "@/shared/icons";
 
 import useTheme from "./hooks/useTheme";
 

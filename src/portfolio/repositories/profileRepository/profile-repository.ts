@@ -1,4 +1,4 @@
-import { Profile } from "@/types";
+import { Profile } from "@/shared/types";
 
 import { albertHernandezProfile } from "./data/albertHernandezProfile";
 

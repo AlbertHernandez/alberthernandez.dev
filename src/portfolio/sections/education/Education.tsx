@@ -1,6 +1,6 @@
 import React from "react";
 
-import { EducationExperience } from "@/types";
+import { EducationExperience } from "@/shared/types";
 
 import { EducationCard } from "./components";
 

@@ -1,4 +1,4 @@
-import { TechnologyId } from "@/technologies";
+import { TechnologyId } from "@/shared/technologies";
 
 import { DateRange } from "./dateRange";
 

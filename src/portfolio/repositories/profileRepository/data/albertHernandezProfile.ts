@@ -1,5 +1,5 @@
-import { Profile } from "@/types";
-import { getYearsFromDate } from "@/utils";
+import { Profile } from "@/shared/types";
+import { getYearsFromDate } from "@/shared/utils";
 
 const firstJobStartDate = new Date("2019-02-01");
 

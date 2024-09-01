@@ -2,7 +2,7 @@
 
 import React, { Suspense } from "react";
 
-import { Profile } from "@/types";
+import { Profile } from "@/shared/types";
 
 import { Footer, Header } from "./components";
 import useMount from "./hooks/useMount";

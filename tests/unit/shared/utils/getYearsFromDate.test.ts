@@ -1,4 +1,4 @@
-import { getYearsFromDate } from "@/utils";
+import { getYearsFromDate } from "src/shared/utils";
 
 const mockToday = new Date("2023-06-15");
 

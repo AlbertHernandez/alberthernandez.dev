@@ -3,10 +3,10 @@ import Link from "next/link";
 
 import React from "react";
 
-import { ExternalLink } from "@/icons";
-import { Technologies } from "@/technologies";
-import { WorkExperience } from "@/types";
-import { formatDateRange } from "@/utils";
+import { ExternalLink } from "@/shared/icons";
+import { Technologies } from "@/shared/technologies";
+import { WorkExperience } from "@/shared/types";
+import { formatDateRange } from "@/shared/utils";
 
 import { TechnologyTag } from "./components";
 

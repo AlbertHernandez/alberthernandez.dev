@@ -16,7 +16,7 @@ import {
   React,
   Redis,
   TypeScript,
-} from "@/icons";
+} from "@/shared/icons";
 
 export interface Technology {
   name: string;

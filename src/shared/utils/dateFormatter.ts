@@ -1,4 +1,4 @@
-import { DateRange } from "@/types";
+import { DateRange } from "@/shared/types";
 
 import { assertNever } from "./assertNever";
 

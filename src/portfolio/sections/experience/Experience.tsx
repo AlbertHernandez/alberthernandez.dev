@@ -1,6 +1,6 @@
 import React from "react";
 
-import { WorkExperience } from "@/types";
+import { WorkExperience } from "@/shared/types";
 
 import { ExperienceCard } from "./components";
 

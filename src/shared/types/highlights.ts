@@ -1,4 +1,4 @@
-import { IconName } from "@/icons";
+import { IconName } from "@/shared/icons";
 
 export interface Highlights {
   icon: IconName;

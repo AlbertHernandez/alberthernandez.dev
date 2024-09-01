@@ -1,7 +1,7 @@
 import React from "react";
 
-import { GitHub, Gmail, IconProps, LinkedIn, X, YouTube } from "@/icons";
-import { SocialPlatformLink, SocialPlatformName } from "@/types";
+import { GitHub, Gmail, IconProps, LinkedIn, X, YouTube } from "@/shared/icons";
+import { SocialPlatformLink, SocialPlatformName } from "@/shared/types";
 
 export const SocialLinks: React.FC<{
   email: string;
