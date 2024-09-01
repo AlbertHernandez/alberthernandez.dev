@@ -5,7 +5,9 @@ import { Profile } from "@/shared/types";
 
 import { ThemeToggleButton } from "./components";
 
-export const Header: React.FC<{ profile: Profile }> = ({ profile }) => {
+export const PortfolioNavBar: React.FC<{ profile: Profile }> = ({
+  profile,
+}) => {
   const { isVisible } = useDelayedVisibility();
   const { scrollTo } = useSmoothScroll();
 
