@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import React from "react";
 
 import { GitHub, Gmail, IconProps, LinkedIn, X, YouTube } from "@/shared/icons";
@@ -24,27 +22,27 @@ export const SocialLinks: React.FC<{
 
   return (
     <div className="flex space-x-4">
-      <Link
-        href={email}
+      <a
+        href={`mailto:${email}`}
         aria-label="Email"
         className="text-muted-foreground hover:text-primary transition-colors duration-200"
       >
         <Gmail className="fill-current w-6 h-6 transform transition-transform duration-200 hover:scale-110" />
-      </Link>
+      </a>
       {socialPlatformLinks.map(({ name, url }) => {
         const Icon = getIconForSocialPlatformName(name);
 
         return (
-          <Link
+          <a
             key={url}
             href={url}
             aria-label={name}
             target={"_blank"}
-            rel={"noopener"}
+            rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors duration-200"
           >
             <Icon className="fill-current w-6 h-6 transform transition-transform duration-200 hover:scale-110" />
-          </Link>
+          </a>
         );
       })}
     </div>
