@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const useDelayedVisibility = (delay: number = 100) => {
+export const useDelayedVisibility = (delay: number = 100) => {
   const [isVisible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -10,5 +10,3 @@ const useDelayedVisibility = (delay: number = 100) => {
 
   return { isVisible };
 };
-
-export default useDelayedVisibility;

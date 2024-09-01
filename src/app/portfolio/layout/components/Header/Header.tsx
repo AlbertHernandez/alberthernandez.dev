@@ -3,8 +3,7 @@ import React from "react";
 import { Profile } from "@/types";
 
 import ThemeToggleButton from "./components/ThemeToogleButton";
-import useDelayedVisibility from "./hooks/useDelayedVisibility";
-import useSmoothScroll from "./hooks/useSmoothScroll";
+import { useDelayedVisibility, useSmoothScroll } from "./hooks";
 
 const Header: React.FC<{ profile: Profile }> = ({ profile }) => {
   const { isVisible } = useDelayedVisibility();
