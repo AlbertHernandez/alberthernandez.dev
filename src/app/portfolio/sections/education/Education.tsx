@@ -2,7 +2,7 @@ import React from "react";
 
 import { EducationExperience } from "@/types";
 
-import EducationCard from "./components/EducationCard";
+import { EducationCard } from "./components";
 
 interface EducationProps {
   educationExperiences: EducationExperience[];

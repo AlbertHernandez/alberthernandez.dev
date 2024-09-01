@@ -11,7 +11,7 @@ interface EducationCardProps {
   education: EducationExperience;
 }
 
-const EducationCard: React.FC<EducationCardProps> = ({ education }) => {
+export const EducationCard: React.FC<EducationCardProps> = ({ education }) => {
   return (
     <article className="flex flex-row items-start gap-4 sm:gap-8">
       <div className="w-16 h-16 relative flex-shrink-0">
@@ -55,5 +55,3 @@ const EducationCard: React.FC<EducationCardProps> = ({ education }) => {
     </article>
   );
 };
-
-export default EducationCard;
