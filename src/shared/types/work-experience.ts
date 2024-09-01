@@ -1,6 +1,6 @@
 import { TechnologyId } from "@/shared/technologies";
 
-import { DateRange } from "./dateRange";
+import { DateRange } from "./date-range.ts";
 
 export interface WorkExperience {
   company: {

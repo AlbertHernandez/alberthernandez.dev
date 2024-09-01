@@ -1,6 +1,6 @@
 import { DateRange } from "@/shared/types";
 
-import { assertNever } from "./assertNever";
+import { assertNever } from "./assert-never.ts";
 
 type DateFormat = "month-year" | "year" | "full";
 

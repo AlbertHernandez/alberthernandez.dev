@@ -1,1 +1,1 @@
-export * from "./PortfolioNavBar";
+export * from "./portfolio-nav-bar";

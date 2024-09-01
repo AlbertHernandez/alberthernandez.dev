@@ -3,7 +3,7 @@
 import React from "react";
 
 import { Footer } from "@/shared/components";
-import useMount from "@/shared/hooks/useMount.ts";
+import useMount from "@/shared/hooks/use-mount.ts";
 import { Profile } from "@/shared/types";
 
 import { PortfolioNavBar } from "./components";
