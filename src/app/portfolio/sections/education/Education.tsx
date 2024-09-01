@@ -8,7 +8,9 @@ interface EducationProps {
   educationExperiences: EducationExperience[];
 }
 
-const Education: React.FC<EducationProps> = ({ educationExperiences }) => {
+export const Education: React.FC<EducationProps> = ({
+  educationExperiences,
+}) => {
   return (
     <section
       id="education"
@@ -32,5 +34,3 @@ const Education: React.FC<EducationProps> = ({ educationExperiences }) => {
     </section>
   );
 };
-
-export default Education;

@@ -5,7 +5,7 @@ import React from "react";
 import { SocialLinks } from "@/components/SocialLinks";
 import { Profile } from "@/types";
 
-const Hero: React.FC<{ profile: Profile }> = ({ profile }) => {
+export const Hero: React.FC<{ profile: Profile }> = ({ profile }) => {
   return (
     <section id="about" className="container py-8 md:py-12 lg:py-24 mx-auto">
       <div className="mx-auto max-w-[980px] flex flex-col md:flex-row items-center justify-center gap-8">
@@ -38,5 +38,3 @@ const Hero: React.FC<{ profile: Profile }> = ({ profile }) => {
     </section>
   );
 };
-
-export default Hero;

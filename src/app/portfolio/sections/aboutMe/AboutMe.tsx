@@ -5,7 +5,7 @@ import * as icons from "@/icons";
 import { IconName } from "@/icons";
 import { About } from "@/types";
 
-const AboutMe: React.FC<{ about: About }> = ({ about }) => {
+export const AboutMe: React.FC<{ about: About }> = ({ about }) => {
   const getIconFromName = (name: IconName) => {
     const iconNameToCustomIcon: {
       [key in IconName]?: React.JSX.Element;
@@ -60,5 +60,3 @@ const AboutMe: React.FC<{ about: About }> = ({ about }) => {
     </section>
   );
 };
-
-export default AboutMe;

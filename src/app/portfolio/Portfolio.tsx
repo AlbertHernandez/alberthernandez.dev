@@ -2,10 +2,7 @@ import React from "react";
 
 import PortfolioLayout from "./layout";
 import { getProfile } from "./repositories";
-import AboutMe from "./sections/aboutMe";
-import Education from "./sections/education";
-import Experience from "./sections/experience";
-import Hero from "./sections/hero";
+import { AboutMe, Education, Experience, Hero } from "./sections";
 
 export default function Portfolio() {
   const profile = getProfile();

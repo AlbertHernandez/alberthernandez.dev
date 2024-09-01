@@ -4,7 +4,7 @@ import { WorkExperience } from "@/types";
 
 import ExperienceCard from "./components/ExperienceCard";
 
-const Experience: React.FC<{ workExperiences: WorkExperience[] }> = ({
+export const Experience: React.FC<{ workExperiences: WorkExperience[] }> = ({
   workExperiences,
 }) => {
   return (
@@ -31,5 +31,3 @@ const Experience: React.FC<{ workExperiences: WorkExperience[] }> = ({
     </section>
   );
 };
-
-export default Experience;
