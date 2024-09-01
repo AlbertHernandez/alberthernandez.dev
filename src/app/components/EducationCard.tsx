@@ -3,8 +3,8 @@ import Link from "next/link";
 
 import React from "react";
 
-import { EducationExperience } from "@/app/data/types.ts";
 import { ExternalLink } from "@/shared/icons";
+import { EducationExperience } from "@/shared/types";
 import { formatDateRange } from "@/shared/utils/dateFormatter";
 
 interface EducationCardProps {

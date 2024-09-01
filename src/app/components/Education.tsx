@@ -1,7 +1,7 @@
 import React from "react";
 
 import { EducationCard } from "@/app/components/EducationCard";
-import { EducationExperience } from "@/app/data/types";
+import { EducationExperience } from "@/shared/types";
 
 interface EducationProps {
   educationExperiences: EducationExperience[];

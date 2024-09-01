@@ -1,5 +1,5 @@
-import { WorkExperience } from "@/app/data/types.ts";
-import { Technologies } from "@/shared/technologies.tsx";
+import { Technologies } from "@/shared/technologies";
+import { WorkExperience } from "@/shared/types";
 
 export const workExperiences: WorkExperience[] = [
   {

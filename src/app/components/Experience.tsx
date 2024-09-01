@@ -1,7 +1,7 @@
 import React from "react";
 
 import { ExperienceCard } from "@/app/components/ExperienceCard";
-import { WorkExperience } from "@/app/data/types";
+import { WorkExperience } from "@/shared/types";
 
 interface ExperienceProps {
   experiences: WorkExperience[];

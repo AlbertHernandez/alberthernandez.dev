@@ -4,8 +4,8 @@ import Link from "next/link";
 import React from "react";
 
 import { TechnologyTag } from "@/app/components/TechnologyTag";
-import { WorkExperience } from "@/app/data/types";
 import { ExternalLink } from "@/shared/icons";
+import { WorkExperience } from "@/shared/types";
 import { formatDateRange } from "@/shared/utils/dateFormatter";
 
 interface ExperienceCardProps {

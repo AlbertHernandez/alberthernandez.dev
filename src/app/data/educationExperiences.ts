@@ -1,4 +1,4 @@
-import { EducationExperience } from "@/app/data/types.ts";
+import { EducationExperience } from "@/shared/types";
 
 export const educationExperiences: EducationExperience[] = [
   {
