@@ -1,9 +1,9 @@
 import React from "react";
 
-import { YouTube } from "@/shared/icons";
-import * as icons from "@/shared/icons";
-import { IconName } from "@/shared/icons";
-import { About } from "@/shared/types";
+import { YouTube } from "@/icons";
+import * as icons from "@/icons";
+import { IconName } from "@/icons";
+import { About } from "@/types";
 
 const AboutMe: React.FC<{ about: About }> = ({ about }) => {
   const getIconFromName = (name: IconName) => {

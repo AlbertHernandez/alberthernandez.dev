@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Profile } from "@/shared/types";
+import { Profile } from "@/types";
 
 import ThemeToggleButton from "./components/ThemeToogleButton";
 import useDelayedVisibility from "./hooks/useDelayedVisibility";

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Layout } from "./layout/Layout";
+import PortfolioLayout from "./layout";
 import { getProfile } from "./repositories";
 import AboutMe from "./sections/aboutMe";
 import Education from "./sections/education";
@@ -11,11 +11,11 @@ export default function Portfolio() {
   const profile = getProfile();
 
   return (
-    <Layout profile={profile}>
+    <PortfolioLayout profile={profile}>
       <Hero profile={profile} />
       <AboutMe about={profile.about} />
       <Experience workExperiences={profile.workExperiences} />
       <Education educationExperiences={profile.educationExperiences} />
-    </Layout>
+    </PortfolioLayout>
   );
 }

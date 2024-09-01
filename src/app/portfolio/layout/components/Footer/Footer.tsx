@@ -1,7 +1,7 @@
 import React from "react";
 
-import { SocialLinks } from "@/shared/components/SocialLinks";
-import { Profile } from "@/shared/types";
+import { SocialLinks } from "@/components/SocialLinks";
+import { Profile } from "@/types";
 
 const Footer: React.FC<{ profile: Profile }> = ({ profile }) => {
   return (

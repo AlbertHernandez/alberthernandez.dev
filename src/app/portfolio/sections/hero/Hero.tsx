@@ -2,8 +2,8 @@ import Image from "next/image";
 
 import React from "react";
 
-import { SocialLinks } from "@/shared/components/SocialLinks";
-import { Profile } from "@/shared/types";
+import { SocialLinks } from "@/components/SocialLinks";
+import { Profile } from "@/types";
 
 const Hero: React.FC<{ profile: Profile }> = ({ profile }) => {
   return (
