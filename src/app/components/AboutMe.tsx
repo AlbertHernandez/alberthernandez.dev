@@ -3,9 +3,9 @@ import React from "react";
 import { YouTube } from "@/shared/icons";
 import * as icons from "@/shared/icons";
 import { IconName } from "@/shared/icons/types.ts";
-import { Profile } from "@/shared/types";
+import { About } from "@/shared/types";
 
-export const AboutMe: React.FC<{ profile: Profile }> = ({ profile }) => {
+export const AboutMe: React.FC<{ about: About }> = ({ about }) => {
   const getIconFromName = (name: IconName) => {
     const iconNameToCustomIcon: {
       [key in IconName]?: React.JSX.Element;
@@ -39,10 +39,10 @@ export const AboutMe: React.FC<{ profile: Profile }> = ({ profile }) => {
           </span>
         </h2>
         <p className="text-lg text-gray-600 dark:text-gray-300 mb-12">
-          {profile.about.introduction}
+          {about.introduction}
         </p>
         <div className="grid md:grid-cols-2 gap-8">
-          {profile.about.highlights.map(highlight => (
+          {about.highlights.map(highlight => (
             <div key={highlight.title} className="flex items-start space-x-4">
               <div className="flex-shrink-0 -mt-0.5" aria-hidden="true">
                 {getIconFromName(highlight.icon)}

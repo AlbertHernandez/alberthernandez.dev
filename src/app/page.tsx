@@ -14,7 +14,7 @@ export default function Portfolio() {
   return (
     <Layout profile={profile}>
       <Hero profile={profile} />
-      <AboutMe profile={profile} />
+      <AboutMe about={profile.about} />
       <Experience workExperiences={profile.workExperiences} />
       <Education educationExperiences={profile.educationExperiences} />
     </Layout>
