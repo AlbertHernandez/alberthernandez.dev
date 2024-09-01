@@ -4,7 +4,7 @@ import PortfolioLayout from "./layout";
 import { getProfile } from "./repositories";
 import { AboutMe, Education, Experience, Hero } from "./sections";
 
-export default function Portfolio() {
+export const Portfolio = () => {
   const profile = getProfile();
 
   return (
@@ -15,4 +15,4 @@ export default function Portfolio() {
       <Education educationExperiences={profile.educationExperiences} />
     </PortfolioLayout>
   );
-}
+};
