@@ -1,5 +1,5 @@
-import { Technology } from "@/shared/technologies.tsx";
-import { DateRange } from "@/shared/types/dateRange.ts";
+import { TechnologyId } from "@/shared/technologies";
+import { DateRange } from "@/shared/types/dateRange";
 
 export interface WorkExperience {
   company: {
@@ -10,5 +10,5 @@ export interface WorkExperience {
   jobTitle: string;
   duration: DateRange; // If there is no 'end' in the range, the period is ongoing
   responsibilities: string[];
-  technologiesUsed: Technology[];
+  technologiesIds: TechnologyId[];
 }

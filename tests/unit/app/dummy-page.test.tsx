@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { expect, test } from "vitest";
 
-import DummyPage from "@/app/dummy-page.tsx";
+import DummyPage from "@/app/dummy-page";
 
 test("DummyPage", () => {
   render(<DummyPage />);

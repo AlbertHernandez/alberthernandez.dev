@@ -1,7 +1,6 @@
 import React from "react";
 
-import { defaultIconProps } from "@/shared/icons/defaultIconProps.ts";
-
+import { defaultIconProps } from "./defaultIconProps";
 import { IconProps } from "./types";
 
 export const Datadog: React.FC<IconProps> = ({ ...clientProps }) => {

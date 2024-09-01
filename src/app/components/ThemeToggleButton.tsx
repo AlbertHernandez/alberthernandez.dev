@@ -3,7 +3,7 @@ import React from "react";
 import { useTheme } from "@/shared/hooks/useTheme";
 import { Moon, Sun } from "@/shared/icons";
 
-import { Button } from "./Button.tsx";
+import { Button } from "./Button";
 
 interface ThemeToggleButtonProps {
   className?: string;

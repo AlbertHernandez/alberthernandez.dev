@@ -15,6 +15,7 @@ export * from "./Lightbulb";
 export * from "./LinkedIn";
 export * from "./MongoDB";
 export * from "./Moon";
+export * from "./NestJS";
 export * from "./NodeJS";
 export * from "./NodeJS";
 export * from "./PostgreSQL";

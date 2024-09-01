@@ -10,13 +10,13 @@ import {
   Jest,
   Kubernetes,
   MongoDB,
+  NestJS,
   NodeJS,
   PostgreSQL,
   React,
   Redis,
   TypeScript,
 } from "@/shared/icons";
-import { NestJS } from "@/shared/icons/NestJS.tsx";
 
 export interface Technology {
   name: string;
@@ -24,7 +24,7 @@ export interface Technology {
   icon: Icon;
 }
 
-export type TechnologyKey =
+export type TechnologyId =
   | "NodeJS"
   | "JavaScript"
   | "React"
@@ -42,7 +42,7 @@ export type TechnologyKey =
   | "NestJS"
   | "PostgreSQL";
 
-export const Technologies: { [key in TechnologyKey]: Technology } = {
+export const Technologies: { [key in TechnologyId]: Technology } = {
   NodeJS: {
     name: "Node.js",
     color: "#43853d",

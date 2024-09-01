@@ -6,7 +6,7 @@ import { AboutMe } from "@/app/components/AboutMe";
 import { Education } from "@/app/components/Education";
 import { Experience } from "@/app/components/Experience";
 import { Hero } from "@/app/components/Hero";
-import { Layout } from "@/app/components/Layout.tsx";
+import { Layout } from "@/app/components/Layout";
 import { educationExperiences, workExperiences } from "@/app/data";
 
 export default function Portfolio() {
