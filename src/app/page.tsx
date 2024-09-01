@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import Portfolio from "@/pages/portfolio";
+import Portfolio from "./portfolio";
 
 export default function WebSite() {
   return <Portfolio />;
