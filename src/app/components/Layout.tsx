@@ -3,12 +3,14 @@ import React, { Suspense } from "react";
 import { Footer } from "@/app/components/Footer";
 import { Header } from "@/app/components/Header";
 import { useMount } from "@/shared/hooks";
+import { Profile } from "@/shared/types";
 
 interface LayoutProps {
   children: React.ReactNode;
+  profile: Profile;
 }
 
-export const Layout: React.FC<LayoutProps> = ({ children }) => {
+export const Layout: React.FC<LayoutProps> = ({ children, profile }) => {
   const { mounted } = useMount();
 
   if (!mounted) return;
@@ -18,13 +20,13 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
       <a href="#main-content" className="sr-only focus:not-sr-only">
         Skip to main content
       </a>
-      <Header />
+      <Header profile={profile} />
       <main id="main-content" className="flex-1 pt-16">
         <Suspense fallback={<div className="text-center py-8">Loading...</div>}>
           {children}
         </Suspense>
       </main>
-      <Footer />
+      <Footer profile={profile} />
     </div>
   );
 };

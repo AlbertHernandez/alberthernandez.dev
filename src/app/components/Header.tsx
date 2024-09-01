@@ -2,8 +2,9 @@ import React from "react";
 
 import { ThemeToggleButton } from "@/app/components/ThemeToggleButton";
 import { useDelayedVisibility, useSmoothScroll } from "@/shared/hooks";
+import { Profile } from "@/shared/types";
 
-export const Header: React.FC = () => {
+export const Header: React.FC<{ profile: Profile }> = ({ profile }) => {
   const { isVisible } = useDelayedVisibility();
   const { scrollTo } = useSmoothScroll();
 
@@ -23,7 +24,7 @@ export const Header: React.FC = () => {
           aria-label="Go to About section"
         >
           <span className="font-bold text-lg text-primary transition-all ease-in-out hover:scale-110">
-            Albert Hernández
+            {profile.name}
           </span>
         </button>
         <div className="hidden md:flex items-center space-x-4 text-sm font-medium">

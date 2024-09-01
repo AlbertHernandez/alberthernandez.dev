@@ -3,11 +3,9 @@ import React from "react";
 import { ExperienceCard } from "@/app/components/ExperienceCard";
 import { WorkExperience } from "@/shared/types";
 
-interface ExperienceProps {
-  experiences: WorkExperience[];
-}
-
-export const Experience: React.FC<ExperienceProps> = ({ experiences }) => {
+export const Experience: React.FC<{ workExperiences: WorkExperience[] }> = ({
+  workExperiences,
+}) => {
   return (
     <section
       id="experience"
@@ -20,11 +18,11 @@ export const Experience: React.FC<ExperienceProps> = ({ experiences }) => {
           </span>
         </h2>
         <div className="space-y-16">
-          {experiences.map((experience, index) => (
+          {workExperiences.map((experience, index) => (
             <ExperienceCard
               key={experience.company.name}
               experience={experience}
-              isLast={index === experiences.length - 1}
+              isLast={index === workExperiences.length - 1}
             />
           ))}
         </div>

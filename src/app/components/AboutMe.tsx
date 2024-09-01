@@ -1,70 +1,31 @@
-import Link from "next/link";
-
 import React from "react";
 
-import { Code, Lightbulb, Users, YouTube } from "@/shared/icons";
+import { YouTube } from "@/shared/icons";
+import * as icons from "@/shared/icons";
+import { IconName } from "@/shared/icons/types.ts";
+import { Profile } from "@/shared/types";
 
-interface FeatureProps {
-  icon: React.ReactNode;
-  title: string;
-  description: React.ReactNode;
-}
-
-const Feature: React.FC<FeatureProps> = ({ icon, title, description }) => (
-  <div className="flex items-start space-x-4">
-    <div className="flex-shrink-0 -mt-0.5" aria-hidden="true">
-      {icon}
-    </div>
-    <div>
-      <h3 className="text-xl font-bold mb-2">{title}</h3>
-      <p className="text-gray-600 dark:text-gray-300">{description}</p>
-    </div>
-  </div>
-);
-
-export const AboutMe: React.FC = () => {
-  const features: FeatureProps[] = [
-    {
-      icon: <Code className="w-8 h-8 text-primary dark:text-primary-dark" />,
-      title: "Backend Developer",
-      description:
-        "Software Engineer with expertise in backend services, driving efficiency and scalability in complex systems to support millions of users.",
-    },
-    {
-      icon: <Users className="w-8 h-8 text-primary dark:text-primary-dark" />,
-      title: "Cross-functional Collaborator",
-      description:
-        "With experience in frontend, backend, and SRE teams, I enjoy collaborating with cross-functional teams to bring innovative ideas to life.",
-    },
-    {
-      icon: (
-        <Lightbulb className="w-8 h-8 text-primary dark:text-primary-dark" />
-      ),
-      title: "Value-Driven Solutions",
-      description:
-        "I am passionate about working in product and platform teams, creating digital solutions that deliver value and impact end users.",
-    },
-    {
-      icon: (
+export const AboutMe: React.FC<{ profile: Profile }> = ({ profile }) => {
+  const getIconFromName = (name: IconName) => {
+    const iconNameToCustomIcon: {
+      [key in IconName]?: React.JSX.Element;
+    } = {
+      YouTube: (
         <YouTube className="fill-current w-8 h-8 text-primary dark:text-primary-dark" />
       ),
-      title: "Content Creator",
-      description: (
-        <>
-          In my free time, I create programming videos on{" "}
-          <Link
-            href="https://www.youtube.com/@AlbertHernandez"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary dark:text-primary-dark hover:underline"
-          >
-            YouTube
-          </Link>
-          , where I combine my passion for teaching with programming.
-        </>
-      ),
-    },
-  ];
+    };
+
+    const customIcon = iconNameToCustomIcon[name];
+
+    if (customIcon) return customIcon;
+
+    const Icon = icons[name];
+
+    if (Icon)
+      return <Icon className="w-8 h-8 text-primary dark:text-primary-dark" />;
+
+    throw new Error(`Icon not found for icon name: ${name}`);
+  };
 
   return (
     <section
@@ -78,13 +39,21 @@ export const AboutMe: React.FC = () => {
           </span>
         </h2>
         <p className="text-lg text-gray-600 dark:text-gray-300 mb-12">
-          More than 5 years of experience as a Backend Software Engineer.
-          Working with product teams focused on the end customer as well as
-          platform teams.
+          {profile.about.introduction}
         </p>
         <div className="grid md:grid-cols-2 gap-8">
-          {features.map(feature => (
-            <Feature key={feature.title} {...feature} />
+          {profile.about.highlights.map(highlight => (
+            <div key={highlight.title} className="flex items-start space-x-4">
+              <div className="flex-shrink-0 -mt-0.5" aria-hidden="true">
+                {getIconFromName(highlight.icon)}
+              </div>
+              <div>
+                <h3 className="text-xl font-bold mb-2">{highlight.title}</h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  {highlight.description}
+                </p>
+              </div>
+            </div>
           ))}
         </div>
       </div>
