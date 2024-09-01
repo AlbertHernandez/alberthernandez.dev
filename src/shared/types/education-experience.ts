@@ -1,4 +1,4 @@
-import { DateRange } from "./date-range.ts";
+import { DateRange } from "./date-range";
 
 export interface EducationExperience {
   institution: {

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import React from "react";
 
-import { SocialLinks } from "@/shared/components/SocialLinks";
+import { SocialLinks } from "@/shared/components/social-links";
 import { Profile } from "@/shared/types";
 
 export const Hero: React.FC<{ profile: Profile }> = ({ profile }) => {

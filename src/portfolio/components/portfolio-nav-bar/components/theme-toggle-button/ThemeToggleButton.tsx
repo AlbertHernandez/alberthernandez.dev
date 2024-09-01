@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Button } from "@/shared/components";
-import useTheme from "@/shared/hooks/use-theme.ts";
+import useTheme from "@/shared/hooks/use-theme";
 import { Moon, Sun } from "@/shared/icons";
 
 interface ThemeToggleButtonProps {

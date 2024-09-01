@@ -1,1 +1,1 @@
-export * from "./profile-service.ts";
+export * from "./profile-service";

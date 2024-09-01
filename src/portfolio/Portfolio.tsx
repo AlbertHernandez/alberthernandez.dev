@@ -2,11 +2,10 @@
 
 import React from "react";
 
-import { Footer } from "@/shared/components";
-import useMount from "@/shared/hooks/use-mount.ts";
+import useMount from "@/shared/hooks/use-mount";
 import { Profile } from "@/shared/types";
 
-import { PortfolioNavBar } from "./components";
+import { PortfolioFooter, PortfolioNavBar } from "./components";
 import { AboutMe, Education, Experience, Hero } from "./sections";
 
 export const Portfolio: React.FC<{ profile: Profile }> = ({ profile }) => {
@@ -26,7 +25,7 @@ export const Portfolio: React.FC<{ profile: Profile }> = ({ profile }) => {
         <Experience workExperiences={profile.workExperiences} />
         <Education educationExperiences={profile.educationExperiences} />
       </main>
-      <Footer profile={profile} />
+      <PortfolioFooter profile={profile} />
     </div>
   );
 };

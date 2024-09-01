@@ -1,3 +1,2 @@
-export * from "./Button";
-export * from "./Footer";
-export * from "./SocialLinks";
+export * from "./button";
+export * from "./social-links";

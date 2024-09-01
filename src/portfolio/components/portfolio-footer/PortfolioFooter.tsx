@@ -1,9 +1,11 @@
 import React from "react";
 
-import { SocialLinks } from "@/shared/components/SocialLinks";
+import { SocialLinks } from "@/shared/components/social-links";
 import { Profile } from "@/shared/types";
 
-export const Footer: React.FC<{ profile: Profile }> = ({ profile }) => {
+export const PortfolioFooter: React.FC<{ profile: Profile }> = ({
+  profile,
+}) => {
   return (
     <footer className="py-8 md:py-12" role="contentinfo">
       <div className="container mx-auto max-w-[1042px] flex flex-col md:flex-row items-center justify-between">

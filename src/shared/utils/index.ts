@@ -1,3 +1,3 @@
-export * from "./assert-never.ts";
-export * from "./date-formatter.ts";
-export * from "./get-years-from-date.ts";
+export * from "./assert-never";
+export * from "./date-formatter";
+export * from "./get-years-from-date";
