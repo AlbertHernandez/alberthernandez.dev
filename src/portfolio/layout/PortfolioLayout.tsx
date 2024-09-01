@@ -2,10 +2,10 @@
 
 import React, { Suspense } from "react";
 
+import useMount from "@/shared/hooks/useMount";
 import { Profile } from "@/shared/types";
 
 import { Footer, Header } from "./components";
-import useMount from "./hooks/useMount";
 
 interface LayoutProps {
   children: React.ReactNode;

@@ -1,9 +1,9 @@
 import React from "react";
 
+import { useDelayedVisibility, useSmoothScroll } from "@/shared/hooks";
 import { Profile } from "@/shared/types";
 
 import { ThemeToggleButton } from "./components";
-import { useDelayedVisibility, useSmoothScroll } from "./hooks";
 
 export const Header: React.FC<{ profile: Profile }> = ({ profile }) => {
   const { isVisible } = useDelayedVisibility();
