@@ -8,14 +8,14 @@ import { Technologies } from "@/technologies";
 import { WorkExperience } from "@/types";
 import { formatDateRange } from "@/utils";
 
-import TechnologyTag from "./components/TechnologyTag";
+import { TechnologyTag } from "./components";
 
 interface ExperienceCardProps {
   experience: WorkExperience;
   isLast: boolean;
 }
 
-const ExperienceCard: React.FC<ExperienceCardProps> = ({
+export const ExperienceCard: React.FC<ExperienceCardProps> = ({
   experience,
   isLast,
 }) => (
@@ -97,5 +97,3 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
     </div>
   </div>
 );
-
-export default ExperienceCard;

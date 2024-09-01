@@ -2,7 +2,7 @@ import React from "react";
 
 import { WorkExperience } from "@/types";
 
-import ExperienceCard from "./components/ExperienceCard";
+import { ExperienceCard } from "./components";
 
 export const Experience: React.FC<{ workExperiences: WorkExperience[] }> = ({
   workExperiences,

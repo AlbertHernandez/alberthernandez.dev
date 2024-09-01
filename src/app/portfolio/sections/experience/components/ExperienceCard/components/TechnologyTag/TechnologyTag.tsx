@@ -9,7 +9,7 @@ interface TechnologyTagProps {
   className?: string;
 }
 
-const TechnologyTag: React.FC<TechnologyTagProps> = ({
+export const TechnologyTag: React.FC<TechnologyTagProps> = ({
   name,
   icon,
   color,
@@ -42,5 +42,3 @@ const TechnologyTag: React.FC<TechnologyTagProps> = ({
     </span>
   );
 };
-
-export default TechnologyTag;
