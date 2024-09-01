@@ -1,6 +1,6 @@
 import React from "react";
 
-import { defaultIconProps } from "./defaultIconProps";
+import { defaultIconProps } from "./default-icon-props";
 import { IconProps } from "./types";
 
 export const CircleCI: React.FC<IconProps> = ({ ...clientProps }) => {

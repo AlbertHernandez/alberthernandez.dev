@@ -1,6 +1,6 @@
 import React from "react";
 
-import { defaultIconProps } from "./defaultIconProps";
+import { defaultIconProps } from "./default-icon-props";
 import { IconProps } from "./types";
 
 export const JavaScript: React.FC<IconProps> = ({ ...clientProps }) => {
