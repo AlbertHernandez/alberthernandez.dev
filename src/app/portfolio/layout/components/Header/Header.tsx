@@ -2,7 +2,7 @@ import React from "react";
 
 import { Profile } from "@/types";
 
-import ThemeToggleButton from "./components/ThemeToogleButton";
+import { ThemeToggleButton } from "./components";
 import { useDelayedVisibility, useSmoothScroll } from "./hooks";
 
 const Header: React.FC<{ profile: Profile }> = ({ profile }) => {

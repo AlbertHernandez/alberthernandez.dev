@@ -9,7 +9,7 @@ interface ThemeToggleButtonProps {
   className?: string;
 }
 
-const ThemeToggleButton: React.FC<ThemeToggleButtonProps> = ({
+export const ThemeToggleButton: React.FC<ThemeToggleButtonProps> = ({
   className = "",
 }) => {
   const { toggleTheme, isLightTheme } = useTheme();
@@ -36,5 +36,3 @@ const ThemeToggleButton: React.FC<ThemeToggleButtonProps> = ({
     </Button>
   );
 };
-
-export default ThemeToggleButton;
