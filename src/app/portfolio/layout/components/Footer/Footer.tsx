@@ -3,7 +3,7 @@ import React from "react";
 import { SocialLinks } from "@/components/SocialLinks";
 import { Profile } from "@/types";
 
-const Footer: React.FC<{ profile: Profile }> = ({ profile }) => {
+export const Footer: React.FC<{ profile: Profile }> = ({ profile }) => {
   return (
     <footer className="py-8 md:py-12" role="contentinfo">
       <div className="container mx-auto max-w-[1042px] flex flex-col md:flex-row items-center justify-between">
@@ -18,5 +18,3 @@ const Footer: React.FC<{ profile: Profile }> = ({ profile }) => {
     </footer>
   );
 };
-
-export default Footer;

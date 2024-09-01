@@ -4,8 +4,7 @@ import React, { Suspense } from "react";
 
 import { Profile } from "@/types";
 
-import Footer from "./components/Footer";
-import Header from "./components/Header";
+import { Footer, Header } from "./components";
 import useMount from "./hooks/useMount";
 
 interface LayoutProps {

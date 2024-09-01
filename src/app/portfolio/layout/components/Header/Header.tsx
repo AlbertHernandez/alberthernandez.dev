@@ -5,7 +5,7 @@ import { Profile } from "@/types";
 import { ThemeToggleButton } from "./components";
 import { useDelayedVisibility, useSmoothScroll } from "./hooks";
 
-const Header: React.FC<{ profile: Profile }> = ({ profile }) => {
+export const Header: React.FC<{ profile: Profile }> = ({ profile }) => {
   const { isVisible } = useDelayedVisibility();
   const { scrollTo } = useSmoothScroll();
 
@@ -55,5 +55,3 @@ const Header: React.FC<{ profile: Profile }> = ({ profile }) => {
     </header>
   );
 };
-
-export default Header;
