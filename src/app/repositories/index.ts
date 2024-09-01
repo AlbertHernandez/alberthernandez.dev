@@ -1,1 +1,1 @@
-export * from "./profile-repository";
+export * from "./profileRepository";
