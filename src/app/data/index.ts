@@ -1,2 +1,1 @@
-export * from "./educationExperiences";
-export * from "./workExperiences";
+export * from "./albertHernandezProfile";

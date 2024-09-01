@@ -7,11 +7,13 @@ const yearsOfExperience = getYearsFromDate(firstJobStartDate);
 
 const title = "Backend Software Engineer";
 
+const location = "Spain";
+
 export const albertHernandezProfile: Profile = {
   name: "Albert Hernández",
   title,
   yearsOfExperience,
-  location: "Spain",
+  location,
   email: "alberthernandezdev@gmail.com",
   socialPlatformLinks: [
     {
@@ -32,7 +34,7 @@ export const albertHernandezProfile: Profile = {
     },
   ],
   image: "/albert.webp",
-  description: `I'm a passionate ${title} based in Spain, with over ${yearsOfExperience} years of experience in building scalable and efficient systems. I also create content on YouTube about web programing. Let's connect!`,
+  description: `I'm a passionate ${title} based in ${location}, with over ${yearsOfExperience} years of experience in building scalable and efficient systems. I also create content on YouTube about web programing. Let's connect!`,
   about: {
     introduction: `More than ${yearsOfExperience} years of experience as a ${title}. Working with product teams focused on the end customer as well as platform teams.`,
     highlights: [
