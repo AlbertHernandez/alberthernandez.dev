@@ -1,3 +1,5 @@
+"use client";
+
 import React, { Suspense } from "react";
 
 import { Profile } from "@/shared/types";
