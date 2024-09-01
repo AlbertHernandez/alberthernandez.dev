@@ -1,4 +1,4 @@
-import { IconProps } from "./types.ts";
+import { IconProps } from "./types";
 
 export const defaultIconProps: Partial<IconProps> = {
   size: 24,

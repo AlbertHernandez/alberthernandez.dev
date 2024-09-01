@@ -1,7 +1,7 @@
 import React from "react";
 
-import { defaultIconProps } from "./defaultIconProps.ts";
-import { IconProps } from "./types.ts";
+import { defaultIconProps } from "./defaultIconProps";
+import { IconProps } from "./types";
 
 export const GoogleCloudPlatform: React.FC<IconProps> = ({
   ...clientProps

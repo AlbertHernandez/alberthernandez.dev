@@ -1,7 +1,7 @@
-import { About } from "./about.ts";
-import { EducationExperience } from "./educationExperience.ts";
-import { SocialPlatformLink } from "./socialPlatformLink.ts";
-import { WorkExperience } from "./workExperience.ts";
+import { About } from "./about";
+import { EducationExperience } from "./educationExperience";
+import { SocialPlatformLink } from "./socialPlatformLink";
+import { WorkExperience } from "./workExperience";
 
 export interface Profile {
   name: string;

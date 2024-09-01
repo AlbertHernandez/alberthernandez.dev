@@ -1,1 +1,1 @@
-export * from "./SocialLinks.tsx";
+export * from "./SocialLinks";

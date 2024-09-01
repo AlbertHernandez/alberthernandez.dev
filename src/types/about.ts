@@ -1,4 +1,4 @@
-import { Highlights } from "./highlights.ts";
+import { Highlights } from "./highlights";
 
 export interface About {
   introduction: string;
