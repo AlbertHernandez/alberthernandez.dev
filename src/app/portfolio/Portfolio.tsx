@@ -2,9 +2,8 @@
 
 import React from "react";
 
-import { getProfile } from "@/app/repositories";
-
 import { Layout } from "./layout/Layout";
+import { getProfile } from "./repositories";
 import AboutMe from "./sections/aboutMe";
 import Education from "./sections/education";
 import Experience from "./sections/experience";
