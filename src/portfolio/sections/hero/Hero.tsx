@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 
 import { SocialLinks } from "@/shared/components/social-links";
+import { VitaminatedText } from "@/shared/components/vitaminated-text";
 import { Profile } from "@/shared/types";
 
 export const Hero: React.FC<{ profile: Profile }> = ({ profile }) => {
@@ -27,7 +28,7 @@ export const Hero: React.FC<{ profile: Profile }> = ({ profile }) => {
             </span>
           </h1>
           <p className="text-base text-muted-foreground dark:text-gray-400 mb-6">
-            {profile.description}
+            <VitaminatedText text={profile.description} />
           </p>
           <SocialLinks
             email={profile.email}

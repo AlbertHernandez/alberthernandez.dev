@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import React from "react";
 
+import { VitaminatedText } from "@/shared/components/vitaminated-text";
 import { ExternalLink } from "@/shared/icons";
 import { Technologies } from "@/shared/technologies";
 import { WorkExperience } from "@/shared/types";
@@ -19,23 +20,6 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
   experience,
   isLast,
 }) => {
-  const renderHighlightedText = (text: string) => {
-    const parts = text.split(/(<highlight>.*?<\/highlight>)/);
-    return parts.map((part, index) => {
-      if (part.startsWith("<highlight>") && part.endsWith("</highlight>")) {
-        const highlightedText = part
-          .replace("<highlight>", "")
-          .replace("</highlight>", "");
-        return (
-          <span key={index} className="font-bold text-blue-500">
-            {highlightedText}
-          </span>
-        );
-      }
-      return part;
-    });
-  };
-
   return (
     <div className="relative flex items-start">
       {!isLast && (
@@ -94,7 +78,7 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
         >
           {experience.responsibilities.map((responsibility, i) => (
             <li key={i} className="text-sm leading-relaxed dark:text-gray-300">
-              {renderHighlightedText(responsibility)}
+              <VitaminatedText text={responsibility} />
             </li>
           ))}
         </ul>
