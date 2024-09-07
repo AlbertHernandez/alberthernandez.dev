@@ -1,19 +1,16 @@
 import React from "react";
 
 import { useDelayedVisibility, useSmoothScroll } from "@/shared/hooks";
-import { Profile } from "@/shared/types";
 
 import { ThemeToggleButton } from "./components";
 
-export const PortfolioNavBar: React.FC<{ profile: Profile }> = ({
-  profile,
-}) => {
+export const PortfolioNavBar: React.FC = () => {
   const { isVisible } = useDelayedVisibility();
   const { scrollTo } = useSmoothScroll();
 
   return (
     <header
-      className={`fixed left-1/2 transform -translate-x-1/2 z-50 rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-lg transition-all duration-500 ease-in-out ${
+      className={`hidden md:flex fixed left-1/2 transform -translate-x-1/2 z-50 rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-lg transition-all duration-500 ease-in-out ${
         isVisible ? "top-4 opacity-100" : "-top-full opacity-0"
       }`}
     >
@@ -21,15 +18,6 @@ export const PortfolioNavBar: React.FC<{ profile: Profile }> = ({
         className="inline-flex h-14 items-center justify-between px-6 space-x-4"
         aria-label="Main"
       >
-        <button
-          onClick={() => scrollTo("about")}
-          className="flex items-center space-x-2"
-          aria-label="Go to About section"
-        >
-          <span className="font-bold text-lg text-primary transition-all ease-in-out hover:scale-110">
-            {profile.name}
-          </span>
-        </button>
         <div className="hidden md:flex items-center space-x-4 text-sm font-medium">
           <button
             onClick={() => scrollTo("about-me")}
@@ -49,8 +37,6 @@ export const PortfolioNavBar: React.FC<{ profile: Profile }> = ({
           >
             Education
           </button>
-        </div>
-        <div className="relative">
           <ThemeToggleButton className="group transition-all ease-in-out" />
         </div>
       </nav>

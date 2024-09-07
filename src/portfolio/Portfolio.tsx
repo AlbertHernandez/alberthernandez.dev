@@ -18,8 +18,8 @@ export const Portfolio: React.FC<{ profile: Profile }> = ({ profile }) => {
       <a href="#main-content" className="sr-only focus:not-sr-only">
         Skip to main content
       </a>
-      <PortfolioNavBar profile={profile} />
-      <main id="main-content" className="flex-1 pt-16">
+      <PortfolioNavBar />
+      <main id="main-content" className="flex-1 pt-8">
         <Hero profile={profile} />
         <AboutMe about={profile.about} />
         <Experience workExperiences={profile.workExperiences} />

@@ -7,7 +7,7 @@ import { Profile } from "@/shared/types";
 
 export const Hero: React.FC<{ profile: Profile }> = ({ profile }) => {
   return (
-    <section id="about" className="container py-8 md:py-12 lg:py-24 mx-auto">
+    <section id="about" className="container pb-8 md:py-20 lg:py-24 mx-auto">
       <div className="mx-auto max-w-[980px] flex flex-col md:flex-row items-center justify-center gap-8">
         <div className="md:w-1/3 flex justify-center items-center">
           <div className="rounded-full border-4 shadow-lg border-[#27314b] dark:border-[#e5e7eb]">
