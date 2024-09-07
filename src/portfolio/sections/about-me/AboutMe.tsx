@@ -6,6 +6,23 @@ import { IconName } from "@/shared/icons";
 import { About } from "@/shared/types";
 
 export const AboutMe: React.FC<{ about: About }> = ({ about }) => {
+  const renderHighlightedText = (text: string) => {
+    const parts = text.split(/(<highlight>.*?<\/highlight>)/);
+    return parts.map((part, index) => {
+      if (part.startsWith("<highlight>") && part.endsWith("</highlight>")) {
+        const highlightedText = part
+          .replace("<highlight>", "")
+          .replace("</highlight>", "");
+        return (
+          <span key={index} className="font-bold text-blue-500">
+            {highlightedText}
+          </span>
+        );
+      }
+      return part;
+    });
+  };
+
   const getIconFromName = (name: IconName) => {
     const iconNameToCustomIcon: {
       [key in IconName]?: React.JSX.Element;
@@ -39,7 +56,7 @@ export const AboutMe: React.FC<{ about: About }> = ({ about }) => {
           </span>
         </h2>
         <p className="text-lg text-gray-600 dark:text-gray-300 mb-12">
-          {about.introduction}
+          {renderHighlightedText(about.introduction)}
         </p>
         <div className="grid md:grid-cols-2 gap-8">
           {about.highlights.map(highlight => (
@@ -50,7 +67,7 @@ export const AboutMe: React.FC<{ about: About }> = ({ about }) => {
               <div>
                 <h3 className="text-xl font-bold mb-2">{highlight.title}</h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  {highlight.description}
+                  {renderHighlightedText(highlight.description)}
                 </p>
               </div>
             </div>
