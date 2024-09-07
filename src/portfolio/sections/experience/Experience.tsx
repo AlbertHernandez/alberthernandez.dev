@@ -18,7 +18,7 @@ export const Experience: React.FC<{ workExperiences: WorkExperience[] }> = ({
             Experience
           </span>
         </h2>
-        <div className="space-y-16">
+        <div className="space-y-12">
           {workExperiences.map((experience, index) => (
             <ExperienceCard
               key={experience.company.name}
