@@ -34,7 +34,7 @@ export const albertHernandezProfile: Profile = {
     },
   ],
   image: "/albert.webp",
-  description: `I'm a passionate ${title} based in ${location}, with over ${yearsOfExperience} years of experience in building scalable and efficient systems. I also create content on YouTube about web programing. Let's connect!`,
+  description: `I'm a passionate <highlight>${title}</highlight> based in ${location}, with over ${yearsOfExperience} years of experience in building scalable and efficient systems. I also <highlight>create content about web programming</highlight> on YouTube. Let's connect!`,
   about: {
     introduction: `More than ${yearsOfExperience} years of experience as a ${title}. Working with <highlight>product teams</highlight> focused on the end customer as well as <highlight>platform teams</highlight>.`,
     highlights: [
