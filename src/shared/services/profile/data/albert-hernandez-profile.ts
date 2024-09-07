@@ -96,11 +96,11 @@ export const albertHernandezProfile: Profile = {
       },
       responsibilities: [
         "Improved code reusability and consistency by creating internal libraries, making them independent of any specific framework, so that all <highlight>microservices</highlight> in the platform could utilize them.",
-        "Optimized operational efficiency by creating import and export processes, reducing manual work for agents and achieving over 80% time savings. Developed a backoffice to visualize, execute, and monitor these processes in real-time.",
+        "Improved software quality and reliability by integrating Feature Flag systems, Observability, Cloud Native Development, and Trunk-based development practices, enabling teams to deliver software more effectively.",
         "Created <highlight>real-time communication</highlight> by designing and implementing bridges between cloud systems like <highlight>Google Cloud Platform</highlight> and Salesforce, enabling event-based integration between both solutions.",
         "Enabled seamless platform integration by enhancing a Public API, allowing external developers smoother access to the system.",
-        "<highlight>Improved software quality and reliability</highlight> by integrating Feature Flag systems, Observability, Cloud Native Development, and Trunk-based development practices, enabling teams to deliver software more effectively.",
         "Enhanced customer-agent alignment in a scalable, <highlight>multi-tenant platform</highlight> by developing matching systems to allocate the most suitable agent based on customer profiles.",
+        "Optimized operational efficiency by creating import and export processes, reducing manual work for agents and achieving over 80% time savings. Developed a backoffice to visualize, execute, and monitor these processes in real-time.",
       ],
       technologiesIds: [],
     },
