@@ -17,6 +17,7 @@
     "plugin:node/recommended"
   ],
   "rules": {
+    "unicorn/filename-case": "off",
     "unicorn/consistent-function-scoping": "off",
     "@typescript-eslint/no-misused-promises": "off",
     "simple-import-sort/imports": "error",
