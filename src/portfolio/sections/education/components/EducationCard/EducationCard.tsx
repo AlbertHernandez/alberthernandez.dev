@@ -50,7 +50,7 @@ export const EducationCard: React.FC<EducationCardProps> = ({ education }) => {
             </Link>
           </h3>
           <time
-            className="text-sm text-muted-foreground dark:text-gray-400 w-full sm:w-auto sm:text-right mt-1 sm:mt-0"
+            className="text-muted-foreground dark:text-gray-400 w-full sm:w-auto sm:text-right mt-1 sm:mt-0"
             dateTime={`${education.duration.start.getFullYear()}-${education.duration.end?.getFullYear() || "present"}`}
           >
             {formatDateRange(education.duration, { format: "year" })}

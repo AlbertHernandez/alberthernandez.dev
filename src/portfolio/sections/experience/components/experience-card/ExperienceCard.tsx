@@ -68,7 +68,7 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
               {experience.jobTitle}
             </p>
           </div>
-          <div className="text-sm text-muted-foreground dark:text-gray-400 w-full sm:w-auto sm:text-right">
+          <div className="text-muted-foreground dark:text-gray-400 w-full sm:w-auto sm:text-right">
             <div className="flex items-center sm:justify-end">
               <time
                 dateTime={`${experience.duration.start.getFullYear()}-${experience.duration.end?.getFullYear() || "present"}`}
@@ -85,7 +85,7 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
           aria-label="Responsibilities"
         >
           {experience.responsibilities.map((responsibility, i) => (
-            <li key={i} className="text-sm leading-relaxed dark:text-gray-300">
+            <li key={i} className="leading-relaxed dark:text-gray-300">
               <VitaminatedText text={responsibility} />
             </li>
           ))}
