@@ -35,8 +35,8 @@ export const Portfolio: React.FC<{ profile: Profile }> = ({ profile }) => {
           Skip to main content
         </a>
         <PortfolioNavBar />
-        <Hero profile={profile} />
         <main id="main-content" className="flex-1">
+          <Hero profile={profile} />
           <AboutMe about={profile.about} />
           <Experience workExperiences={profile.workExperiences} />
           <Education educationExperiences={profile.educationExperiences} />
