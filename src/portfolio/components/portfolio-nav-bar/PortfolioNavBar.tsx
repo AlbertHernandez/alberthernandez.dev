@@ -14,7 +14,7 @@ export const PortfolioNavBar: React.FC<{ isThemeToggleEnabled: boolean }> = ({
 
   return (
     <header
-      className={`fixed left-1/2 transform -translate-x-1/2 z-50 transition-all ease-in-out top-4 rounded-full ${
+      className={`fixed left-1/2 transform -translate-x-1/2 z-50 transition-all ease-in-out top-4 rounded-full hidden md:block ${
         scrollPosition > 0
           ? "bg-white/90 dark:bg-gray-800/90 backdrop-blur-md shadow-lg"
           : "bg-transparent"
@@ -29,7 +29,7 @@ export const PortfolioNavBar: React.FC<{ isThemeToggleEnabled: boolean }> = ({
         className={`inline-flex items-center justify-between px-6 space-x-4 transition-all duration-300 ease-in-out h-12`}
         aria-label="Main"
       >
-        <div className="hidden md:flex items-center space-x-4 text-sm font-medium">
+        <div className="flex items-center space-x-4 text-sm font-medium">
           <button
             onClick={() => scrollTo("about-me")}
             className={NAV_BUTTON_CLASSES}
