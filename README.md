@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://alberthernandez.dev/" target="blank"><img src="images/logo.png" alt="Albert Hernandez Website" width="512" /></a>
+  <a href="https://alberthernandez.dev/" target="blank"><img src="images/web.png" alt="Albert Hernandez Website" width="1000" /></a>
 </p>
 
 <h1 align="center">⭐ Albert Hernandez Website ⭐</h1>
@@ -7,6 +7,24 @@
 <p align="center">
   Personal website of Albert Hernandez
 </p>
+
+<div align="center">
+    <a href="#-developing">
+        Developing
+    </a>
+    <span>&nbsp;✦&nbsp;</span>
+    <a href="#-tools">
+        Tools
+    </a>
+    <span>&nbsp;✦&nbsp;</span>
+    <a href="#-deploys">
+        Deploys
+    </a>
+    <span>&nbsp;✦&nbsp;</span>
+    <a href="https://alberthernandez.dev/">
+        Website
+    </a>
+</div>
 
 <p align="center">
   <a href="https://nodejs.org/docs/latest-v20.x/api/index.html"><img src="https://img.shields.io/badge/🐢 node-20.x-green.svg" alt="node"/></a>
@@ -73,7 +91,7 @@ npm run dev
 
 Finally, open [http://localhost:3000](http://localhost:3000) in the browser to see the app running.
 
-## ✅ Testing
+### ✅ Testing
 
 To run the tests of the app, you can run:
 
@@ -81,7 +99,7 @@ To run the tests of the app, you can run:
 npm run test
 ```
 
-## 💅 Linting
+### 💅 Linting
 
 To run the linter, execute the following command:
 
