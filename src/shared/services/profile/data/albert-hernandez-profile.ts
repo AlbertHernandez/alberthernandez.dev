@@ -118,7 +118,7 @@ export const albertHernandezProfile: Profile = {
   ],
   config: {
     isThemeToggleEnabled: false,
-    defaultTheme: "system",
+    defaultTheme: "dark",
     forcedTheme: "dark",
   },
 } as const;

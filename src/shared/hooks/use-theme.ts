@@ -1,10 +1,14 @@
 import { useTheme as useNextTheme } from "next-themes";
-import { useCallback, useMemo } from "react";
+import { useCallback, useEffect, useMemo } from "react";
+
+import { getProfile } from "@/shared/services";
 
 export enum Theme {
   Light = "light",
   Dark = "dark",
 }
+
+const { config } = getProfile();
 
 const useTheme = () => {
   const { setTheme, resolvedTheme } = useNextTheme();
@@ -29,6 +33,12 @@ const useTheme = () => {
     () => resolvedTheme === Theme.Dark,
     [resolvedTheme],
   );
+
+  useEffect(() => {
+    if (config.forcedTheme) {
+      setTheme(config.forcedTheme);
+    }
+  }, [setTheme]);
 
   return {
     setLightTheme,
