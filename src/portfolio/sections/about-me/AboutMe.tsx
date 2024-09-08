@@ -29,7 +29,7 @@ export const AboutMe: React.FC<{ about: About }> = ({ about }) => {
   };
 
   return (
-    <section id="about-me" className="py-12 md:py-12 lg:py-16">
+    <section id="about-me" className="py-12">
       <div className="container mx-auto max-w-[1042px]">
         <h2 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl mb-6 text-left">
           <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
