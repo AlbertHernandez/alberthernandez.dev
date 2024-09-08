@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import React from "react";
+import React, { useState } from "react";
 
 import { ExternalLink } from "@/shared/icons";
 import { EducationExperience } from "@/shared/types";
@@ -12,6 +12,8 @@ interface EducationCardProps {
 }
 
 export const EducationCard: React.FC<EducationCardProps> = ({ education }) => {
+  const [isLinkFocused, setIsLinkFocused] = useState(false);
+
   return (
     <article className="flex flex-row items-start gap-4 sm:gap-8">
       <div className="w-16 h-16 relative flex-shrink-0">
@@ -32,11 +34,17 @@ export const EducationCard: React.FC<EducationCardProps> = ({ education }) => {
               target="_blank"
               rel="noopener noreferrer"
               className="text-xl sm:text-2xl font-bold text-primary hover:underline inline-flex items-center group"
+              onFocus={() => setIsLinkFocused(true)}
+              onBlur={() => setIsLinkFocused(false)}
               aria-label={`${education.institution.name} (opens in a new tab)`}
             >
               {education.institution.name}
               <ExternalLink
-                className="ml-1 h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity"
+                className={`ml-1 h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity ${
+                  isLinkFocused || isLinkFocused
+                    ? "opacity-100"
+                    : "opacity-0 group-hover:opacity-100"
+                }`}
                 aria-hidden="true"
               />
             </Link>

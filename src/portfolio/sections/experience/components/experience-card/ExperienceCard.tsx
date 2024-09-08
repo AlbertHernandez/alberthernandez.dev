@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import React from "react";
+import React, { useState } from "react";
 
 import { VitaminatedText } from "@/shared/components/vitaminated-text";
 import { ExternalLink } from "@/shared/icons";
@@ -20,6 +20,8 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
   experience,
   isLast,
 }) => {
+  const [isLinkFocused, setIsLinkFocused] = useState(false);
+
   return (
     <div className="relative flex items-start">
       {!isLast && (
@@ -47,13 +49,19 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center group hover:underline"
+                onFocus={() => setIsLinkFocused(true)}
+                onBlur={() => setIsLinkFocused(false)}
+                aria-label={`${experience.company.name} (opens in a new tab)`}
               >
                 {experience.company.name}
                 <ExternalLink
-                  className="ml-1 h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity"
+                  className={`ml-1 h-4 w-4 transition-opacity ${
+                    isLinkFocused || isLinkFocused
+                      ? "opacity-100"
+                      : "opacity-0 group-hover:opacity-100"
+                  }`}
                   aria-hidden="true"
                 />
-                <span className="sr-only">(opens in a new tab)</span>
               </Link>
             </h3>
             <p className="text-lg font-semibold mb-2 sm:mb-0">
