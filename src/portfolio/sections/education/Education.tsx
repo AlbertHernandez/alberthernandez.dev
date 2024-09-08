@@ -12,7 +12,7 @@ export const Education: React.FC<EducationProps> = ({
   educationExperiences,
 }) => {
   return (
-    <section id="education" className="py-12 md:py-16 lg:py-18">
+    <section id="education" className="py-8 lg:py-18">
       <div className="container mx-auto max-w-[1042px]">
         <h2 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl mb-8 text-primary">
           <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
