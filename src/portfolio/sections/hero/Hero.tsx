@@ -1,12 +1,16 @@
+"use client";
+
 import Image from "next/image";
 
-import React from "react";
+import React, { useState } from "react";
 
 import { SocialLinks } from "@/shared/components/social-links";
 import { VitaminatedText } from "@/shared/components/vitaminated-text";
 import { Profile } from "@/shared/types";
 
 export const Hero: React.FC<{ profile: Profile }> = ({ profile }) => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   return (
     <section
       id="about"
@@ -14,15 +18,20 @@ export const Hero: React.FC<{ profile: Profile }> = ({ profile }) => {
     >
       <div className="mx-auto max-w-[980px] flex flex-col md:flex-row items-center justify-center gap-8">
         <div className="md:w-1/3 flex justify-center items-center">
-          <div className="rounded-full border-4 shadow-lg border-[#27314b] dark:border-[#e5e7eb]">
+          <div className="rounded-full border-4 shadow-lg border-[#27314b] dark:border-[#e5e7eb] relative">
+            {!imageLoaded && (
+              <div className="absolute inset-0 rounded-full bg-gray-200 dark:bg-gray-700 animate-pulse" />
+            )}
             <Image
               src={profile.image}
               alt={profile.name}
               width={250}
               height={250}
-              className="rounded-full"
+              className={`rounded-full transition-opacity duration-300 ${
+                imageLoaded ? "opacity-100" : "opacity-0"
+              }`}
               priority
-              loading="eager"
+              onLoadingComplete={() => setImageLoaded(true)}
             />
           </div>
         </div>
