@@ -15,4 +15,8 @@ export interface Profile {
   about: About;
   workExperiences: WorkExperience[];
   educationExperiences: EducationExperience[];
+  config: {
+    isThemeToggleEnabled: boolean;
+    defaultTheme: "system" | "light" | "dark";
+  };
 }

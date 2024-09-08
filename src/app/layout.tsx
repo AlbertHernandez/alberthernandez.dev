@@ -8,6 +8,8 @@ import "./globals.css";
 
 import { ThemeProvider } from "next-themes";
 
+import { getProfile } from "@/shared/services";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -85,6 +87,8 @@ export const metadata: Metadata = {
   },
 };
 
+const { config } = getProfile();
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -93,7 +97,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme={config.defaultTheme}
+          enableSystem
+        >
           {children}
         </ThemeProvider>
         <SpeedInsights />

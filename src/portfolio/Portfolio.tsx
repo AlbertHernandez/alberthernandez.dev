@@ -34,7 +34,9 @@ export const Portfolio: React.FC<{ profile: Profile }> = ({ profile }) => {
         <a href="#main-content" className="sr-only focus:not-sr-only">
           Skip to main content
         </a>
-        <PortfolioNavBar />
+        <PortfolioNavBar
+          isThemeToggleEnabled={profile.config.isThemeToggleEnabled}
+        />
         <main id="main-content" className="flex-1">
           <Hero profile={profile} />
           <AboutMe about={profile.about} />

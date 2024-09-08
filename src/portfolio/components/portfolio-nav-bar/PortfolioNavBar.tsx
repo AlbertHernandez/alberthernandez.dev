@@ -4,7 +4,9 @@ import { useScrollPosition, useSmoothScroll } from "@/shared/hooks";
 
 import { ThemeToggleButton } from "./components";
 
-export const PortfolioNavBar: React.FC = () => {
+export const PortfolioNavBar: React.FC<{ isThemeToggleEnabled: boolean }> = ({
+  isThemeToggleEnabled,
+}) => {
   const { scrollTo } = useSmoothScroll();
   const { scrollPosition } = useScrollPosition();
   const NAV_BUTTON_CLASSES =
@@ -46,7 +48,9 @@ export const PortfolioNavBar: React.FC = () => {
           >
             Education
           </button>
-          <ThemeToggleButton className="group transition-all ease-in-out" />
+          {isThemeToggleEnabled && (
+            <ThemeToggleButton className="group transition-all ease-in-out" />
+          )}
         </div>
       </nav>
     </header>
