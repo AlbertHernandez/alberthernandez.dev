@@ -18,6 +18,8 @@ export const Hero: React.FC<{ profile: Profile }> = ({ profile }) => {
               width={250}
               height={250}
               className="rounded-full"
+              priority
+              loading="eager"
             />
           </div>
         </div>

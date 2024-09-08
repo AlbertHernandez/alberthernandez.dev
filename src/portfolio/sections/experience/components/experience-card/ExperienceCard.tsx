@@ -82,20 +82,22 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
             </li>
           ))}
         </ul>
-        <div className="flex flex-wrap gap-3" aria-label="Technologies used">
-          {experience.technologiesIds.map(technologyId => {
-            const technology = Technologies[technologyId];
+        {experience.technologiesIds.length > 0 && (
+          <div className="flex flex-wrap gap-3" aria-label="Technologies used">
+            {experience.technologiesIds.map(technologyId => {
+              const technology = Technologies[technologyId];
 
-            return (
-              <TechnologyTag
-                key={technology.name}
-                name={technology.name}
-                icon={technology.icon}
-                color={technology.color}
-              />
-            );
-          })}
-        </div>
+              return (
+                <TechnologyTag
+                  key={technology.name}
+                  name={technology.name}
+                  icon={technology.icon}
+                  color={technology.color}
+                />
+              );
+            })}
+          </div>
+        )}
       </div>
     </div>
   );
