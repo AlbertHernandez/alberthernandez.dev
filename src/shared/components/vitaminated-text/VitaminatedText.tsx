@@ -10,7 +10,7 @@ export const VitaminatedText: React.FC<VitaminatedTextProps> = ({ text }) => {
   const { isLightTheme } = useTheme();
 
   const textColor = useMemo(() => {
-    return isLightTheme ? "#2090df" : "#5BC0BE";
+    return isLightTheme ? "#0F5587" : "#5BC0BE";
   }, [isLightTheme]);
 
   const parts = text.split(/(<highlight>.*?<\/highlight>)/);
