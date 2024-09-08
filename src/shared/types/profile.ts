@@ -18,5 +18,6 @@ export interface Profile {
   config: {
     isThemeToggleEnabled: boolean;
     defaultTheme: "system" | "light" | "dark";
+    forcedTheme?: "system" | "light" | "dark";
   };
 }
