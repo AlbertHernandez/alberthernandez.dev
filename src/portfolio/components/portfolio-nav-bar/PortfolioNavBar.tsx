@@ -1,39 +1,48 @@
 import React from "react";
 
-import { useDelayedVisibility, useSmoothScroll } from "@/shared/hooks";
+import { useScrollPosition, useSmoothScroll } from "@/shared/hooks";
 
 import { ThemeToggleButton } from "./components";
 
 export const PortfolioNavBar: React.FC = () => {
-  const { isVisible } = useDelayedVisibility();
   const { scrollTo } = useSmoothScroll();
+  const { scrollPosition } = useScrollPosition();
+  const NAV_BUTTON_CLASSES =
+    "text-primary transition-all hover:scale-110 py-2 px-3 rounded-full hover:bg-gray-100/50 dark:hover:bg-gray-700/50";
 
   return (
     <header
-      className={`hidden md:flex fixed left-1/2 transform -translate-x-1/2 z-50 rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-lg transition-all duration-500 ease-in-out ${
-        isVisible ? "top-4 opacity-100" : "-top-full opacity-0"
+      className={`fixed left-1/2 transform -translate-x-1/2 z-50 transition-all ease-in-out top-4 rounded-full ${
+        scrollPosition > 0
+          ? "bg-white/90 dark:bg-gray-800/90 backdrop-blur-md shadow-lg"
+          : "bg-transparent"
       }`}
+      style={{
+        borderColor: `rgba(75, 85, 99, ${scrollPosition === 0 ? 0 : 0.3})`,
+        borderWidth: "1px",
+        borderStyle: "solid",
+      }}
     >
       <nav
-        className="inline-flex h-14 items-center justify-between px-6 space-x-4"
+        className={`inline-flex items-center justify-between px-6 space-x-4 transition-all duration-300 ease-in-out h-12`}
         aria-label="Main"
       >
         <div className="hidden md:flex items-center space-x-4 text-sm font-medium">
           <button
             onClick={() => scrollTo("about-me")}
-            className="text-primary transition-all ease-in-out hover:scale-110"
+            className={NAV_BUTTON_CLASSES}
           >
             About Me
           </button>
           <button
             onClick={() => scrollTo("experience")}
-            className="text-primary transition-all ease-in-out hover:scale-110"
+            className={NAV_BUTTON_CLASSES}
           >
             Experience
           </button>
           <button
             onClick={() => scrollTo("education")}
-            className="text-primary transition-all ease-in-out hover:scale-110"
+            className={NAV_BUTTON_CLASSES}
           >
             Education
           </button>
