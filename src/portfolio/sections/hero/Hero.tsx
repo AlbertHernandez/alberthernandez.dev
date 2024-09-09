@@ -39,7 +39,7 @@ export const Hero: React.FC<{ profile: Profile }> = ({ profile }) => {
               {profile.name}
             </span>
           </h1>
-          <p className="text-base text-muted-foreground dark:text-gray-400 mb-6">
+          <p className="text-muted-foreground dark:text-gray-400 mb-6 text-lg">
             <VitaminatedText text={profile.description} />
           </p>
           <SocialLinks
