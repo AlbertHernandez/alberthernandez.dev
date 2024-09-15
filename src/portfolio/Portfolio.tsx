@@ -2,17 +2,12 @@
 
 import React from "react";
 
-import useMount from "@/shared/hooks/use-mount";
 import { Profile } from "@/shared/types";
 
 import { PortfolioFooter, PortfolioNavBar } from "./components";
 import { AboutMe, Education, Experience, Hero } from "./sections";
 
 export const Portfolio: React.FC<{ profile: Profile }> = ({ profile }) => {
-  const { mounted } = useMount();
-
-  if (!mounted) return;
-
   return (
     <div
       className={`relative flex flex-col min-h-screen bg-gray-900 text-gray-100`}
