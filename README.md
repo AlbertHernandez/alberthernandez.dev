@@ -113,7 +113,7 @@ To run the linter, execute the following command:
 npm run lint
 ```
 
-And for fixing lint issues automatically, you can execute:
+And for fixing lint issues automatically, you can run:
 
 ```bash
 npm run lint:fix
