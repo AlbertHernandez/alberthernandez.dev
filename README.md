@@ -34,7 +34,6 @@
   <a href="https://nextjs.org/"><img src="https://img.shields.io/badge/✨ Framework-NextJS-yellow.svg" alt="npm"/></a>
   <a href="https://vercel.com/albert-hernandez-dev/website"><img src="https://img.shields.io/badge/☁ Cloud-▲ Vercel-black.svg" alt="npm"/></a>
   <a href="https://dash.cloudflare.com/ee5cacf057a2ebbe042cebfc8e8f3945/alberthernandez.dev"><img src="https://img.shields.io/badge/🚪 Firewall-Cloudflare-orange.svg" alt="cloudflare"/></a>
-  <a href="https://albert-tb.sentry.io/projects/website/?project=4507794284347392&statsPeriod=14d"><img src="https://img.shields.io/badge/🐛 Error Tracking-Sentry-purple.svg" alt="cloudflare"/></a>
   <a href="https://vitest.dev/"><img src="https://img.shields.io/badge/🧪 Test-Vitest-green.svg" alt="swc"/></a>
 </p>
 
@@ -118,7 +117,6 @@ npm run lint:fix
 ## 💼 Tools
 
 - [Vercel](https://vercel.com/) as cloud provider.
-- [Sentry](https://sentry.io/) for error tracking.
 - [Cloudflare](https://www.cloudflare.com/) for firewall and security.
 
 ## 🚀 Deploys

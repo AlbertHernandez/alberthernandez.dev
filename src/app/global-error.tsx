@@ -2,7 +2,6 @@
 
 import NextError from "next/error";
 
-import * as Sentry from "@sentry/nextjs";
 import { useEffect } from "react";
 
 export default function GlobalError({
@@ -11,7 +10,8 @@ export default function GlobalError({
   error: Error & { digest?: string };
 }) {
   useEffect(() => {
-    Sentry.captureException(error);
+    // eslint-disable-next-line no-console
+    console.error(error);
   }, [error]);
 
   return (
