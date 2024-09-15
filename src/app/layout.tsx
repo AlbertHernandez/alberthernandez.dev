@@ -1,16 +1,14 @@
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Inter } from "next/font/google";
 
 import type { Metadata } from "next";
 
 import "./globals.css";
 
+import { GeistSans } from "geist/font/sans";
 import { ThemeProvider } from "next-themes";
 
 import { getProfile } from "@/shared/services";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://alberthernandez.dev"),
@@ -96,7 +94,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={GeistSans.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme={config.defaultTheme}
