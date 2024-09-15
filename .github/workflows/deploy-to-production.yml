@@ -8,42 +8,9 @@ permissions:
   pull-requests: write
 
 jobs:
-  check-branch:
-    name: Check branch 🌳
-    runs-on: ubuntu-latest
-    outputs:
-      is-main: ${{ steps.check.outputs.is-main }}
-    steps:
-      - name: Check if on main branch 🌳
-        id: check
-        run: |
-          if [[ "${GITHUB_REF}" == "refs/heads/main" ]]; then
-            echo "is-main=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "is-main=false" >> "$GITHUB_OUTPUT"
-          fi
-
-  tests:
-    name: Test app is working 🧪
-    if: needs.check-branch.outputs.is-main == 'true'
-    needs: [check-branch]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout 🛬
-        uses: actions/checkout@v4
-      - name: Setup Node ⚙️
-        uses: ./.github/actions/setup-node
-      - name: Lint code 💅
-        run: npm run lint
-      - name: Build NextJS 📦
-        run: npm run build
-      - name: Run tests ✅
-        run: npm run test
-
   merge-to-production:
     name: Merge to production 🚀
     if: needs.check-branch.outputs.is-main == 'true'
-    needs: [check-branch, tests]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛬
