@@ -39,7 +39,7 @@ ENV NODE_ENV production
 ENV HOSTNAME "0.0.0.0"
 ENV USER=node
 
-RUN mkdir .next
+RUN mkdir -p .next/cache && chown -R node:node .next/cache
 
 COPY --from=deps /usr/bin/dumb-init /usr/bin/dumb-init
 COPY --from=build /app/public ./public
