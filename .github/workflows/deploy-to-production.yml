@@ -10,7 +10,6 @@ permissions:
 jobs:
   merge-to-production:
     name: Merge to production 🚀
-    if: needs.check-branch.outputs.is-main == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛬
