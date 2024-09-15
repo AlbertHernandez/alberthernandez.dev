@@ -25,9 +25,9 @@ export const SocialLinks: React.FC<{
       <a
         href={`mailto:${email}`}
         aria-label="Email"
-        className="text-muted-foreground hover:text-primary transition-colors duration-200"
+        className="text-muted-foreground transition-colors duration-200"
       >
-        <Gmail className="fill-current w-6 h-6 transform transition-transform duration-200 hover:scale-110" />
+        <Gmail className="fill-current w-6 h-6 transform transition-transform duration-200 hover:scale-110 text-[color:#94a3b8] hover:text-white" />
       </a>
       {socialPlatformLinks.map(({ name, url }) => {
         const Icon = getIconForSocialPlatformName(name);
@@ -37,11 +37,11 @@ export const SocialLinks: React.FC<{
             key={url}
             href={url}
             aria-label={name}
-            target={"_blank"}
+            target="_blank"
             rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-primary transition-colors duration-200"
+            className="text-muted-foreground transition-colors duration-200"
           >
-            <Icon className="fill-current w-6 h-6 transform transition-transform duration-200 hover:scale-110" />
+            <Icon className="fill-current w-6 h-6 transform transition-transform duration-200 hover:scale-110 text-[color:#94a3b8] hover:text-white" />
           </a>
         );
       })}

@@ -1,18 +1,10 @@
-import React, { Fragment, useMemo } from "react";
-
-import useTheme from "@/shared/hooks/use-theme";
+import React, { Fragment } from "react";
 
 interface VitaminatedTextProps {
   text: string;
 }
 
 export const VitaminatedText: React.FC<VitaminatedTextProps> = ({ text }) => {
-  const { isLightTheme } = useTheme();
-
-  const textColor = useMemo(() => {
-    return isLightTheme ? "#0F5587" : "#5BC0BE";
-  }, [isLightTheme]);
-
   const parts = text.split(/(<highlight>.*?<\/highlight>)/);
 
   return (
@@ -25,7 +17,7 @@ export const VitaminatedText: React.FC<VitaminatedTextProps> = ({ text }) => {
           return (
             <mark
               key={index}
-              style={{ color: textColor }}
+              style={{ color: "#5BC0BE" }}
               className="font-bold bg-transparent"
               aria-label={`Emphasized: ${highlightedText}`}
             >

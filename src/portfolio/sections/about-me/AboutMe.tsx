@@ -11,9 +11,7 @@ export const AboutMe: React.FC<{ about: About }> = ({ about }) => {
     const iconNameToCustomIcon: {
       [key in IconName]?: React.JSX.Element;
     } = {
-      YouTube: (
-        <YouTube className="fill-current w-8 h-8 text-primary dark:text-primary-dark" />
-      ),
+      YouTube: <YouTube className="fill-current w-8 h-8" />,
     };
 
     const customIcon = iconNameToCustomIcon[name];
@@ -22,8 +20,7 @@ export const AboutMe: React.FC<{ about: About }> = ({ about }) => {
 
     const Icon = icons[name];
 
-    if (Icon)
-      return <Icon className="w-8 h-8 text-primary dark:text-primary-dark" />;
+    if (Icon) return <Icon className="w-8 h-8" />;
 
     throw new Error(`Icon not found for icon name: ${name}`);
   };
@@ -36,18 +33,24 @@ export const AboutMe: React.FC<{ about: About }> = ({ about }) => {
             About Me
           </span>
         </h2>
-        <p className="text-lg text-gray-600 dark:text-gray-300 mb-12">
+        <p className="text-lg dark:text-gray-300 mb-12">
           <VitaminatedText text={about.introduction} />
         </p>
         <div className="grid md:grid-cols-2 gap-8">
           {about.highlights.map(highlight => (
-            <div key={highlight.title} className="flex items-start space-x-4">
-              <div className="flex-shrink-0 -mt-0.5" aria-hidden="true">
+            <div
+              key={highlight.title}
+              className="flex items-start space-x-4 dark:text-gray-100"
+            >
+              <div
+                className="flex-shrink-0 -mt-0.5 dark:text-gray-100"
+                aria-hidden="true"
+              >
                 {getIconFromName(highlight.icon)}
               </div>
               <div>
                 <h3 className="text-xl font-bold mb-2">{highlight.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300">
+                <p className="dark:text-gray-300">
                   <VitaminatedText text={highlight.description} />
                 </p>
               </div>

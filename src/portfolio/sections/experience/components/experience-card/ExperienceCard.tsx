@@ -43,7 +43,7 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
       <div className="ml-6 flex-grow">
         <div className="flex flex-col sm:flex-row justify-between items-start mb-2">
           <div>
-            <h3 className="text-xl font-bold text-primary mb-1">
+            <h3 className="text-xl font-bold mb-1 text-gray-100">
               <Link
                 href={experience.company.website}
                 target="_blank"
@@ -64,7 +64,7 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
                 />
               </Link>
             </h3>
-            <p className="text-lg font-semibold mb-2 sm:mb-0">
+            <p className="text-lg font-semibold mb-2 sm:mb-0 text-gray-100">
               {experience.jobTitle}
             </p>
           </div>

@@ -6,9 +6,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import { GeistSans } from "geist/font/sans";
-import { ThemeProvider } from "next-themes";
-
-import { getProfile } from "@/shared/services";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://alberthernandez.dev"),
@@ -85,8 +82,6 @@ export const metadata: Metadata = {
   },
 };
 
-const { config } = getProfile();
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -95,14 +90,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={GeistSans.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme={config.defaultTheme}
-          forcedTheme={config.forcedTheme}
-          enableSystem
-        >
-          {children}
-        </ThemeProvider>
+        {children}
         <SpeedInsights />
         <Analytics />
       </body>
