@@ -2,8 +2,14 @@ import React from "react";
 
 import { Profile } from "@/shared/types";
 
-import { PortfolioFooter, PortfolioNavBar } from "./components";
-import { AboutMe, Education, Experience, Hero } from "./sections";
+import {
+  AboutMe,
+  Education,
+  Experience,
+  Hero,
+  PortfolioFooter,
+  PortfolioNavBar,
+} from "./components";
 
 export const Portfolio: React.FC<{ profile: Profile }> = ({ profile }) => {
   return (
