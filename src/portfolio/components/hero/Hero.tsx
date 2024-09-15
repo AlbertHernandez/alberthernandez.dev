@@ -13,7 +13,7 @@ export const Hero: React.FC<{ profile: Profile }> = ({ profile }) => {
   return (
     <section
       id="about"
-      className="container pb-8 md:py-20 lg:py-24 mx-auto mt-8"
+      className="container pb-4 md:py-12 lg:py-18 mx-auto mt-8 md:mt-24"
     >
       <div className="mx-auto max-w-[980px] flex flex-col md:flex-row items-center justify-center gap-8">
         <div className="md:w-1/3 flex justify-center items-center">
