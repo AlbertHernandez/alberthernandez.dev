@@ -9,7 +9,7 @@ const title = "Backend Software Engineer";
 
 const location = "Spain";
 
-export const albertHernandezProfile: Profile = {
+export const profile: Profile = {
   name: "Albert Hernández",
   title,
   yearsOfExperience,

@@ -1,8 +1,8 @@
 import React from "react";
 
+import { profile } from "@/config/profile";
 import { Portfolio } from "@/portfolio";
-import { getProfile } from "@/shared/services";
 
 export default function Page() {
-  return <Portfolio profile={getProfile()} />;
+  return <Portfolio profile={profile} />;
 }

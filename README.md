@@ -17,6 +17,10 @@
         Tools
     </a>
     <span>&nbsp;✦&nbsp;</span>
+    <a href="#-configuration">
+        Configuration
+    </a>
+    <span>&nbsp;✦&nbsp;</span>
     <a href="#-deploys">
         Deploys
     </a>
@@ -113,6 +117,10 @@ And for fixing lint issues automatically, you can execute:
 ```bash
 npm run lint:fix
 ```
+
+## 🎨 Configuration
+
+The portfolio it has been created with the idea that all the content can be easily modified and adapted for any developer. To do so, we have created a configuration file located at `src/config/profile/index.ts` where we can modify the content of the website.
 
 ## 💼 Tools
 

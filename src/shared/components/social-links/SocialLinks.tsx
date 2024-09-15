@@ -4,7 +4,7 @@ import { GitHub, Gmail, IconProps, LinkedIn, X, YouTube } from "@/shared/icons";
 import { SocialPlatformLink, SocialPlatformName } from "@/shared/types";
 
 export const SocialLinks: React.FC<{
-  email: string;
+  email?: string;
   socialPlatformLinks: SocialPlatformLink[];
 }> = ({ email, socialPlatformLinks }) => {
   const getIconForSocialPlatformName = (name: SocialPlatformName) => {
@@ -22,13 +22,15 @@ export const SocialLinks: React.FC<{
 
   return (
     <div className="flex space-x-4">
-      <a
-        href={`mailto:${email}`}
-        aria-label="Email"
-        className="text-muted-foreground transition-colors duration-200"
-      >
-        <Gmail className="fill-current w-6 h-6 transform transition-transform duration-200 hover:scale-110 text-[color:#94a3b8] hover:text-white" />
-      </a>
+      {email && (
+        <a
+          href={`mailto:${email}`}
+          aria-label="Email"
+          className="text-muted-foreground transition-colors duration-200"
+        >
+          <Gmail className="fill-current w-6 h-6 transform transition-transform duration-200 hover:scale-110 text-[color:#94a3b8] hover:text-white" />
+        </a>
+      )}
       {socialPlatformLinks.map(({ name, url }) => {
         const Icon = getIconForSocialPlatformName(name);
 

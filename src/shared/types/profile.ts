@@ -10,7 +10,7 @@ export interface Profile {
   title: string;
   yearsOfExperience: number;
   location: string;
-  email: string;
+  email?: string;
   socialPlatformLinks: SocialPlatformLink[];
   about: About;
   workExperiences: WorkExperience[];
