@@ -1,6 +1,6 @@
 import React from "react";
 
-import { SocialLinks } from "@/shared/components/social-links";
+import { SocialLinks } from "@/shared/components";
 import { Profile } from "@/shared/types";
 
 export const PortfolioFooter: React.FC<{ profile: Profile }> = ({

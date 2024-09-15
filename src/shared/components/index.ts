@@ -1,2 +1,2 @@
-export * from "./button";
 export * from "./social-links";
+export * from "./vitaminated-text";

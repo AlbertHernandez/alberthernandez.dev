@@ -1,9 +1,8 @@
 import React from "react";
 
-import { VitaminatedText } from "@/shared/components/vitaminated-text";
-import { YouTube } from "@/shared/icons";
+import { VitaminatedText } from "@/shared/components";
+import { IconName, YouTube } from "@/shared/icons";
 import * as icons from "@/shared/icons";
-import { IconName } from "@/shared/icons";
 import { About } from "@/shared/types";
 
 export const AboutMe: React.FC<{ about: About }> = ({ about }) => {

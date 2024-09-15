@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import React, { useState } from "react";
 
-import { VitaminatedText } from "@/shared/components/vitaminated-text";
+import { VitaminatedText } from "@/shared/components";
 import { ExternalLink } from "@/shared/icons";
 import { WorkExperience } from "@/shared/types";
 import { formatDateRange } from "@/shared/utils";
