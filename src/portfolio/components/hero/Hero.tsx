@@ -30,7 +30,7 @@ export const Hero: React.FC<{ profile: Profile }> = ({ profile }) => {
                 imageLoaded ? "opacity-100" : "opacity-0"
               }`}
               priority
-              onLoadingComplete={() => setImageLoaded(true)}
+              onLoad={() => setImageLoaded(true)}
             />
           </div>
         </div>

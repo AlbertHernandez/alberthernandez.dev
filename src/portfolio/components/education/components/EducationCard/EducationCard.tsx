@@ -35,7 +35,7 @@ export const EducationCard: React.FC<EducationCardProps> = ({ education }) => {
               href={education.institution.website}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl sm:text-2xl font-bold hover:underline inline-flex items-center group text-gray-100"
+              className="text-xl font-bold hover:underline inline-flex items-center group text-gray-100"
               onFocus={() => setIsLinkFocused(true)}
               onBlur={() => setIsLinkFocused(false)}
               aria-label={`${education.institution.name} (opens in a new tab)`}
