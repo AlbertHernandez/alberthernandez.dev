@@ -15,9 +15,9 @@ export const Hero: React.FC<{ profile: Profile }> = ({ profile }) => {
       id="about"
       className="container pb-4 md:py-12 lg:py-18 mx-auto mt-8 md:mt-24"
     >
-      <div className="mx-auto max-w-[980px] flex flex-col md:flex-row items-center justify-center gap-8">
-        <div className="md:w-1/3 flex justify-center items-center">
-          <div className="rounded-full border-4 shadow-lg border-[#e5e7eb] relative">
+      <div className="mx-auto max-w-[1042px] flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="md:w-1/3 flex justify-center md:justify-start items-center lg:pl-8">
+          <div className="rounded-full border-4 shadow-lg border-[#e5e7eb] relative min-w-[150px] min-h-[150px]">
             {!imageLoaded && (
               <div className="absolute inset-0 rounded-full bg-gray-700 animate-pulse" />
             )}
@@ -40,7 +40,7 @@ export const Hero: React.FC<{ profile: Profile }> = ({ profile }) => {
               {profile.name}
             </span>
           </h1>
-          <p className="text-gray-400 mb-6 text-lg">
+          <p className="text-gray-400 mb-6 text-lg max-w-[640px]">
             <VitaminatedText text={profile.description} />
           </p>
           <SocialLinks
