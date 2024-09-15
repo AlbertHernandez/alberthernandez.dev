@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { useScrollPosition, useSmoothScroll } from "@/shared/hooks";
+import { useScrollPosition, useSmoothScroll } from "./hooks";
 
 export const PortfolioNavBar: React.FC = () => {
   const { scrollTo } = useSmoothScroll();
