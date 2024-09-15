@@ -2,7 +2,7 @@ repository:
   name: website
   description: Personal website
   homepage: https://alberthernandez.dev/
-  topics: nodejs, nextjs, typescript
+  topics: portfolio, nextjs
   has_wiki: false
   private: true
   has_issues: true

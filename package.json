@@ -14,9 +14,8 @@
     "url": "git+https://github.com/AlbertHernandez/website.git"
   },
   "keywords": [
-    "typescript",
-    "express",
-    "template"
+    "portfolio",
+    "nextjs"
   ],
   "engines": {
     "node": "20.x",
