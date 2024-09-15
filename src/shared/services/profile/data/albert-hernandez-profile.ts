@@ -80,7 +80,6 @@ export const albertHernandezProfile: Profile = {
         "Improved code quality and reliability by applying testing strategies and design patterns such as CQRS, <highlight>Event-Driven Architecture</highlight>, and Feature Flags. Utilized Hexagonal Architecture and <highlight>Domain-Driven Design (DDD)</highlight>.",
         "Created search and recommendation systems enabling teachers to discover new materials for their students according to their profiles and preferences.",
       ],
-      technologiesIds: [],
     },
     {
       company: {
@@ -99,7 +98,6 @@ export const albertHernandezProfile: Profile = {
         "Created <highlight>real-time communication</highlight> by designing and implementing bridges between cloud systems like <highlight>Google Cloud Platform</highlight> and Salesforce, enabling event-based integration between both solutions.",
         "Improved software quality and reliability by integrating Feature Flag systems, Observability, Cloud Native Development, and Trunk-based development practices, enabling teams to deliver software more effectively.",
       ],
-      technologiesIds: [],
     },
   ],
   educationExperiences: [

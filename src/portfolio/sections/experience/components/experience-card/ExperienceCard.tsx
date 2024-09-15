@@ -5,11 +5,8 @@ import React, { useState } from "react";
 
 import { VitaminatedText } from "@/shared/components/vitaminated-text";
 import { ExternalLink } from "@/shared/icons";
-import { Technologies } from "@/shared/technologies";
 import { WorkExperience } from "@/shared/types";
 import { formatDateRange } from "@/shared/utils";
-
-import { TechnologyTag } from "./components";
 
 interface ExperienceCardProps {
   experience: WorkExperience;
@@ -90,22 +87,6 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
             </li>
           ))}
         </ul>
-        {experience.technologiesIds.length > 0 && (
-          <div className="flex flex-wrap gap-3" aria-label="Technologies used">
-            {experience.technologiesIds.map(technologyId => {
-              const technology = Technologies[technologyId];
-
-              return (
-                <TechnologyTag
-                  key={technology.name}
-                  name={technology.name}
-                  icon={technology.icon}
-                  color={technology.color}
-                />
-              );
-            })}
-          </div>
-        )}
       </div>
     </div>
   );
