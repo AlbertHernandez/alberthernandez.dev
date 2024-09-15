@@ -17,9 +17,9 @@ export const Hero: React.FC<{ profile: Profile }> = ({ profile }) => {
     >
       <div className="mx-auto max-w-[980px] flex flex-col md:flex-row items-center justify-center gap-8">
         <div className="md:w-1/3 flex justify-center items-center">
-          <div className="rounded-full border-4 shadow-lg dark:border-[#e5e7eb] relative">
+          <div className="rounded-full border-4 shadow-lg border-[#e5e7eb] relative">
             {!imageLoaded && (
-              <div className="absolute inset-0 rounded-full dark:bg-gray-700 animate-pulse" />
+              <div className="absolute inset-0 rounded-full bg-gray-700 animate-pulse" />
             )}
             <Image
               src={profile.image}
@@ -40,7 +40,7 @@ export const Hero: React.FC<{ profile: Profile }> = ({ profile }) => {
               {profile.name}
             </span>
           </h1>
-          <p className="text-muted-foreground dark:text-gray-400 mb-6 text-lg">
+          <p className="text-gray-400 mb-6 text-lg">
             <VitaminatedText text={profile.description} />
           </p>
           <SocialLinks

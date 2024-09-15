@@ -25,12 +25,12 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
     <div className="relative flex">
       {!isLast && (
         <div
-          className="absolute top-[3.3rem] left-6 h-[calc(100%)] w-px bg-gray-300 dark:bg-gray-700"
+          className="absolute top-[3.3rem] left-6 h-[calc(100%)] w-px bg-gray-700"
           aria-hidden="true"
         />
       )}
       <div className="flex-shrink-0 w-12 h-12 mt-1">
-        <div className="w-12 h-12 rounded-full border-4 border-white dark:border-gray-800 bg-white dark:bg-gray-800 z-10 overflow-hidden">
+        <div className="w-12 h-12 rounded-full border-4 border-gray-800 bg-gray-800 z-10 overflow-hidden">
           <Image
             src={experience.company.logo}
             alt={`${experience.company.name} logo`}
@@ -71,7 +71,7 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
               {experience.jobTitle}
             </p>
           </div>
-          <div className="text-muted-foreground dark:text-gray-400 w-full sm:w-auto sm:text-right mt-2 sm:mt-0">
+          <div className="text-gray-400 w-full sm:w-auto sm:text-right mt-2 sm:mt-0">
             <time
               dateTime={`${experience.duration.start.getFullYear()}-${experience.duration.end?.getFullYear() || "present"}`}
             >
@@ -86,7 +86,7 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
           aria-label="Responsibilities"
         >
           {experience.responsibilities.map((responsibility, i) => (
-            <li key={i} className="leading-relaxed dark:text-gray-300">
+            <li key={i} className="leading-relaxed text-gray-300">
               <VitaminatedText text={responsibility} />
             </li>
           ))}

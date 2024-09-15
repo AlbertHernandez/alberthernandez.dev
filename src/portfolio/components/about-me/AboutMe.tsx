@@ -32,24 +32,24 @@ export const AboutMe: React.FC<{ about: About }> = ({ about }) => {
             About Me
           </span>
         </h2>
-        <p className="text-lg dark:text-gray-300 mb-12">
+        <p className="text-lg text-gray-300 mb-12">
           <VitaminatedText text={about.introduction} />
         </p>
         <div className="grid md:grid-cols-2 gap-8">
           {about.highlights.map(highlight => (
             <div
               key={highlight.title}
-              className="flex items-start space-x-4 dark:text-gray-100"
+              className="flex items-start space-x-4 text-gray-100"
             >
               <div
-                className="flex-shrink-0 -mt-0.5 dark:text-gray-100"
+                className="flex-shrink-0 -mt-0.5 text-gray-100"
                 aria-hidden="true"
               >
                 {getIconFromName(highlight.icon)}
               </div>
               <div>
                 <h3 className="text-xl font-bold mb-2">{highlight.title}</h3>
-                <p className="dark:text-gray-300">
+                <p className="text-gray-300">
                   <VitaminatedText text={highlight.description} />
                 </p>
               </div>
