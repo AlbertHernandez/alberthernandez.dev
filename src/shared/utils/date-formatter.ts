@@ -2,7 +2,7 @@ import { DateRange } from "@/shared/types";
 
 import { assertNever } from "./assert-never";
 
-type DateFormat = "month-year" | "year" | "full";
+type DateFormat = "month-year" | "year";
 
 interface FormatOptions {
   format?: DateFormat;
@@ -21,13 +21,6 @@ const formatDate = (
   switch (format) {
     case "year": {
       return date.getFullYear().toString();
-    }
-    case "full": {
-      return date.toLocaleDateString(locale, {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-      });
     }
     case "month-year": {
       return date.toLocaleDateString(locale, {
