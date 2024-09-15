@@ -6,16 +6,17 @@
   "description": "Personal website",
   "author": "alberthernandezdev@gmail.com",
   "bugs": {
-    "url": "https://github.com/AlbertHernandez/website/issues"
+    "url": "https://github.com/AlbertHernandez/alberthernandez.dev/issues"
   },
-  "homepage": "https://github.com/AlbertHernandez/website#readme",
+  "homepage": "https://github.com/AlbertHernandez/alberthernandez.dev#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AlbertHernandez/website.git"
+    "url": "git+https://github.com/AlbertHernandez/alberthernandez.dev.git"
   },
   "keywords": [
     "portfolio",
-    "nextjs"
+    "nextjs",
+    "tailwindcss"
   ],
   "engines": {
     "node": "20.x",

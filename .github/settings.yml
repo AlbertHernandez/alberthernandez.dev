@@ -1,8 +1,8 @@
 repository:
-  name: website
-  description: Personal website
+  name: alberthernandez.dev
+  description: ✨ Personal website
   homepage: https://alberthernandez.dev/
-  topics: portfolio, nextjs
+  topics: portfolio, nextjs, tailwindcss
   has_wiki: false
   private: true
   has_issues: true

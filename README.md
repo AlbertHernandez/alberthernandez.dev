@@ -130,9 +130,9 @@ The portfolio it has been created with the idea that all the content can be easi
 
 ## 🚀 Deploys
 
-The deployment process is automatize using GitHub Actions and Vercel. First we should merge our changes to the `main` branch, this will trigger automatically the deployment to a preview environment where we can test the correct behaviour of the application. Once we know this is working fine, we can trigger the deployment to production by running the [deploy to production](https://github.com/AlbertHernandez/website/actions/workflows/deploy-to-production.yml) workflow.
+The deployment process is automatize using GitHub Actions and Vercel. First we should merge our changes to the `main` branch, this will trigger automatically the deployment to a preview environment where we can test the correct behaviour of the application. Once we know this is working fine, we can trigger the deployment to production by running the [deploy to production](https://github.com/AlbertHernandez/alberthernandez.dev/actions/workflows/deploy-to-production.yml) workflow.
 
-| **🌍 Environment**                                                      | **▶︎ Trigger**                                                                                                                            |
-| ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Development](https://website-git-main-albert-hernandez-dev.vercel.app) | When there is a change on `main` branch                                                                                                    |
-| [Production](https://alberthernandez.dev/)                              | Manually by running [deploy to production](https://github.com/AlbertHernandez/website/actions/workflows/deploy-to-production.yml) workflow |
+| **🌍 Environment**                                                      | **▶︎ Trigger**                                                                                                                                        |
+| ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [Development](https://website-git-main-albert-hernandez-dev.vercel.app) | When there is a change on `main` branch                                                                                                                |
+| [Production](https://alberthernandez.dev/)                              | Manually by running [deploy to production](https://github.com/AlbertHernandez/alberthernandez.dev/actions/workflows/deploy-to-production.yml) workflow |
