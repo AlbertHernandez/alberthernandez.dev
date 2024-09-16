@@ -1,5 +1,6 @@
 "use client";
 
+import { track } from "@vercel/analytics/react";
 import Link from "next/link";
 
 import { useEffect } from "react";
@@ -16,6 +17,11 @@ export default function GlobalError({
   useEffect(() => {
     // eslint-disable-next-line no-console
     console.error(error);
+    track("Global Error", {
+      error: error.message,
+      stack: error.stack || "",
+      digest: error.digest || "",
+    });
   }, [error]);
 
   return (
