@@ -1,3 +1,4 @@
+export * from "./ArrowLeft";
 export * from "./Code";
 export * from "./ExternalLink";
 export * from "./GitHub";
