@@ -1,7 +1,5 @@
 "use client";
 
-import Link from "next/link";
-
 import React from "react";
 
 import { useScrollOpacity, useSmoothScroll } from "./hooks";
@@ -58,16 +56,20 @@ export const NavBar: React.FC = () => {
             </button>
           </li>
           <li>
-            <Link
+            <a
               href="/curriculum.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className={`${NAV_BUTTON_CLASSES} hover:bg-[#2a3749] inline-block`}
               aria-label="Open CV in a new tab"
+              onClick={e => {
+                e.preventDefault();
+                window.open("/curriculum.pdf", "_blank", "noopener,noreferrer");
+              }}
             >
               CV
               <span className="sr-only">(opens in a new tab)</span>
-            </Link>
+            </a>
           </li>
         </ul>
       </nav>
