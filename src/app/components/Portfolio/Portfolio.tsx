@@ -6,9 +6,9 @@ import {
   AboutMe,
   Education,
   Experience,
+  Footer,
   Hero,
-  PortfolioFooter,
-  PortfolioNavBar,
+  NavBar,
 } from "./components";
 
 export const Portfolio: React.FC<{ profile: Profile }> = ({ profile }) => {
@@ -21,14 +21,14 @@ export const Portfolio: React.FC<{ profile: Profile }> = ({ profile }) => {
         <a href="#main-content" className="sr-only focus:not-sr-only">
           Skip to main content
         </a>
-        <PortfolioNavBar />
+        <NavBar />
         <main id="main-content" className="flex-1">
           <Hero profile={profile} />
           <AboutMe about={profile.about} />
           <Experience workExperiences={profile.workExperiences} />
           <Education educationExperiences={profile.educationExperiences} />
         </main>
-        <PortfolioFooter profile={profile} />
+        <Footer profile={profile} />
       </div>
     </div>
   );

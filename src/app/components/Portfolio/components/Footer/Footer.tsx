@@ -3,9 +3,7 @@ import React from "react";
 import { SocialLinks } from "@/shared/components";
 import { Profile } from "@/shared/types";
 
-export const PortfolioFooter: React.FC<{ profile: Profile }> = ({
-  profile,
-}) => {
+export const Footer: React.FC<{ profile: Profile }> = ({ profile }) => {
   const currentYear = new Date().getFullYear();
 
   return (

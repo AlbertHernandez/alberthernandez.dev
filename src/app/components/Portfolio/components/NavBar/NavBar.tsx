@@ -4,7 +4,7 @@ import React from "react";
 
 import { useScrollOpacity, useSmoothScroll } from "./hooks";
 
-export const PortfolioNavBar: React.FC = () => {
+export const NavBar: React.FC = () => {
   const { scrollTo } = useSmoothScroll();
   const { opacity } = useScrollOpacity();
 
