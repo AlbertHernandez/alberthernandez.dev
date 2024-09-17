@@ -11,11 +11,11 @@ export const NavBar: React.FC = () => {
   const { opacity } = useScrollOpacity();
 
   const NAV_BUTTON_CLASSES =
-    "transition-all hover:scale-110 py-2 px-3 rounded-full text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white";
+    "transition-all hover:scale-110 py-2 px-3 max-[440px]:py-1 max-[440px]:px-2 rounded-full text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white whitespace-nowrap text-center text-sm max-[440px]:text-xs";
 
   return (
     <header
-      className="fixed left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 ease-in-out top-4 rounded-full hidden md:block"
+      className="fixed left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 ease-in-out top-4 rounded-full"
       style={{
         backgroundColor: `rgba(30, 40, 54, ${opacity * 0.9})`,
         borderColor: `rgba(75, 85, 99, ${opacity * 0.3})`,
@@ -26,10 +26,10 @@ export const NavBar: React.FC = () => {
       role="banner"
     >
       <nav
-        className="inline-flex items-center justify-between px-6 space-x-4 transition-all duration-300 ease-in-out h-12"
+        className="flex items-center justify-between px-6 max-[440px]:px-2 transition-all duration-300 ease-in-out h-12 max-[440px]:h-8"
         aria-label="Main navigation"
       >
-        <ul className="flex items-center space-x-4 text-sm font-medium list-none m-0 p-0">
+        <ul className="flex items-center space-x-4 max-[440px]:space-x-1 text-sm max-[440px]:text-xs font-medium list-none m-0 p-0">
           <li>
             <button
               onClick={() => scrollTo("about-me")}
@@ -62,7 +62,7 @@ export const NavBar: React.FC = () => {
               href="/curriculum.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className={`${NAV_BUTTON_CLASSES} hover:bg-[#2a3749]`}
+              className={`${NAV_BUTTON_CLASSES} hover:bg-[#2a3749] inline-block`}
               aria-label="Open CV in a new tab"
             >
               CV
