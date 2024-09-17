@@ -17,7 +17,7 @@ get_files() {
 }
 
 filter_files() {
-    IGNORE_EXTENSIONS=("png" "snap" "jpg")
+    IGNORE_EXTENSIONS=("png" "snap" "jpg" "pdf")
 
     local files="$1"
     local filtered=""
