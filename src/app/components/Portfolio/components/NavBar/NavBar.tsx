@@ -9,7 +9,7 @@ export const NavBar: React.FC = () => {
   const { opacity } = useScrollOpacity();
 
   const NAV_BUTTON_CLASSES =
-    "transition-all hover:scale-110 py-2 px-3 max-[440px]:py-1 max-[440px]:px-2 rounded-full text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white whitespace-nowrap text-center text-sm max-[440px]:text-xs";
+    "transition-all hover:scale-110 py-2 px-3 max-[440px]:py-1 max-[440px]:px-2 rounded-full text-gray-300 hover:text-white whitespace-nowrap text-center text-sm max-[440px]:text-xs";
 
   return (
     <header
